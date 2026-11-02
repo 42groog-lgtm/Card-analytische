@@ -1,99 +1,176 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Deck Commander – étape 1</title>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Deck Commander</title>
 <style>
-:root{--bg:#f4f5f6;--surface:#fff;--ink:#17202a;--muted:#5d6975;--line:#d9dee3;--accent:#2457c5;--accent-ink:#fff;--warn:#a4501b;--ok:#1d7a4d}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111418;--surface:#1a1f25;--ink:#e8ecf0;--muted:#98a3ae;--line:#2c343d;--accent:#7aa2f7;--accent-ink:#0d1117;--warn:#f0a272;--ok:#5ccf93;color-scheme:dark}}
+:root{--bg:#f4f5f6;--surface:#fff;--ink:#17202a;--muted:#5d6975;--line:#d9dee3;--accent:#2457c5;--accent-ink:#fff;
+  --ok:#14663f;--ok-bg:#e1f3e8;--bad:#a3201f;--bad-bg:#fbe5e4;--warn:#8a5200;--warn-bg:#fdf0d6}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111418;--surface:#1a1f25;--ink:#e8ecf0;--muted:#98a3ae;--line:#2c343d;--accent:#7aa2f7;--accent-ink:#0d1117;
+  --ok:#6fdca0;--ok-bg:#12301f;--bad:#ff8f8c;--bad-bg:#3a1a19;--warn:#f2b660;--warn-bg:#35280f;color-scheme:dark}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;
   padding:max(16px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(32px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}
 .wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
 h1{font-size:22px;margin:0}
-.sub{color:var(--muted);margin:4px 0 0;font-size:14px}
+h2{font-size:17px;margin:16px 0 8px}
+h2:first-child{margin-top:0}
 .box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px}
+label.l{display:block;font-size:14px;color:var(--muted);margin:0 0 4px}
+input[type=text]{width:100%;font:inherit;font-size:16px;min-height:44px;padding:8px 10px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px}
 textarea{width:100%;min-height:200px;resize:vertical;font:16px/1.4 ui-monospace,Menlo,Consolas,monospace;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px}
 button{font:inherit;font-weight:600;min-height:44px;padding:10px 18px;border-radius:6px;border:0;background:var(--accent);color:var(--accent-ink);cursor:pointer}
 button:disabled{opacity:.5}
+button.danger{background:transparent;color:var(--bad);border:1px solid var(--bad)}
+button.danger.arm{background:var(--bad);color:var(--surface)}
+button.link{background:none;color:var(--accent);padding:6px 0;min-height:44px;text-align:left}
 .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.rowh{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:8px}
+.rowh h2{margin:0}
 .status{font-size:14px;color:var(--muted);margin:0;flex:1 1 200px}
 .status.warn{color:var(--warn)}.status.ok{color:var(--ok)}
-.sum{display:flex;gap:16px;flex-wrap:wrap;font-size:14px}
-.sum b{font-size:20px;display:block}
-.list{list-style:none;margin:0;padding:0}
-.card{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
-.card:last-child{border-bottom:0}
-.card img{width:44px;height:auto;border-radius:3px;display:block;background:var(--line);aspect-ratio:488/680}
-.card .n{font-weight:600;overflow-wrap:anywhere}
-.card .t{font-size:13px;color:var(--muted);overflow-wrap:anywhere}
-.card .r{text-align:right;font-size:13px;white-space:nowrap}
-.card.miss .n{color:var(--warn)}
-.board{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:14px 0 2px}
+.note{font-size:12px;color:var(--muted);margin:6px 0 0}
+.warnbox{background:var(--warn-bg);color:var(--warn);border-radius:8px;padding:10px 12px;font-size:14px;margin:0}
 a{color:var(--accent)}
-.foot{font-size:12px;color:var(--muted)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* liste des decks */
+.dlist{list-style:none;margin:0;padding:0}
+.dlist li{border-top:1px solid var(--line)}
+.dlist li:first-child{border-top:0}
+.dlist button{all:unset;box-sizing:border-box;display:flex;width:100%;align-items:center;gap:10px;min-height:56px;padding:8px 2px;cursor:pointer}
+.dlist button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.dname{font-weight:600;flex:1;min-width:0;overflow-wrap:anywhere}
+.dmeta{display:block;font-weight:400;font-size:13px;color:var(--muted)}
+.pill{flex:0 0 auto;font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px}
+.pill.legal{background:var(--ok-bg);color:var(--ok)}
+.pill.illegal{background:var(--bad-bg);color:var(--bad)}
+.pill.unknown{background:var(--warn-bg);color:var(--warn)}
+.pill.none{background:var(--line);color:var(--muted)}
+
+/* légalité */
+.legal{border-radius:8px;padding:12px 14px}
+.legal.legal{background:var(--ok-bg);color:var(--ok)}
+.legal.illegal{background:var(--bad-bg);color:var(--bad)}
+.legal.unknown{background:var(--warn-bg);color:var(--warn)}
+.legal .lt{font-size:18px;font-weight:700;margin:0}
+.legal ul{margin:6px 0 0;padding-left:20px;font-size:14px}
+.legal .note{color:inherit;opacity:.85}
+
+/* symboles de mana : couleurs saturées, lettres contrastées */
+.ms{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;overflow:hidden;border:1.5px solid rgba(0,0,0,.65);font:700 12px/1 system-ui,sans-serif;background:#d0cbc6;color:#111;flex:0 0 auto}
+.ms.W{background:#f6efc2;color:#2b2616}.ms.U{background:#0e68ab;color:#fff}.ms.B{background:#1a1a1a;color:#f2f2f2}.ms.R{background:#d3202a;color:#fff}.ms.G{background:#00733e;color:#fff}
+.ms.big{width:30px;height:30px;font-size:15px}
+.ms .h{flex:1;height:100%;display:flex;align-items:center;justify-content:center;font-size:9px;background:#d0cbc6;color:#111}
+.ms .h.W{background:#f6efc2;color:#2b2616}.ms .h.U{background:#0e68ab;color:#fff}.ms .h.B{background:#1a1a1a;color:#f2f2f2}.ms .h.R{background:#d3202a;color:#fff}.ms .h.G{background:#00733e;color:#fff}
 .cost{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:2px;max-width:150px;margin-top:2px}
-.ms{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;border:1px solid rgba(0,0,0,.4);font:700 11px/1 system-ui,sans-serif;color:#1b1b1b;background:#cac5c0;flex:0 0 auto}
-.ms.W{background:#f8e7b9}.ms.U{background:#b3ceea}.ms.B{background:#a69f9d}.ms.R{background:#eb9f82}.ms.G{background:#c4d3ca}
-.ms.sm{font-size:9px;letter-spacing:-.5px}
-.ms.big{width:28px;height:28px;font-size:14px}
+
+/* stats */
 .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:14px}
 .tile{border:1px solid var(--line);border-radius:8px;padding:10px 12px;min-width:0}
 .tile b{display:block;font-size:22px;font-variant-numeric:tabular-nums}
 .tile span{font-size:12px;color:var(--muted)}
-h2{font-size:17px;margin:16px 0 8px}
-h2:first-child{margin-top:0}
 .curve{display:flex;align-items:flex-end;gap:6px;height:150px}
 .curve .col{flex:1;min-width:0;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:3px}
 .curve .bar{width:100%;background:var(--accent);border-radius:3px 3px 0 0;min-height:2px}
 .curve .n{font-size:12px;font-variant-numeric:tabular-nums}
 .curve .x{font-size:12px;color:var(--muted);border-top:1px solid var(--line);width:100%;text-align:center;padding-top:3px}
-.crow{display:grid;grid-template-columns:30px 1fr;gap:10px;align-items:center;margin-bottom:12px}
+.crow{display:grid;grid-template-columns:32px 1fr;gap:10px;align-items:center;margin-bottom:12px}
 .line{display:grid;grid-template-columns:72px 1fr 40px;gap:8px;align-items:center;font-size:13px;color:var(--muted)}
 .line .track{height:10px;background:var(--line);border-radius:2px;overflow:hidden}
-.line .fill{height:100%}
+.line .fill{height:100%;outline:1px solid rgba(0,0,0,.25);outline-offset:-1px}
+.fill.W{background:#e8d98a}.fill.U{background:#0e68ab}.fill.B{background:#3a3a3a}.fill.R{background:#d3202a}.fill.G{background:#00733e}
 .line .v{text-align:right;color:var(--ink);font-variant-numeric:tabular-nums}
-.note{font-size:12px;color:var(--muted);margin:6px 0 0}
-:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* cartes */
+.sum{display:flex;gap:16px;flex-wrap:wrap;font-size:14px;margin-bottom:6px}
+.sum b{font-size:20px;display:block}
+details.board{border-top:1px solid var(--line)}
+details.board:first-of-type{border-top:0}
+details.board>summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:8px;min-height:44px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+details.board>summary::-webkit-details-marker{display:none}
+details.board>summary::after{content:"▾";margin-left:auto;font-size:14px}
+details.board[open]>summary::after{transform:rotate(180deg)}
+.list{list-style:none;margin:0;padding:0}
+.card{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
+.card img{width:44px;height:auto;border-radius:3px;display:block;background:var(--line);aspect-ratio:488/680}
+.card .n{font-weight:600;overflow-wrap:anywhere;color:inherit;text-decoration:none}
+.card .t{font-size:13px;color:var(--muted);overflow-wrap:anywhere}
+.card .r{text-align:right;font-size:13px;white-space:nowrap}
+.card.miss .n{color:var(--warn)}
+.foot{font-size:12px;color:var(--muted)}
 </style></head><body>
 <div class="wrap">
-  <header>
-    <h1>Deck Commander</h1>
-    <p class="sub">Étape 1 : lecture de la liste et recherche des cartes sur Scryfall.</p>
-  </header>
+  <header><h1>Deck Commander</h1></header>
+  <p class="warnbox" id="boot">Le script de la page ne s'est pas lancé : rien ne fonctionnera. Ouvre la page dans un vrai navigateur (Chrome, Safari, Firefox), pas dans un aperçu.</p>
+  <p class="warnbox" id="storeWarn" hidden>Ce navigateur refuse d'enregistrer des données : tes decks seront perdus à la fermeture de la page.</p>
 
-  <section class="box">
-    <label for="list" style="font-size:14px;color:var(--muted)">Colle ta liste (ex. « 1 Sol Ring » ou export Moxfield / Archidekt)</label>
-    <textarea id="list" spellcheck="false" autocapitalize="off" placeholder="Commander&#10;1 Atraxa, Praetors' Voice&#10;&#10;Deck&#10;1 Sol Ring&#10;1 Arcane Signet&#10;1 Command Tower&#10;30 Forest"></textarea>
-    <div class="row">
-      <button type="button" id="go">Chercher sur Scryfall</button>
-      <p class="status warn" id="status" role="status" aria-live="polite">Le script de la page ne s'est pas lancé : le bouton ne fonctionnera pas. Ouvre le fichier dans un vrai navigateur (Chrome, Safari, Firefox), pas dans un aperçu.</p>
-    </div>
-  </section>
+  <div id="home" hidden>
+    <section class="box">
+      <div class="rowh"><h2>Mes decks</h2><button type="button" id="newDeck">+ Nouveau deck</button></div>
+      <ul class="dlist" id="deckList"></ul>
+      <p class="note" id="homeNote"></p>
+    </section>
+  </div>
 
-  <section class="box" id="stats" hidden aria-label="Stats de mana">
-    <h2>Stats de mana</h2>
-    <div class="tiles" id="tiles"></div>
-    <h2>Courbe de mana</h2>
-    <div id="curve"></div>
-    <p class="note" id="curveNote"></p>
-    <h2>Couleurs : symboles et sources</h2>
-    <div id="colors"></div>
-    <p class="note">Symboles : symboles de mana dans les coûts des sorts. Sources : terrains qui produisent la couleur, d'après Scryfall. Un terrain à plusieurs couleurs compte pour chacune. Un symbole hybride compte pour ses deux couleurs.</p>
-  </section>
+  <div id="deckView" hidden>
+    <button type="button" class="link" id="back">← Mes decks</button>
 
-  <section class="box" id="res" hidden>
-    <div class="sum" id="sum"></div>
-    <div id="out"></div>
-  </section>
+    <section class="box">
+      <label class="l" for="deckName">Nom du deck</label>
+      <input type="text" id="deckName" maxlength="60" autocomplete="off">
+      <label class="l" for="list" style="margin-top:12px">Liste de cartes (ex. « 1 Sol Ring » ou export Moxfield / Archidekt)</label>
+      <textarea id="list" spellcheck="false" autocapitalize="off" placeholder="Commander&#10;1 Atraxa, Praetors' Voice&#10;&#10;Deck&#10;1 Sol Ring&#10;1 Arcane Signet&#10;1 Command Tower&#10;30 Forest&#10;&#10;Sideboard&#10;1 Swords to Plowshares"></textarea>
+      <div class="row">
+        <button type="button" id="go">Analyser le deck</button>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </div>
+      <p class="note" id="saved"></p>
+    </section>
 
-  <p class="foot">Données et images : <a href="https://scryfall.com" rel="noopener">Scryfall</a>. Non affilié à Scryfall ni à Wizards of the Coast.</p>
+    <section id="legalBox" hidden aria-label="Légalité Commander">
+      <div class="legal" id="legal"></div>
+    </section>
+
+    <section class="box" id="stats" hidden aria-label="Stats de mana">
+      <h2>Stats de mana</h2>
+      <div class="tiles" id="tiles"></div>
+      <h2>Courbe de mana</h2>
+      <div id="curve"></div>
+      <p class="note" id="curveNote"></p>
+      <h2>Couleurs : symboles et sources</h2>
+      <div id="colors"></div>
+      <p class="note">Symboles : symboles de mana dans les coûts des sorts. Sources : terrains qui produisent la couleur, d'après Scryfall. Un terrain à plusieurs couleurs compte pour chacune. Un symbole hybride compte pour ses deux couleurs.</p>
+    </section>
+
+    <section class="box" id="res" hidden>
+      <div class="sum" id="sum"></div>
+      <div id="out"></div>
+    </section>
+
+    <section class="box">
+      <button type="button" class="danger" id="del">Supprimer ce deck</button>
+    </section>
+  </div>
+
+  <p class="foot">Données et images : <a href="https://scryfall.com" rel="noopener">Scryfall</a>. Non affilié à Scryfall ni à Wizards of the Coast. Les decks sont enregistrés dans ce navigateur uniquement.</p>
 </div>
 
 <script>
 (function(){
   var $=function(i){return document.getElementById(i)};
+  var COLORS=["W","U","B","R","G"];
   var HEAD={commander:"commander",commandant:"commander",companion:"companion",deck:"main",mainboard:"main",main:"main",sideboard:"side",side:"side","réserve":"side",reserve:"side",maybeboard:"maybe"};
   var BLABEL={commander:"Commandant",companion:"Compagnon",main:"Deck",side:"Réserve",maybe:"À envisager"};
+  var COLLAPSED={side:true,maybe:true};
+  var DK="deckv2.decks", CK="deckv2.cards", MAXAGE=7*864e5;
+  var storeOK=true, decks=[], cache={}, activeId=null, entries=[];
 
-  /* ---- lecture de la liste ---- */
+  function el(tag,cls,text){ var e=document.createElement(tag); if(cls) e.className=cls; if(text!==undefined) e.textContent=text; return e; }
+  function read(k,def){ try{ var v=localStorage.getItem(k); return v?JSON.parse(v):def; }catch(e){ storeOK=false; return def; } }
+  function write(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){ storeOK=false; $("storeWarn").hidden=false; } }
+  function saveDecks(){ write(DK,decks); }
+  function saveCache(){ write(CK,cache); }
+  function cur(){ return decks.filter(function(d){return d.id===activeId})[0]; }
+
+  /* ---------- lecture de la liste ---------- */
   function parse(text){
     var out=[], idx={}, board="main";
     text.split(/\r?\n/).forEach(function(raw){
@@ -113,19 +190,29 @@ h2:first-child{margin-top:0}
     return out;
   }
 
-  /* ---- Scryfall ---- */
+  /* ---------- Scryfall ---------- */
   function sleep(ms){ return new Promise(function(r){ setTimeout(r,ms); }); }
-  async function lookup(entries,onProgress){
-    var names=[], seen={};
-    entries.forEach(function(e){ var k=e.name.toLowerCase(); if(!seen[k]){ seen[k]=1; names.push(e.name); } });
-    var byName={}, missing=[];
-    function keep(c){
-      byName[c.name.toLowerCase()]=c;
-      c.name.split(" // ").forEach(function(n){ if(!byName[n.toLowerCase()]) byName[n.toLowerCase()]=c; });
-    }
+  function slim(c){
+    var f=(c.card_faces&&c.card_faces[0])||c, faces=c.card_faces||[c];
+    var text=faces.map(function(x){return x.oracle_text||""}).join("\n")+"\n"+(c.oracle_text||"");
+    var tl=f.type_line||c.type_line||"", kw=c.keywords||[];
+    return {name:c.name,tl:tl,mc:f.mana_cost||c.mana_cost||"",cmc:c.cmc||0,prod:c.produced_mana||[],ci:c.color_identity||[],
+      lg:(c.legalities&&c.legalities.commander)||"",
+      cmd:(/Legendary/.test(tl)&&/Creature/.test(tl))||/can be your commander/i.test(text)||/Background/.test(tl),
+      ptn:kw.some(function(k){return /^(Partner|Friends forever|Choose a background|Doctor's companion)/i.test(k)})||/Background/.test(tl),
+      any:/a deck can have (any number|up to \S+( \S+)?) of cards named/i.test(text),
+      basic:/Basic/.test(tl),
+      img:(c.image_uris&&c.image_uris.small)||(f.image_uris&&f.image_uris.small)||"",
+      uri:c.scryfall_uri||"",t:Date.now()};
+  }
+  function keep(c){ var s=slim(c); cache[c.name.toLowerCase()]=s; c.name.split(" // ").forEach(function(n){ cache[n.toLowerCase()]=s; }); return s; }
+  function lookupCache(n){ var k=n.toLowerCase(); return cache[k]||cache[k.split(" // ")[0]]||null; }
+  function fresh(n){ var s=lookupCache(n); return !!s&&(Date.now()-(s.t||0)<MAXAGE); }
+  async function fetchCards(names,say){
+    var missing=[];
     for(var i=0;i<names.length;i+=75){
       var chunk=names.slice(i,i+75);
-      onProgress("Scryfall : cartes "+(i+1)+" à "+Math.min(i+75,names.length)+" sur "+names.length+"…");
+      say("Scryfall : cartes "+(i+1)+" à "+Math.min(i+75,names.length)+" sur "+names.length+"…");
       var res=await fetch("https://api.scryfall.com/cards/collection",{method:"POST",
         headers:{"Content-Type":"application/json","Accept":"application/json"},
         body:JSON.stringify({identifiers:chunk.map(function(n){return {name:n}})})});
@@ -138,54 +225,85 @@ h2:first-child{margin-top:0}
     }
     var tries=missing.slice(0,20);
     for(var m=0;m<tries.length;m++){
-      onProgress("Scryfall : recherche approchante de « "+tries[m]+" »…");
+      say("Scryfall : recherche approchante de « "+tries[m]+" »…");
       await sleep(120);
       try{
         var r=await fetch("https://api.scryfall.com/cards/named?fuzzy="+encodeURIComponent(tries[m]));
-        if(r.ok){ var c=await r.json(); keep(c); byName[tries[m].toLowerCase()]=c; }
+        if(r.ok){ var c=await r.json(); var s=keep(c); cache[tries[m].toLowerCase()]=s; }
       }catch(e){}
     }
-    entries.forEach(function(e){ e.card=byName[e.name.toLowerCase()]||byName[e.name.split(" // ")[0].toLowerCase()]||null; });
   }
 
-  /* ---- affichage ---- */
-  function face(c){ return (c.card_faces&&c.card_faces[0])||c; }
-  function thumb(c){ var f=face(c); return (c.image_uris&&c.image_uris.small)||(f.image_uris&&f.image_uris.small)||""; }
-  var COLORS=["W","U","B","R","G"];
-  function costOf(c){ return face(c).mana_cost||c.mana_cost||""; }
+  /* ---------- symboles de mana ---------- */
+  function half(code){ return el("span","h"+(COLORS.indexOf(code)>=0?" "+code:""),code); }
   function symbol(tok,big){
-    var t=tok.toUpperCase(), s=document.createElement("span"), parts=t.split("/");
-    s.className="ms"+(big?" big":"");
+    var t=tok.toUpperCase(), s=el("span","ms"+(big?" big":"")), parts=t.split("/");
     s.title="{"+tok+"}";
-    if(/^\d+$/.test(t)||/^[XYZSC]$/.test(t)){ s.textContent=t; }
-    else if(COLORS.indexOf(t)>=0){ s.className+=" "+t; s.textContent=t; }
-    else if(parts.length===2&&parts[1]==="P"&&COLORS.indexOf(parts[0])>=0){ s.className+=" "+parts[0]; s.textContent="Φ"; }
-    else if(parts.length===2&&COLORS.indexOf(parts[0])>=0&&COLORS.indexOf(parts[1])>=0){
-      var col={W:"#f8e7b9",U:"#b3ceea",B:"#a69f9d",R:"#eb9f82",G:"#c4d3ca"};
-      s.style.background="linear-gradient(135deg,"+col[parts[0]]+" 50%,"+col[parts[1]]+" 50%)"; s.className+=" sm"; s.textContent=parts[0]+parts[1];
-    } else if(parts.length===2&&parts[0]==="2"&&COLORS.indexOf(parts[1])>=0){ s.className+=" "+parts[1]+" sm"; s.textContent="2"+parts[1]; }
-    else { s.className+=" sm"; s.textContent=t; }
+    var isC=function(x){return COLORS.indexOf(x)>=0};
+    if(/^\d+$/.test(t)||/^[XYZSC]$/.test(t)) s.textContent=t;
+    else if(isC(t)){ s.className+=" "+t; s.textContent=t; }
+    else if(parts.length===2&&parts[1]==="P"&&isC(parts[0])){ s.className+=" "+parts[0]; s.textContent="Φ"; }
+    else if(parts.length===2&&(isC(parts[0])||parts[0]==="2")&&isC(parts[1])){ s.appendChild(half(parts[0])); s.appendChild(half(parts[1])); }
+    else s.textContent=t;
     return s;
   }
   function symbols(cost){
-    var w=document.createElement("div"); w.className="cost";
-    var toks=(cost||"").match(/\{[^}]+\}/g)||[];
+    var w=el("div","cost"), toks=(cost||"").match(/\{[^}]+\}/g)||[];
     w.setAttribute("aria-label",toks.map(function(t){return t.slice(1,-1)}).join(" "));
     toks.forEach(function(t){ w.appendChild(symbol(t.slice(1,-1))); });
     return w;
   }
   function pips(cost){ var p={W:0,U:0,B:0,R:0,G:0}; (cost.match(/\{[^}]+\}/g)||[]).forEach(function(t){ t.slice(1,-1).toUpperCase().split("/").forEach(function(x){ if(p[x]!==undefined) p[x]++; }); }); return p; }
-  function isLand(c){ return /Land/.test(face(c).type_line||c.type_line||""); }
-  function stats(entries){
-    var deck=entries.filter(function(e){ return e.card&&(e.board==="main"||e.board==="commander"); });
+
+  /* ---------- légalité Commander ---------- */
+  function legality(es){
+    var cmd=es.filter(function(e){return e.board==="commander"}), main=es.filter(function(e){return e.board==="main"}), deck=cmd.concat(main);
+    var q=function(l){return l.reduce(function(a,e){return a+e.qty},0)};
+    var issues=[], unknown=[], total=q(deck), cmdQty=q(cmd);
+    var missing=deck.filter(function(e){return !e.card});
+    if(missing.length) unknown.push(q(missing)+" carte(s) introuvable(s) sur Scryfall : "+missing.map(function(e){return e.name}).slice(0,5).join(", ")+(missing.length>5?"…":""));
+    if(!cmdQty) issues.push("Aucun commandant : mets-le dans une section « Commander ».");
+    else if(cmdQty>2) issues.push("Trop de commandants ("+cmdQty+").");
+    else {
+      cmd.forEach(function(e){ if(e.card&&!e.card.cmd) issues.push(e.card.name+" ne peut pas être commandant."); });
+      if(cmdQty===2&&cmd.every(function(e){return e.card})&&!cmd.every(function(e){return e.card.ptn})) issues.push("Deux commandants : seules les cartes avec Partenaire (ou équivalent) peuvent être associées.");
+    }
+    if(total!==100) issues.push("Le deck compte "+total+" carte(s) au lieu de 100, commandant compris.");
+    var counts={};
+    deck.forEach(function(e){ var k=e.name.toLowerCase(); counts[k]=counts[k]||{n:0,e:e}; counts[k].n+=e.qty; });
+    Object.keys(counts).forEach(function(k){ var o=counts[k], c=o.e.card; if(o.n>1&&!(c&&(c.basic||c.any))) issues.push(o.n+" exemplaires de "+(c?c.name:o.e.name)+" (une seule copie autorisée)."); });
+    deck.forEach(function(e){ var c=e.card; if(!c) return;
+      if(c.lg==="banned") issues.push(c.name+" est bannie en Commander.");
+      else if(c.lg&&c.lg!=="legal") issues.push(c.name+" n'est pas autorisée en Commander.");
+    });
+    var allowed={}, cmdFound=cmd.filter(function(e){return e.card});
+    cmdFound.forEach(function(e){ e.card.ci.forEach(function(x){ allowed[x]=1; }); });
+    if(cmdFound.length&&cmdFound.length===cmd.length) main.forEach(function(e){ var c=e.card; if(c&&c.ci.some(function(x){return !allowed[x]})) issues.push(c.name+" : identité de couleur hors de celle du commandant."); });
+    var s=issues.length?"illegal":(unknown.length?"unknown":"legal");
+    return {s:s,issues:issues,unknown:unknown,total:total};
+  }
+  var LTITLE={legal:"✓ Deck légal en Commander",illegal:"✕ Deck illégal en Commander",unknown:"? Légalité non vérifiable"};
+  function renderLegal(L){
+    var box=$("legal"); box.textContent=""; box.className="legal "+L.s;
+    box.appendChild(el("p","lt",LTITLE[L.s]));
+    var all=L.issues.concat(L.unknown);
+    if(all.length){ var ul=el("ul"); all.slice(0,8).forEach(function(t){ ul.appendChild(el("li",null,t)); }); if(all.length>8) ul.appendChild(el("li",null,"… et "+(all.length-8)+" autre(s) problème(s).")); box.appendChild(ul); }
+    box.appendChild(el("p","note","Vérifié : 100 cartes, commandant valide, une seule copie (hors terrains de base et cartes qui l'autorisent), légalité Commander selon Scryfall, identité de couleur. Non vérifié : compagnon, associations Partenaire précises, règles rares."));
+    $("legalBox").hidden=false;
+  }
+
+  /* ---------- stats de mana ---------- */
+  function isLand(c){ return /Land/.test(c.tl); }
+  function stats(es){
+    var deck=es.filter(function(e){ return e.card&&(e.board==="main"||e.board==="commander"); });
     var box=$("stats"); if(!deck.length){ box.hidden=true; return; }
     var spells=0,lands=0,mvSum=0,curve=[0,0,0,0,0,0,0,0],pip={W:0,U:0,B:0,R:0,G:0},src={W:0,U:0,B:0,R:0,G:0};
     deck.forEach(function(e){
       var c=e.card,q=e.qty;
-      if(isLand(c)){ lands+=q; var seen={}; (c.produced_mana||[]).forEach(function(x){ if(src[x]!==undefined&&!seen[x]){ seen[x]=1; src[x]+=q; } }); }
-      else { spells+=q; var mv=Math.round(c.cmc||0); mvSum+=mv*q; curve[Math.min(7,mv)]+=q; var p=pips(costOf(c)); COLORS.forEach(function(k){ pip[k]+=p[k]*q; }); }
+      if(isLand(c)){ lands+=q; var seen={}; c.prod.forEach(function(x){ if(src[x]!==undefined&&!seen[x]){ seen[x]=1; src[x]+=q; } }); }
+      else { spells+=q; var mv=Math.round(c.cmc||0); mvSum+=mv*q; curve[Math.min(7,mv)]+=q; var p=pips(c.mc); COLORS.forEach(function(k){ pip[k]+=p[k]*q; }); }
     });
-    var total=spells+lands, miss=entries.filter(function(e){return !e.card&&(e.board==="main"||e.board==="commander")}).reduce(function(a,e){return a+e.qty},0);
+    var total=spells+lands, miss=es.filter(function(e){return !e.card&&(e.board==="main"||e.board==="commander")}).reduce(function(a,e){return a+e.qty},0);
     var t=$("tiles"); t.textContent="";
     [[spells?(mvSum/spells).toFixed(2).replace(".",","):"–","VM moyenne des sorts"],[spells,"sorts"],[lands+" · "+Math.round(100*lands/total)+"%","terrains"]].forEach(function(x){
       var d=el("div","tile"); d.appendChild(el("b",null,String(x[0]))); d.appendChild(el("span",null,x[1])); t.appendChild(d); });
@@ -200,59 +318,135 @@ h2:first-child{margin-top:0}
       if(!pip[k]&&!src[k]) return; any=true;
       var row=el("div","crow"); row.appendChild(symbol(k,true));
       var dual=el("div");
-      [["symboles",pip[k],totP,"var(--accent)"],["sources",src[k],lands,"var(--accent)"]].forEach(function(l){
+      [["symboles",pip[k],totP],["sources",src[k],lands]].forEach(function(l){
         var line=el("div","line"); line.appendChild(el("span",null,l[0]));
-        var tr=el("div","track"), f=el("div","fill"); f.style.width=Math.round(100*l[1]/Math.max(l[2],1))+"%"; f.style.background=l[3]; tr.appendChild(f); line.appendChild(tr);
+        var tr=el("div","track"), f=el("div","fill "+k); f.style.width=Math.round(100*l[1]/Math.max(l[2],1))+"%"; tr.appendChild(f); line.appendChild(tr);
         line.appendChild(el("span","v",String(l[1]))); dual.appendChild(line); });
       row.appendChild(dual); cb.appendChild(row);
     });
     if(!any) cb.appendChild(el("p","note","Aucun symbole de couleur ni source détecté."));
     box.hidden=false;
   }
-  function el(tag,cls,text){ var e=document.createElement(tag); if(cls) e.className=cls; if(text!==undefined) e.textContent=text; return e; }
-  function show(entries){
-    var total=0,found=0,miss=0,distinctFound=0;
-    entries.forEach(function(e){ total+=e.qty; if(e.card){found+=e.qty;distinctFound++;} else miss+=e.qty; });
+
+  /* ---------- liste des cartes ---------- */
+  function renderCards(es){
+    var total=0,found=0,miss=0;
+    es.forEach(function(e){ total+=e.qty; if(e.card) found+=e.qty; else miss+=e.qty; });
     var sum=$("sum"); sum.textContent="";
-    [[total,"cartes au total"],[entries.length,"cartes différentes"],[found,"trouvées"],[miss,"introuvables"]].forEach(function(p){
-      var d=el("div"); d.appendChild(el("b",null,String(p[0]))); d.appendChild(document.createTextNode(p[1])); sum.appendChild(d);
-    });
+    [[total,"cartes, toutes sections"],[es.length,"cartes différentes"],[found,"trouvées"],[miss,"introuvables"]].forEach(function(p){
+      var d=el("div"); d.appendChild(el("b",null,String(p[0]))); d.appendChild(document.createTextNode(p[1])); sum.appendChild(d); });
     var out=$("out"); out.textContent="";
     ["commander","companion","main","side","maybe"].forEach(function(b){
-      var list=entries.filter(function(e){return e.board===b}); if(!list.length) return;
-      out.appendChild(el("div","board",BLABEL[b]+" · "+list.reduce(function(a,e){return a+e.qty},0)));
+      var list=es.filter(function(e){return e.board===b}); if(!list.length) return;
+      var det=el("details","board"); if(!COLLAPSED[b]) det.open=true;
+      det.appendChild(el("summary",null,BLABEL[b]+" · "+list.reduce(function(a,e){return a+e.qty},0)));
       var ul=el("ul","list");
       list.forEach(function(e){
         var li=el("li","card"+(e.card?"":" miss")), c=e.card;
-        var img=el("img"); img.alt=""; img.loading="lazy"; if(c&&thumb(c)) img.src=thumb(c); li.appendChild(img);
+        var img=el("img"); img.alt=""; img.loading="lazy"; if(c&&c.img) img.src=c.img; li.appendChild(img);
         var mid=el("div");
         if(c){
-          var a=el("a","n",c.name); a.href=c.scryfall_uri||"https://scryfall.com"; a.rel="noopener"; a.style.textDecoration="none"; a.style.color="inherit";
-          mid.appendChild(a); mid.appendChild(el("div","t",face(c).type_line||c.type_line||""));
+          var a=el("a","n",c.name); a.href=/^https:\/\/scryfall\.com\//.test(c.uri)?c.uri:"https://scryfall.com"; a.rel="noopener";
+          mid.appendChild(a); mid.appendChild(el("div","t",c.tl));
         } else { mid.appendChild(el("div","n",e.name)); mid.appendChild(el("div","t","Introuvable sur Scryfall. Vérifie l'orthographe.")); }
         li.appendChild(mid);
-        var r=el("div","r"); r.appendChild(el("div",null,e.qty+"×")); r.appendChild(c?symbols(costOf(c)):el("div")); li.appendChild(r);
+        var r=el("div","r"); r.appendChild(el("div",null,e.qty+"×")); r.appendChild(c?symbols(c.mc):el("div")); li.appendChild(r);
         ul.appendChild(li);
       });
-      out.appendChild(ul);
+      det.appendChild(ul); out.appendChild(det);
     });
-    $("res").hidden=false; stats(entries);
+    $("res").hidden=false;
   }
 
+  function clearResults(){ ["legalBox","stats","res"].forEach(function(i){ $(i).hidden=true; }); }
+  function render(es){
+    if(!es.length){ clearResults(); return null; }
+    var L=legality(es); renderLegal(L); stats(es); renderCards(es);
+    return L;
+  }
+  function link(es){ es.forEach(function(e){ e.card=lookupCache(e.name); }); }
+
   function say(msg,cls){ var s=$("status"); s.textContent=msg; s.className="status"+(cls?" "+cls:""); }
-  say("Prêt. Colle ta liste, puis touche le bouton.");
-  $("go").addEventListener("click",async function(){
-    var entries=parse($("list").value);
-    if(!entries.length){ say("Aucune carte lue. Colle une liste, une carte par ligne.","warn"); return; }
-    var btn=$("go"); btn.disabled=true; say("Scryfall : recherche de "+entries.length+" cartes…");
+  function stamp(d){ var t=new Date(d.updated||Date.now()); $("saved").textContent=storeOK?("Enregistré sur cet appareil à "+t.toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"})+"."):"Non enregistré : ce navigateur refuse le stockage."; }
+  function persistDeck(d,L){ d.updated=Date.now(); d.legal=L?{s:L.s,n:L.total}:null; saveDecks(); stamp(d); }
+
+  var runId=0;
+  async function analyse(){
+    var d=cur(); if(!d) return; var id=++runId, deckId=d.id;
+    d.list=$("list").value; entries=parse(d.list);
+    if(!entries.length){ clearResults(); persistDeck(d,null); say(d.list.trim()?"Aucune carte lue. Une carte par ligne.":"Colle une liste de cartes pour commencer.",d.list.trim()?"warn":""); return; }
+    var names=[], seen={};
+    entries.forEach(function(e){ var k=e.name.toLowerCase(); if(!fresh(e.name)&&!seen[k]){ seen[k]=1; names.push(e.name); } });
+    link(entries); var L=render(entries); persistDeck(d,L);
+    if(!names.length){ say(entries.length+" cartes différentes, toutes déjà en mémoire.","ok"); return; }
+    $("go").disabled=true; say("Scryfall : recherche de "+names.length+" cartes…");
     try{
-      await lookup(entries,say); show(entries);
+      await fetchCards(names,say); saveCache();
+      if(id!==runId||activeId!==deckId) return;
+      link(entries); L=render(entries); persistDeck(d,L);
       var miss=entries.filter(function(e){return !e.card}).length;
       say(miss?(miss+" carte(s) introuvable(s)."):"Toutes les cartes ont été trouvées.",miss?"warn":"ok");
     }catch(e){
-      say("Scryfall est injoignable ("+(e&&e.message||"erreur réseau")+").","warn");
-    }finally{ btn.disabled=false; }
-  });
+      if(id===runId) say("Scryfall est injoignable ("+(e&&e.message||"erreur réseau")+"). Les cartes déjà connues restent affichées.","warn");
+    }finally{ if(id===runId) $("go").disabled=false; }
+  }
+
+  /* ---------- écrans ---------- */
+  var PILL={legal:"Légal",illegal:"Illégal",unknown:"À vérifier",none:"Non analysé"};
+  function renderHome(){
+    var ul=$("deckList"); ul.textContent="";
+    var list=decks.slice().sort(function(a,b){return (b.updated||0)-(a.updated||0)});
+    list.forEach(function(d){
+      var li=el("li"), b=el("button"); b.type="button";
+      var left=el("span","dname",d.name||"Sans nom");
+      left.appendChild(el("span","dmeta",(d.legal?d.legal.n+" cartes":"Pas encore analysé")+" · "+new Date(d.updated||Date.now()).toLocaleDateString("fr-FR")));
+      b.appendChild(left);
+      var s=d.legal?d.legal.s:"none"; b.appendChild(el("span","pill "+s,PILL[s]));
+      b.addEventListener("click",function(){ location.hash="d-"+d.id; });
+      li.appendChild(b); ul.appendChild(li);
+    });
+    $("homeNote").textContent=decks.length?"Touche un deck pour l'ouvrir.":"Aucun deck pour l'instant. Crée ton premier deck avec « + Nouveau deck ».";
+  }
+  function route(){
+    var h=location.hash.replace(/^#/,""), m=h.match(/^d-(.+)$/), d=m&&decks.filter(function(x){return x.id===m[1]})[0];
+    resetDel(); runId++;
+    if(d){
+      activeId=d.id; $("home").hidden=true; $("deckView").hidden=false;
+      $("deckName").value=d.name; $("list").value=d.list; $("go").disabled=false; say(""); $("saved").textContent="";
+      clearResults(); window.scrollTo(0,0);
+      if(d.list.trim()) analyse(); else say("Colle une liste de cartes pour commencer.");
+    } else {
+      activeId=null; $("deckView").hidden=true; $("home").hidden=false; renderHome(); window.scrollTo(0,0);
+    }
+  }
+  function newDeck(){
+    var d={id:"x"+Date.now().toString(36)+Math.random().toString(36).slice(2,5),name:"Nouveau deck",list:"",updated:Date.now(),legal:null};
+    decks.push(d); saveDecks(); location.hash="d-"+d.id;
+    setTimeout(function(){ var n=$("deckName"); n.focus(); n.select(); },50);
+  }
+  var armed=false, armT;
+  function resetDel(){ armed=false; clearTimeout(armT); var b=$("del"); b.textContent="Supprimer ce deck"; b.classList.remove("arm"); }
+  function goHome(){ if(location.hash&&location.hash!=="#") location.hash=""; else route(); }
+  function delDeck(){
+    if(!armed){ armed=true; var b=$("del"); b.textContent="Touche encore pour confirmer"; b.classList.add("arm"); armT=setTimeout(resetDel,4000); return; }
+    decks=decks.filter(function(d){return d.id!==activeId}); saveDecks(); resetDel(); goHome();
+  }
+
+  /* ---------- démarrage ---------- */
+  decks=read(DK,[]); cache=read(CK,{});
+  if(!Array.isArray(decks)) decks=[];
+  if(!cache||typeof cache!=="object") cache={};
+  if(!storeOK) $("storeWarn").hidden=false;
+  $("boot").hidden=true;
+  var saveT;
+  $("list").addEventListener("input",function(){ var d=cur(); if(!d) return; d.list=$("list").value; clearTimeout(saveT); saveT=setTimeout(function(){ d.updated=Date.now(); saveDecks(); stamp(d); },300); });
+  $("deckName").addEventListener("input",function(){ var d=cur(); if(!d) return; d.name=$("deckName").value.trim()||"Sans nom"; d.updated=Date.now(); saveDecks(); stamp(d); });
+  $("go").addEventListener("click",analyse);
+  $("newDeck").addEventListener("click",newDeck);
+  $("back").addEventListener("click",goHome);
+  $("del").addEventListener("click",delDeck);
+  window.addEventListener("hashchange",route);
+  route();
 })();
 </script>
 </body></html>

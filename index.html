@@ -19,7 +19,7 @@ h2{font-size:17px;margin:16px 0 8px}
 h2:first-child{margin-top:0}
 .box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px}
 label.l{display:block;font-size:14px;color:var(--muted);margin:0 0 4px}
-input[type=text],select{width:100%;font:inherit;font-size:16px;min-height:44px;padding:8px 10px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px}
+input[type=text],input[type=number],select{width:100%;font:inherit;font-size:16px;min-height:44px;padding:8px 10px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px}
 textarea{width:100%;min-height:200px;resize:vertical;font:16px/1.4 ui-monospace,Menlo,Consolas,monospace;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px}
 button{font:inherit;font-weight:600;min-height:44px;padding:10px 18px;border-radius:6px;border:0;background:var(--accent);color:var(--accent-ink);cursor:pointer}
 button:disabled{opacity:.5}
@@ -140,6 +140,21 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
 .ids{display:inline-flex;gap:3px;flex:0 0 auto;align-items:center}
 .idline{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:14px;margin-bottom:12px}
 .idline .note{margin:0}
+.chip.mdfc{background:transparent;border:1px dashed var(--muted);color:var(--muted)}
+.grow{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.gtop{display:flex;flex-direction:column;min-width:0}
+.gname{font-weight:600;overflow-wrap:anywhere}
+.gstat{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.gstat.ok{color:var(--ok);font-weight:600}
+.gtrack{grid-column:1/-1;height:10px;background:var(--line);border-radius:3px;overflow:hidden}
+.gfill{height:100%;background:var(--accent)}
+.gfill.ok{background:var(--ok)}
+.gin{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--muted)}
+.gin input{width:76px;text-align:center}
+.gdel{min-height:44px;min-width:44px;padding:0;background:transparent;color:var(--muted);border:1px solid var(--line);font-size:18px}
+.addlabel{display:flex;gap:8px;margin-top:10px}
+.addlabel input{flex:1;min-width:0}
+.cnt{font-weight:500;color:var(--muted);font-size:13px}
 .settings{position:relative}
 .gear{min-width:44px;padding:0;background:var(--surface);color:var(--ink);border:1px solid var(--line);display:grid;place-items:center}
 .gear[aria-expanded="true"]{border-color:var(--accent);color:var(--accent)}
@@ -227,6 +242,11 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
         <h2>Couleurs : symboles et sources</h2>
         <div id="colors"></div>
         <p class="note">Symboles : symboles de mana dans les coûts des sorts. Sources : terrains qui produisent la couleur, d'après Scryfall. Un terrain à plusieurs couleurs compte pour chacune. Un symbole hybride compte pour ses deux couleurs. Les couleurs hors de l'identité du commandant ne sont pas affichées.</p>
+        <h2>Catégories <span class="cnt" id="catCount"></span></h2>
+        <div id="goalsCat"></div>
+        <h2>Tags <span class="cnt" id="tagCount"></span></h2>
+        <div id="goalsTag"></div>
+        <p class="note">Nombre de cartes du deck (commandant et liste principale) par catégorie ou tag. Fixe un objectif à atteindre : la barre se remplit jusqu'à l'objectif. Une carte avec plusieurs étiquettes compte dans chacune.</p>
       </div>
     </section>
 
@@ -249,7 +269,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   var CATS=["Ramp","Pioche","Removal","Balayage","Menace","Protection","Récursion","Tuteur","Utilitaire"];
   var TLABEL={planeswalker:"Planeswalkers",battle:"Batailles",room:"Chambres",creature:"Créatures",artifact:"Artefacts",enchantment:"Enchantements",instant:"Éphémères",sorcery:"Rituels",land:"Terrains",other:"Autres"};
   var TORDER=["planeswalker","battle","room","creature","artifact","enchantment","instant","sorcery","land","other"];
-  var VIEWNOTE={type:"",cat:"Catégorie : une par carte. Attribue-la avec « Étiqueter ».",tag:"Une carte avec plusieurs tags apparaît dans chacun de ses groupes. Attribue les tags avec « Étiqueter »."};
+  var VIEWNOTE={type:"Les MDFC dont une face est un terrain sont comptées dans Terrains (entre parenthèses) mais restent listées avec leur type de sort.",cat:"Une carte avec plusieurs catégories apparaît dans chacune. Attribue-les avec « Étiqueter ».",tag:"Une carte avec plusieurs tags apparaît dans chacun. Attribue-les avec « Étiqueter »."};
   var DK="deckv2.decks", CK="deckv2.cards", PK="deckv2.prefs", MAXAGE=7*864e5;
   var storeOK=true, decks=[], cache={}, prefs={theme:"auto",view:"type"}, activeId=null, entries=[], tab="saisie";
   var fold={}, editing=null, refocus=false, lastL=null;
@@ -269,15 +289,27 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     Array.prototype.forEach.call($("themeSeg").querySelectorAll("button"),function(b){ b.setAttribute("aria-pressed",b.getAttribute("data-theme-set")===prefs.theme?"true":"false"); });
   }
 
-  /* ---------- étiquettes (catégorie + tags) par deck ---------- */
-  function mget(name){ var d=cur(); var m=d&&d.meta&&d.meta[name.toLowerCase()]; return m?{cat:m.cat||"",tags:(m.tags||[]).slice()}:{cat:"",tags:[]}; }
+  /* ---------- étiquettes : catégories et tags, gérés de la même façon ---------- */
+  var KINDS={cat:{k:"cats",many:"Catégories",none:"Sans catégorie",presets:CATS},tag:{k:"tags",many:"Tags",none:"Sans tag",presets:[]}};
+  function mget(name){ var d=cur(), m=(d&&d.meta&&d.meta[name.toLowerCase()])||{};
+    return {cats:(m.cats||(m.cat?[m.cat]:[])).slice(),tags:(m.tags||[]).slice()}; }
   function mset(name,m){ var d=cur(); if(!d) return; d.meta=d.meta||{}; var k=name.toLowerCase();
-    if(!m.cat&&!m.tags.length) delete d.meta[k]; else d.meta[k]={cat:m.cat,tags:m.tags};
+    if(!m.cats.length&&!m.tags.length) delete d.meta[k]; else d.meta[k]={cats:m.cats,tags:m.tags};
     d.updated=Date.now(); saveDecks(); }
-  function allTags(){ var d=cur(), seen={}, out=[]; Object.keys((d&&d.meta)||{}).forEach(function(k){ (d.meta[k].tags||[]).forEach(function(t){ var l=t.toLowerCase(); if(!seen[l]){ seen[l]=1; out.push(t); } }); }); return out.sort(function(a,b){return a.localeCompare(b,"fr")}); }
-  function addTags(name,raw){
-    var m=mget(name), have={}; m.tags.forEach(function(t){ have[t.toLowerCase()]=1; });
-    raw.split(",").forEach(function(t){ t=t.replace(/\s+/g," ").trim().slice(0,30); if(t&&!have[t.toLowerCase()]){ have[t.toLowerCase()]=1; m.tags.push(t); } });
+  function normLabel(t){ return t.replace(/\s+/g," ").trim().slice(0,30); }
+  function registry(kind){ var d=cur(); return (d&&d.labels&&d.labels[kind])||[]; }
+  function knownLabels(kind){
+    var d=cur(), seen={}, out=[], key=KINDS[kind].k;
+    function add(t){ var l=t.toLowerCase(); if(!seen[l]){ seen[l]=1; out.push(t); } }
+    Object.keys((d&&d.meta)||{}).forEach(function(n){ var m=d.meta[n]; (m[key]||(key==="cats"&&m.cat?[m.cat]:[])).forEach(add); });
+    registry(kind).forEach(add);
+    return out.sort(function(a,b){return a.localeCompare(b,"fr")});
+  }
+  function canon(kind,t){ var l=t.toLowerCase(), pool=KINDS[kind].presets.concat(knownLabels(kind));
+    for(var i=0;i<pool.length;i++) if(pool[i].toLowerCase()===l) return pool[i]; return t; }
+  function addLabels(name,kind,raw){
+    var m=mget(name), key=KINDS[kind].k, have={}; m[key].forEach(function(t){ have[t.toLowerCase()]=1; });
+    raw.split(",").forEach(function(t){ t=normLabel(t); if(t&&!have[t.toLowerCase()]){ have[t.toLowerCase()]=1; m[key].push(canon(kind,t)); } });
     mset(name,m);
   }
 
@@ -314,11 +346,12 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
       any:/a deck can have (any number|up to \S+( \S+)?) of cards named/i.test(text),
       basic:/Basic/.test(tl),
       img:(c.image_uris&&c.image_uris.small)||(f.image_uris&&f.image_uris.small)||"",
-      uri:c.scryfall_uri||"",t:Date.now()};
+      uri:c.scryfall_uri||"",t:Date.now(),v:2,
+      mdfc:c.layout==="modal_dfc"&&faces.length>1&&!/Land/.test(faces[0].type_line||"")&&faces.slice(1).some(function(x){return /Land/.test(x.type_line||"")})};
   }
   function keep(c){ var s=slim(c); cache[c.name.toLowerCase()]=s; c.name.split(" // ").forEach(function(n){ cache[n.toLowerCase()]=s; }); return s; }
   function lookupCache(n){ var k=n.toLowerCase(); return cache[k]||cache[k.split(" // ")[0]]||null; }
-  function fresh(n){ var s=lookupCache(n); return !!s&&(Date.now()-(s.t||0)<MAXAGE); }
+  function fresh(n){ var s=lookupCache(n); return !!s&&s.v>=2&&(Date.now()-(s.t||0)<MAXAGE); }
   async function fetchCards(names,say){
     var missing=[];
     for(var i=0;i<names.length;i+=75){
@@ -428,21 +461,21 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     var deck=es.filter(function(e){ return e.card&&(e.board==="main"||e.board==="commander"); });
     var t=$("tiles"), cv=$("curve"), cb=$("colors"); t.textContent=""; cv.textContent=""; cb.textContent="";
     if(!deck.length){ $("curveNote").textContent="Aucune carte du deck trouvée sur Scryfall pour le moment."; return; }
-    var spells=0,lands=0,mvSum=0,curve=[0,0,0,0,0,0,0,0],pip={W:0,U:0,B:0,R:0,G:0},src={W:0,U:0,B:0,R:0,G:0};
+    var spells=0,lands=0,mdfc=0,mvSum=0,curve=[0,0,0,0,0,0,0,0],pip={W:0,U:0,B:0,R:0,G:0},src={W:0,U:0,B:0,R:0,G:0};
     deck.forEach(function(e){
       var c=e.card,q=e.qty;
       if(isLand(c)){ lands+=q; var seen={}; c.prod.forEach(function(x){ if(src[x]!==undefined&&!seen[x]){ seen[x]=1; src[x]+=q; } }); }
-      else { spells+=q; var mv=Math.round(c.cmc||0); mvSum+=mv*q; curve[Math.min(7,mv)]+=q; var p=pips(c.mc); COLORS.forEach(function(k){ pip[k]+=p[k]*q; }); }
+      else { spells+=q; if(c.mdfc) mdfc+=q; var mv=Math.round(c.cmc||0); mvSum+=mv*q; curve[Math.min(7,mv)]+=q; var p=pips(c.mc); COLORS.forEach(function(k){ pip[k]+=p[k]*q; }); }
     });
     var total=spells+lands, miss=es.filter(function(e){return !e.card&&(e.board==="main"||e.board==="commander")}).reduce(function(a,e){return a+e.qty},0);
-    [[spells?(mvSum/spells).toFixed(2).replace(".",","):"–","VM moyenne des sorts"],[spells,"sorts"],[lands+" · "+Math.round(100*lands/total)+"%","terrains"]].forEach(function(x){
+    [[spells?(mvSum/spells).toFixed(2).replace(".",","):"–","VM moyenne des sorts"],[spells,"sorts"],[(lands+mdfc)+" · "+Math.round(100*(lands+mdfc)/total)+"%",mdfc?("terrains ("+lands+" + "+mdfc+" MDFC)"):"terrains"]].forEach(function(x){
       var d=el("div","tile"); d.appendChild(el("b",null,String(x[0]))); d.appendChild(el("span",null,x[1])); t.appendChild(d); });
     var wrap=el("div","curve"); wrap.setAttribute("role","img"); wrap.setAttribute("aria-label","Nombre de sorts par valeur de mana");
     var mx=Math.max.apply(null,curve.concat([1]));
     curve.forEach(function(n,i){ var col=el("div","col"); col.appendChild(el("span","n",String(n)));
       var bar=el("div","bar"); bar.style.height=Math.round(110*n/mx)+"px"; col.appendChild(bar); col.appendChild(el("span","x",i===7?"7+":String(i))); wrap.appendChild(col); });
     cv.appendChild(wrap);
-    $("curveNote").textContent="Valeur de mana des sorts, terrains exclus. Deck = commandant + liste principale"+(miss?(" ("+miss+" carte(s) introuvable(s) exclue(s))."):".");
+    $("curveNote").textContent="Valeur de mana des sorts, terrains exclus. Deck = commandant + liste principale"+(miss?(" ("+miss+" carte(s) introuvable(s) exclue(s))."):".")+(mdfc?" Les MDFC avec une face terrain comptent comme sort et comme terrain.":"");
     var ident=identityOf(es), shown=ident===null?COLORS:ident;
     var head=el("div","idline"); head.appendChild(el("span",null,"Identité de couleur du deck"));
     if(ident===null) head.appendChild(el("span","note","inconnue : commandant absent ou introuvable, toutes les couleurs sont affichées"));
@@ -462,6 +495,68 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     if(!any) cb.appendChild(el("p","note",ident&&!ident.length?"Identité incolore : aucune couleur à afficher.":"Aucun symbole de couleur ni source détecté."));
   }
 
+  /* ---------- objectifs par catégorie / tag ---------- */
+  var focusGoal=null, goalT;
+  function countLabel(es,kind,label){
+    var key=KINDS[kind].k, l=label.toLowerCase(), n=0;
+    es.forEach(function(e){ if(e.board!=="main"&&e.board!=="commander") return; if(mget(e.name)[key].some(function(x){return x.toLowerCase()===l})) n+=e.qty; });
+    return n;
+  }
+  function goalKey(kind,label){ return kind+":"+label.toLowerCase(); }
+  function renderGoals(es){
+    var d=cur(); if(!d) return; d.goals=d.goals||{};
+    ["cat","tag"].forEach(function(kind){
+      var K=KINDS[kind], box=$(kind==="cat"?"goalsCat":"goalsTag"); box.textContent="";
+      var labels=knownLabels(kind), have={}; labels.forEach(function(l){ have[l.toLowerCase()]=1; });
+      Object.keys(d.goals).forEach(function(gk){ if(gk.indexOf(kind+":")===0){ var g=d.goals[gk]; if(g&&g.label&&!have[g.label.toLowerCase()]){ have[g.label.toLowerCase()]=1; labels.push(g.label); } } });
+      labels.sort(function(a,b){return a.localeCompare(b,"fr")});
+      var used=0, shown={};
+      labels.forEach(function(label){
+        var n=countLabel(es,kind,label), gk=goalKey(kind,label), g=d.goals[gk];
+        var inReg=registry(kind).some(function(x){return x.toLowerCase()===label.toLowerCase()});
+        if(!n&&!g&&!inReg) return;
+        if(n) used++; shown[label.toLowerCase()]=1;
+        var row=el("div","grow"), top=el("div","gtop"), stat=el("span","gstat");
+        top.appendChild(el("span","gname",label)); top.appendChild(stat); row.appendChild(top);
+        var inWrap=el("label","gin"); inWrap.appendChild(el("span",null,"Objectif"));
+        var inp=el("input"); inp.type="number"; inp.min="0"; inp.max="99"; inp.setAttribute("inputmode","numeric"); inp.setAttribute("aria-label","Objectif pour "+label); inp.value=(g&&g.n!=null)?g.n:""; inp.setAttribute("data-goal",gk);
+        inWrap.appendChild(inp);
+        if(!n){ var del=el("button","gdel","×"); del.type="button"; del.setAttribute("aria-label","Retirer "+label+" de la liste");
+          del.addEventListener("click",function(){ delete d.goals[gk]; d.labels=d.labels||{cat:[],tag:[]}; d.labels[kind]=registry(kind).filter(function(x){return x.toLowerCase()!==label.toLowerCase()}); saveDecks(); renderGoals(entries); }); inWrap.appendChild(del); }
+        row.appendChild(inWrap);
+        var tr=el("div","gtrack"), fill=el("div","gfill"); tr.appendChild(fill); row.appendChild(tr);
+        function paint(){
+          var t=inp.value===""?null:Math.max(0,Math.min(99,parseInt(inp.value,10)||0));
+          if(t===null){ stat.textContent=n+" carte"+(n>1?"s":""); tr.hidden=true; stat.className="gstat"; return; }
+          tr.hidden=false; fill.style.width=Math.min(100,Math.round(100*n/Math.max(t,1)))+"%"; fill.className="gfill"+(n>=t?" ok":"");
+          stat.className="gstat"+(n>=t?" ok":"");
+          stat.textContent=n+" / "+t+(n>t?" · +"+(n-t):(n===t?" · atteint":" · manque "+(t-n)));
+        }
+        inp.addEventListener("input",function(){
+          var t=inp.value===""?null:Math.max(0,Math.min(99,parseInt(inp.value,10)||0));
+          if(t===null) delete d.goals[gk]; else d.goals[gk]={label:label,n:t};
+          paint(); d.updated=Date.now(); saveDecks();
+        });
+        paint(); box.appendChild(row);
+        if(focusGoal===gk){ focusGoal=null; setTimeout(function(){ inp.focus(); },0); }
+      });
+      $(kind+"Count").textContent="· "+used+" utilisée"+(used>1?"s":"");
+      if(!Object.keys(shown).length) box.appendChild(el("p","note","Aucune "+(kind==="cat"?"catégorie":"tag")+" utilisé"+(kind==="cat"?"e":"")+" pour l'instant. Étiquette des cartes dans l'onglet Liste, ou ajoute-en une ci-dessous pour lui fixer un objectif."));
+      var addBox=el("div","addlabel"), ai=el("input"); ai.type="text"; ai.maxLength=30; ai.autocomplete="off";
+      ai.placeholder=kind==="cat"?"Ajouter une catégorie":"Ajouter un tag"; ai.setAttribute("aria-label",ai.placeholder);
+      var ab=el("button",null,"Ajouter"); ab.type="button";
+      function reg(t){ t=normLabel(t); if(!t) return; t=canon(kind,t); d.labels=d.labels||{cat:[],tag:[]};
+        if(!registry(kind).some(function(x){return x.toLowerCase()===t.toLowerCase()})) d.labels[kind]=registry(kind).concat([t]);
+        focusGoal=goalKey(kind,t); saveDecks(); renderGoals(entries); }
+      ab.addEventListener("click",function(){ reg(ai.value); });
+      ai.addEventListener("keydown",function(ev){ if(ev.key==="Enter"){ ev.preventDefault(); reg(ai.value); } });
+      addBox.appendChild(ai); addBox.appendChild(ab); box.appendChild(addBox);
+      var rest=K.presets.filter(function(t){ return !shown[t.toLowerCase()]; });
+      if(rest.length){ var sg=el("div","sugg"); sg.style.marginTop="8px";
+        rest.forEach(function(t){ var b=el("button",null,"+ "+t); b.type="button"; b.addEventListener("click",function(){ reg(t); }); sg.appendChild(b); }); box.appendChild(sg); }
+    });
+  }
+
   /* ---------- liste : regroupement, repli, étiquettes ---------- */
   function primary(tl){
     var f=tl.split(" // ")[0];
@@ -474,14 +569,13 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     function add(g,e){ if(!map[g]){ map[g]=[]; order.push(g); } map[g].push(e); }
     list.forEach(function(e){
       if(view==="type") add(e.card?TLABEL[primary(e.card.tl)]:"Introuvables",e);
-      else if(view==="cat") add(mget(e.name).cat||"Sans catégorie",e);
-      else { var t=mget(e.name).tags; if(!t.length) add("Sans tag",e); else t.forEach(function(x){ add(x,e); }); }
+      else { var labs=mget(e.name)[KINDS[view].k]; if(!labs.length) add(KINDS[view].none,e); else labs.forEach(function(x){ add(x,e); }); }
     });
-    var last=view==="type"?"Introuvables":(view==="cat"?"Sans catégorie":"Sans tag");
+    var last=view==="type"?"Introuvables":KINDS[view].none;
+    var tl=TORDER.map(function(k){return TLABEL[k]});
     order.sort(function(a,b){
       if(a===last) return 1; if(b===last) return -1;
-      if(view==="type"){ var ia=TORDER.map(function(k){return TLABEL[k]}).indexOf(a), ib=TORDER.map(function(k){return TLABEL[k]}).indexOf(b); return ia-ib; }
-      if(view==="cat") return CATS.indexOf(a)-CATS.indexOf(b);
+      if(view==="type") return tl.indexOf(a)-tl.indexOf(b);
       return a.localeCompare(b,"fr");
     });
     return order.map(function(g){ return {name:g,items:map[g]}; });
@@ -496,33 +590,31 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   }
   function chipsFor(e){
     var m=mget(e.name), box=el("div","chips");
-    if(m.cat) box.appendChild(el("span","chip cat",m.cat));
+    if(e.card&&e.card.mdfc) box.appendChild(el("span","chip mdfc","MDFC · terrain"));
+    m.cats.forEach(function(t){ box.appendChild(el("span","chip cat",t)); });
     m.tags.forEach(function(t){ box.appendChild(el("span","chip",t)); });
     return box.childNodes.length?box:null;
   }
-  function editor(e){
-    var m=mget(e.name), box=el("div","edit");
-    var l1=el("label","l","Catégorie"); var sel=el("select"); sel.setAttribute("aria-label","Catégorie de "+e.name);
-    var o0=el("option",null,"Aucune"); o0.value=""; sel.appendChild(o0);
-    CATS.forEach(function(c){ var o=el("option",null,c); o.value=c; if(c===m.cat) o.selected=true; sel.appendChild(o); });
-    sel.addEventListener("change",function(){ var mm=mget(e.name); mm.cat=sel.value; mset(e.name,mm); renderList(); });
-    var g1=el("div"); g1.appendChild(l1); g1.appendChild(sel); box.appendChild(g1);
-    var g2=el("div"); g2.appendChild(el("label","l","Tags"));
-    if(m.tags.length){ var chips=el("div","chips"); chips.style.marginBottom="8px";
-      m.tags.forEach(function(t){ var c=el("span","chip",t); var x=el("button",null,"×"); x.type="button"; x.setAttribute("aria-label","Retirer le tag "+t);
-        x.addEventListener("click",function(){ var mm=mget(e.name); mm.tags=mm.tags.filter(function(y){return y!==t}); mset(e.name,mm); renderList(); }); c.appendChild(x); chips.appendChild(c); });
-      g2.appendChild(chips); }
-    var ar=el("div","addrow"), inp=el("input"); inp.type="text"; inp.maxLength=60; inp.placeholder="Nouveau tag (virgule pour plusieurs)"; inp.setAttribute("aria-label","Ajouter un tag à "+e.name); inp.autocomplete="off"; inp.setAttribute("data-taginput","1");
+  function labelBlock(e,kind){
+    var K=KINDS[kind], m=mget(e.name), g=el("div"); g.appendChild(el("label","l",K.many));
+    if(m[K.k].length){ var chips=el("div","chips"); chips.style.marginBottom="8px";
+      m[K.k].forEach(function(t){ var c=el("span","chip"+(kind==="cat"?" cat":""),t); var x=el("button",null,"×"); x.type="button"; x.setAttribute("aria-label","Retirer "+t);
+        x.addEventListener("click",function(){ var mm=mget(e.name); mm[K.k]=mm[K.k].filter(function(y){return y!==t}); mset(e.name,mm); renderList(); }); c.appendChild(x); chips.appendChild(c); });
+      g.appendChild(chips); }
+    var ar=el("div","addrow"), inp=el("input"); inp.type="text"; inp.maxLength=60; inp.autocomplete="off";
+    inp.placeholder="Ajouter (virgule pour plusieurs)"; inp.setAttribute("aria-label","Ajouter à "+e.name+" : "+K.many.toLowerCase()); inp.setAttribute("data-taginput",kind);
     var add=el("button","add","Ajouter"); add.type="button";
-    function go(){ if(!inp.value.trim()) return; addTags(e.name,inp.value); refocus=true; renderList(); }
+    function go(){ if(!inp.value.trim()) return; addLabels(e.name,kind,inp.value); refocus=kind; renderList(); }
     add.addEventListener("click",go); inp.addEventListener("keydown",function(ev){ if(ev.key==="Enter"){ ev.preventDefault(); go(); } });
-    ar.appendChild(inp); ar.appendChild(add); g2.appendChild(ar);
-    var have={}; m.tags.forEach(function(t){ have[t.toLowerCase()]=1; });
-    var sug=allTags().filter(function(t){ return !have[t.toLowerCase()]; });
-    if(sug.length){ var sg=el("div","sugg"); sg.style.marginTop="8px"; sug.forEach(function(t){ var b=el("button",null,"+ "+t); b.type="button"; b.addEventListener("click",function(){ addTags(e.name,t); renderList(); }); sg.appendChild(b); }); g2.appendChild(sg); }
-    box.appendChild(g2);
-    return box;
+    ar.appendChild(inp); ar.appendChild(add); g.appendChild(ar);
+    var have={}, pool=[], seenP={}; m[K.k].forEach(function(t){ have[t.toLowerCase()]=1; });
+    K.presets.concat(knownLabels(kind)).forEach(function(t){ var l=t.toLowerCase(); if(!have[l]&&!seenP[l]){ seenP[l]=1; pool.push(t); } });
+    if(pool.length){ var sg=el("div","sugg"); sg.style.marginTop="8px";
+      pool.forEach(function(t){ var b=el("button",null,"+ "+t); b.type="button"; b.addEventListener("click",function(){ addLabels(e.name,kind,t); renderList(); }); sg.appendChild(b); });
+      g.appendChild(sg); }
+    return g;
   }
+  function editor(e){ var box=el("div","edit"); box.appendChild(labelBlock(e,"cat")); box.appendChild(labelBlock(e,"tag")); return box; }
   function cardRow(e){
     var li=el("li","card"+(e.card?"":" miss")), c=e.card;
     var img=el("img"); img.alt=""; img.loading="lazy"; if(c&&c.img) img.src=c.img; li.appendChild(img);
@@ -554,7 +646,8 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     [[deckN,"deck, commandant compris"],[q("side"),"réserve"],[q("maybe"),"à envisager"],[miss,"introuvables"]].forEach(function(p){
       var d=el("div"); d.appendChild(el("b",null,String(p[0]))); d.appendChild(document.createTextNode(p[1])); sum.appendChild(d); });
     Array.prototype.forEach.call($("viewSeg").querySelectorAll("button"),function(b){ b.setAttribute("aria-pressed",b.getAttribute("data-view")===prefs.view?"true":"false"); });
-    $("viewNote").textContent=VIEWNOTE[prefs.view]; $("viewNote").hidden=!VIEWNOTE[prefs.view];
+    var mdfcAll=qsum(es.filter(function(e){return e.card&&e.card.mdfc}));
+    var vn=prefs.view==="type"?(mdfcAll?VIEWNOTE.type:""):VIEWNOTE[prefs.view]; $("viewNote").textContent=vn; $("viewNote").hidden=!vn;
     BORDER.forEach(function(b){
       var list=es.filter(function(e){return e.board===b}); if(!list.length) return;
       var def=(b==="side"||b==="maybe");
@@ -563,14 +656,17 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
         var ul=el("ul","list"); list.forEach(function(e){ ul.appendChild(cardRow(e)); }); sec.appendChild(ul);
       } else {
         groupsFor(list,prefs.view).forEach(function(g){
-          var grp=mkDetails("grp","g|"+b+"|"+prefs.view+"|"+g.name,false,[el("span",null,g.name),el("span","cnt","· "+qsum(g.items))]);
+          var cnt=qsum(g.items), ctext="· "+cnt;
+          if(prefs.view==="type"&&g.name===TLABEL.land){ var md=qsum(list.filter(function(x){return x.card&&x.card.mdfc})); if(md) ctext="· "+(cnt+md)+" ("+cnt+" + "+md+" MDFC)"; }
+          var grp=mkDetails("grp","g|"+b+"|"+prefs.view+"|"+g.name,false,[el("span",null,g.name),el("span","cnt",ctext)]);
           var ul=el("ul","list"); g.items.forEach(function(e){ ul.appendChild(cardRow(e)); }); grp.appendChild(ul); sec.appendChild(grp);
         });
       }
       out.appendChild(sec);
     });
     updateFoldBtn();
-    if(refocus){ refocus=false; var i=out.querySelector("[data-taginput]"); if(i) i.focus(); }
+    if(refocus){ var kf=refocus; refocus=false; var i=out.querySelector('[data-taginput="'+kf+'"]'); if(i) i.focus(); }
+    renderGoals(entries);
   }
 
   /* ---------- rendu global ---------- */
@@ -683,6 +779,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     Array.prototype.forEach.call(all,function(d){ fold[d.getAttribute("data-key")]=anyOpen; });
     renderList();
   });
+  window.addEventListener("pagehide",function(){ clearTimeout(saveT); var d=cur(); if(d&&!$("deckView").hidden){ d.list=$("list").value; saveDecks(); } });
   window.addEventListener("hashchange",route);
   route();
 })();

@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Deck Commander – étape 1</title>
+<style>
+:root{--bg:#f4f5f6;--surface:#fff;--ink:#17202a;--muted:#5d6975;--line:#d9dee3;--accent:#2457c5;--accent-ink:#fff;--warn:#a4501b;--ok:#1d7a4d}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#111418;--surface:#1a1f25;--ink:#e8ecf0;--muted:#98a3ae;--line:#2c343d;--accent:#7aa2f7;--accent-ink:#0d1117;--warn:#f0a272;--ok:#5ccf93;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif;
+  padding:max(16px,env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) max(32px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left))}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+h1{font-size:22px;margin:0}
+.sub{color:var(--muted);margin:4px 0 0;font-size:14px}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px}
+textarea{width:100%;min-height:200px;resize:vertical;font:16px/1.4 ui-monospace,Menlo,Consolas,monospace;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:10px}
+button{font:inherit;font-weight:600;min-height:44px;padding:10px 18px;border-radius:6px;border:0;background:var(--accent);color:var(--accent-ink);cursor:pointer}
+button:disabled{opacity:.5}
+.row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:12px}
+.status{font-size:14px;color:var(--muted);margin:0;flex:1 1 200px}
+.status.warn{color:var(--warn)}.status.ok{color:var(--ok)}
+.sum{display:flex;gap:16px;flex-wrap:wrap;font-size:14px}
+.sum b{font-size:20px;display:block}
+.list{list-style:none;margin:0;padding:0}
+.card{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.card:last-child{border-bottom:0}
+.card img{width:44px;height:auto;border-radius:3px;display:block;background:var(--line);aspect-ratio:488/680}
+.card .n{font-weight:600;overflow-wrap:anywhere}
+.card .t{font-size:13px;color:var(--muted);overflow-wrap:anywhere}
+.card .r{text-align:right;font-size:13px;white-space:nowrap}
+.card.miss .n{color:var(--warn)}
+.board{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:14px 0 2px}
+a{color:var(--accent)}
+.foot{font-size:12px;color:var(--muted)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style></head><body>
+<div class="wrap">
+  <header>
+    <h1>Deck Commander</h1>
+    <p class="sub">Étape 1 : lecture de la liste et recherche des cartes sur Scryfall.</p>
+  </header>
+
+  <section class="box">
+    <label for="list" style="font-size:14px;color:var(--muted)">Colle ta liste (ex. « 1 Sol Ring » ou export Moxfield / Archidekt)</label>
+    <textarea id="list" spellcheck="false" autocapitalize="off" placeholder="Commander&#10;1 Atraxa, Praetors' Voice&#10;&#10;Deck&#10;1 Sol Ring&#10;1 Arcane Signet&#10;1 Command Tower&#10;30 Forest"></textarea>
+    <div class="row">
+      <button type="button" id="go">Chercher sur Scryfall</button>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section class="box" id="res" hidden>
+    <div class="sum" id="sum"></div>
+    <div id="out"></div>
+  </section>
+
+  <p class="foot">Données et images : <a href="https://scryfall.com" rel="noopener">Scryfall</a>. Non affilié à Scryfall ni à Wizards of the Coast.</p>
+</div>
+
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  var HEAD={commander:"commander",commandant:"commander",companion:"companion",deck:"main",mainboard:"main",main:"main",sideboard:"side",side:"side","réserve":"side",reserve:"side",maybeboard:"maybe"};
+  var BLABEL={commander:"Commandant",companion:"Compagnon",main:"Deck",side:"Réserve",maybe:"À envisager"};
+
+  /* ---- lecture de la liste ---- */
+  function parse(text){
+    var out=[], idx={}, board="main";
+    text.split(/\r?\n/).forEach(function(raw){
+      var line=raw.replace(/^\s*\/\/\s*/,"").trim();
+      if(!line) return;
+      var h=HEAD[line.replace(/:$/,"").toLowerCase()];
+      if(h){ board=h; return; }
+      var sb=line.match(/^SB:\s*(.*)$/i), b=board; if(sb){ b="side"; line=sb[1]; }
+      line=line.replace(/\[[^\]]*\]/g,"").replace(/#\S+/g,"").replace(/\*[^*]*\*/g,"").trim();
+      var m=line.match(/^(\d+)\s*x?\s+(.+)$/i), qty=1, name=line;
+      if(m){ qty=parseInt(m[1],10); name=m[2]; }
+      name=name.replace(/\s+\([A-Za-z0-9]{2,6}\)(\s+[\w★-]+)?\s*$/,"").replace(/\s*\/\/\s*/g," // ").trim();
+      if(!name||qty<1) return;
+      var key=b+"|"+name.toLowerCase();
+      if(idx[key]!==undefined) out[idx[key]].qty+=qty; else { idx[key]=out.length; out.push({qty:qty,name:name,board:b,card:null}); }
+    });
+    return out;
+  }
+
+  /* ---- Scryfall ---- */
+  function sleep(ms){ return new Promise(function(r){ setTimeout(r,ms); }); }
+  async function lookup(entries,onProgress){
+    var names=[], seen={};
+    entries.forEach(function(e){ var k=e.name.toLowerCase(); if(!seen[k]){ seen[k]=1; names.push(e.name); } });
+    var byName={}, missing=[];
+    function keep(c){
+      byName[c.name.toLowerCase()]=c;
+      c.name.split(" // ").forEach(function(n){ if(!byName[n.toLowerCase()]) byName[n.toLowerCase()]=c; });
+    }
+    for(var i=0;i<names.length;i+=75){
+      var chunk=names.slice(i,i+75);
+      onProgress("Scryfall : cartes "+(i+1)+" à "+Math.min(i+75,names.length)+" sur "+names.length+"…");
+      var res=await fetch("https://api.scryfall.com/cards/collection",{method:"POST",
+        headers:{"Content-Type":"application/json","Accept":"application/json"},
+        body:JSON.stringify({identifiers:chunk.map(function(n){return {name:n}})})});
+      if(res.status===429) throw new Error("trop de requêtes, réessaie dans une minute");
+      if(!res.ok) throw new Error("erreur "+res.status);
+      var j=await res.json();
+      (j.data||[]).forEach(keep);
+      (j.not_found||[]).forEach(function(nf){ missing.push(nf.name); });
+      if(i+75<names.length) await sleep(120);
+    }
+    var tries=missing.slice(0,20);
+    for(var m=0;m<tries.length;m++){
+      onProgress("Scryfall : recherche approchante de « "+tries[m]+" »…");
+      await sleep(120);
+      try{
+        var r=await fetch("https://api.scryfall.com/cards/named?fuzzy="+encodeURIComponent(tries[m]));
+        if(r.ok){ var c=await r.json(); keep(c); byName[tries[m].toLowerCase()]=c; }
+      }catch(e){}
+    }
+    entries.forEach(function(e){ e.card=byName[e.name.toLowerCase()]||byName[e.name.split(" // ")[0].toLowerCase()]||null; });
+  }
+
+  /* ---- affichage ---- */
+  function face(c){ return (c.card_faces&&c.card_faces[0])||c; }
+  function thumb(c){ var f=face(c); return (c.image_uris&&c.image_uris.small)||(f.image_uris&&f.image_uris.small)||""; }
+  function el(tag,cls,text){ var e=document.createElement(tag); if(cls) e.className=cls; if(text!==undefined) e.textContent=text; return e; }
+  function show(entries){
+    var total=0,found=0,miss=0,distinctFound=0;
+    entries.forEach(function(e){ total+=e.qty; if(e.card){found+=e.qty;distinctFound++;} else miss+=e.qty; });
+    var sum=$("sum"); sum.textContent="";
+    [[total,"cartes au total"],[entries.length,"cartes différentes"],[found,"trouvées"],[miss,"introuvables"]].forEach(function(p){
+      var d=el("div"); d.appendChild(el("b",null,String(p[0]))); d.appendChild(document.createTextNode(p[1])); sum.appendChild(d);
+    });
+    var out=$("out"); out.textContent="";
+    ["commander","companion","main","side","maybe"].forEach(function(b){
+      var list=entries.filter(function(e){return e.board===b}); if(!list.length) return;
+      out.appendChild(el("div","board",BLABEL[b]+" · "+list.reduce(function(a,e){return a+e.qty},0)));
+      var ul=el("ul","list");
+      list.forEach(function(e){
+        var li=el("li","card"+(e.card?"":" miss")), c=e.card;
+        var img=el("img"); img.alt=""; img.loading="lazy"; if(c&&thumb(c)) img.src=thumb(c); li.appendChild(img);
+        var mid=el("div");
+        if(c){
+          var a=el("a","n",c.name); a.href=c.scryfall_uri||"https://scryfall.com"; a.rel="noopener"; a.style.textDecoration="none"; a.style.color="inherit";
+          mid.appendChild(a); mid.appendChild(el("div","t",face(c).type_line||c.type_line||""));
+        } else { mid.appendChild(el("div","n",e.name)); mid.appendChild(el("div","t","Introuvable sur Scryfall. Vérifie l'orthographe.")); }
+        li.appendChild(mid);
+        var r=el("div","r"); r.appendChild(el("div",null,e.qty+"×")); r.appendChild(el("div",null,c?(face(c).mana_cost||c.mana_cost||""):"")); li.appendChild(r);
+        ul.appendChild(li);
+      });
+      out.appendChild(ul);
+    });
+    $("res").hidden=false;
+  }
+
+  function say(msg,cls){ var s=$("status"); s.textContent=msg; s.className="status"+(cls?" "+cls:""); }
+  $("go").addEventListener("click",async function(){
+    var entries=parse($("list").value);
+    if(!entries.length){ say("Aucune carte lue. Colle une liste, une carte par ligne.","warn"); return; }
+    var btn=$("go"); btn.disabled=true; say("Scryfall : recherche de "+entries.length+" cartes…");
+    try{
+      await lookup(entries,say); show(entries);
+      var miss=entries.filter(function(e){return !e.card}).length;
+      say(miss?(miss+" carte(s) introuvable(s)."):"Toutes les cartes ont été trouvées.",miss?"warn":"ok");
+    }catch(e){
+      say("Scryfall est injoignable ("+(e&&e.message||"erreur réseau")+").","warn");
+    }finally{ btn.disabled=false; }
+  });
+})();
+</script>
+</body></html>

@@ -42,7 +42,7 @@ a{color:var(--accent)}
     <textarea id="list" spellcheck="false" autocapitalize="off" placeholder="Commander&#10;1 Atraxa, Praetors' Voice&#10;&#10;Deck&#10;1 Sol Ring&#10;1 Arcane Signet&#10;1 Command Tower&#10;30 Forest"></textarea>
     <div class="row">
       <button type="button" id="go">Chercher sur Scryfall</button>
-      <p class="status" id="status" role="status" aria-live="polite"></p>
+      <p class="status warn" id="status" role="status" aria-live="polite">Le script de la page ne s'est pas lancé : le bouton ne fonctionnera pas. Ouvre le fichier dans un vrai navigateur (Chrome, Safari, Firefox), pas dans un aperçu.</p>
     </div>
   </section>
 
@@ -149,6 +149,7 @@ a{color:var(--accent)}
   }
 
   function say(msg,cls){ var s=$("status"); s.textContent=msg; s.className="status"+(cls?" "+cls:""); }
+  say("Prêt. Colle ta liste, puis touche le bouton.");
   $("go").addEventListener("click",async function(){
     var entries=parse($("list").value);
     if(!entries.length){ say("Aucune carte lue. Colle une liste, une carte par ligne.","warn"); return; }

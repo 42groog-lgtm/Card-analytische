@@ -166,7 +166,13 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
 .settings{position:relative}
 .gear{min-width:44px;padding:0;background:var(--surface);color:var(--ink);border:1px solid var(--line);display:grid;place-items:center}
 .gear[aria-expanded="true"]{border-color:var(--accent);color:var(--accent)}
-.setpanel{position:absolute;right:0;top:calc(100% + 8px);z-index:10;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;min-width:250px;box-shadow:0 8px 28px rgba(0,0,0,.25)}
+.setpanel{position:absolute;right:0;top:calc(100% + 8px);z-index:10;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;width:min(340px,calc(100vw - 32px));max-height:min(78vh,620px);overflow:auto;box-shadow:0 8px 28px rgba(0,0,0,.25)}
+.sethead.sub{margin-top:16px;padding-top:12px;border-top:1px solid var(--line)}
+.setnote{font-size:12px;color:var(--muted);margin:-4px 0 10px}
+.setpanel .setlab{margin-top:10px}
+.chks{display:flex;flex-direction:column}
+.chk{display:flex;align-items:center;gap:10px;min-height:44px;font-size:15px;cursor:pointer}
+.chk input{width:22px;height:22px;accent-color:var(--accent);flex:0 0 auto}
 .sethead{font-weight:700;margin:0 0 10px}
 .setlab{font-size:13px;color:var(--muted);margin:0 0 6px}
 .foot{font-size:12px;color:var(--muted)}
@@ -186,6 +192,39 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
           <button type="button" data-theme-set="light" aria-pressed="false">Clair</button>
           <button type="button" data-theme-set="dark" aria-pressed="false">Sombre</button>
         </div>
+        <p class="sethead sub">Listes · valeurs par défaut</p>
+        <p class="setnote">Appliquées à l'ouverture d'un deck. Les boutons de l'onglet Liste ne changent l'affichage que ponctuellement.</p>
+        <p class="setlab" id="defViewLab">Regroupement</p>
+        <div class="seg" role="group" aria-labelledby="defViewLab" id="defView">
+          <button type="button" data-def-view="type" aria-pressed="true">Type</button>
+          <button type="button" data-def-view="cat" aria-pressed="false">Catégorie</button>
+          <button type="button" data-def-view="tag" aria-pressed="false">Tag</button>
+        </div>
+        <p class="setlab" id="defDispLab">Affichage</p>
+        <div class="seg" role="group" aria-labelledby="defDispLab" id="defDisp">
+          <button type="button" data-def-disp="text" aria-pressed="false">Texte</button>
+          <button type="button" data-def-disp="list" aria-pressed="true">Liste</button>
+          <button type="button" data-def-disp="grid" aria-pressed="false">Images</button>
+        </div>
+        <div id="defColWrap" hidden>
+          <p class="setlab" id="defColsLab">Images par ligne</p>
+          <div class="seg" role="group" aria-labelledby="defColsLab" id="defCols">
+            <button type="button" data-def-cols="1" aria-pressed="false">1</button>
+            <button type="button" data-def-cols="2" aria-pressed="true">2</button>
+            <button type="button" data-def-cols="3" aria-pressed="false">3</button>
+            <button type="button" data-def-cols="4" aria-pressed="false">4</button>
+          </div>
+        </div>
+        <p class="setlab">Repliés par défaut</p>
+        <div class="chks">
+          <label class="chk"><input type="checkbox" data-deffold="commander"> Commandant</label>
+          <label class="chk"><input type="checkbox" data-deffold="companion"> Compagnon</label>
+          <label class="chk"><input type="checkbox" data-deffold="main"> Deck</label>
+          <label class="chk"><input type="checkbox" data-deffold="side"> Réserve</label>
+          <label class="chk"><input type="checkbox" data-deffold="maybe"> À envisager</label>
+          <label class="chk"><input type="checkbox" id="defGroups"> Groupes (type, catégorie, tag)</label>
+        </div>
+        <button type="button" class="ghost" id="defReset" style="margin-top:12px;min-height:40px;padding:6px 12px;font-size:14px">Rétablir les valeurs d'origine</button>
       </div>
     </div>
   </div>
@@ -290,9 +329,11 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   var TORDER=["planeswalker","battle","room","creature","artifact","enchantment","instant","sorcery","land","other"];
   var VIEWNOTE={type:"Les MDFC dont une face est un terrain sont comptées dans Terrains (entre parenthèses) mais restent listées avec leur type de sort.",cat:"Une carte avec plusieurs catégories apparaît dans chacune. Attribue-les avec « Étiqueter ».",tag:"Une carte avec plusieurs tags apparaît dans chacun. Attribue-les avec « Étiqueter »."};
   var DK="deckv2.decks", CK="deckv2.cards", PK="deckv2.prefs", MAXAGE=7*864e5;
-  var storeOK=true, decks=[], cache={}, prefs={theme:"auto",view:"type",display:"list",cols:2}, activeId=null, entries=[], tab="saisie";
+  var storeOK=true, decks=[], cache={}, prefs={theme:"auto",def:factoryDef()}, live={view:"type",display:"list",cols:2}, activeId=null, entries=[], tab="saisie";
   var fold={}, editing=null, refocus=false, lastL=null;
 
+  function factoryDef(){ return {view:"type",display:"list",cols:2,fold:{commander:false,companion:false,main:false,side:true,maybe:true},groups:false}; }
+  function applyDefaults(){ live.view=prefs.def.view; live.display=prefs.def.display; live.cols=prefs.def.cols; }
   function el(tag,cls,text){ var e=document.createElement(tag); if(cls) e.className=cls; if(text!==undefined) e.textContent=text; return e; }
   function read(k,def){ try{ var v=localStorage.getItem(k); return v?JSON.parse(v):def; }catch(e){ storeOK=false; return def; } }
   function write(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){ storeOK=false; $("storeWarn").hidden=false; } }
@@ -632,7 +673,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   }
   function editor(e){ var box=el("div","edit"); box.appendChild(labelBlock(e,"cat")); box.appendChild(labelBlock(e,"tag")); return box; }
   function cardRow(e){
-    var compact=prefs.display==="text", c=e.card;
+    var compact=live.display==="text", c=e.card;
     var li=el("li","card"+(c?"":" miss")+(compact?" compact":""));
     if(!compact){ var img=el("img"); img.alt=""; img.loading="lazy"; if(c&&c.img) img.src=c.img; li.appendChild(img); }
     var mid=el("div");
@@ -670,8 +711,8 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     return s;
   }
   function mkList(items){
-    var grid=prefs.display==="grid", ul=el("ul",grid?"gridcards":"list");
-    if(grid) ul.style.setProperty("--cols",String(prefs.cols));
+    var grid=live.display==="grid", ul=el("ul",grid?"gridcards":"list");
+    if(grid) ul.style.setProperty("--cols",String(live.cols));
     items.forEach(function(e){ ul.appendChild(grid?tileCard(e):cardRow(e)); });
     return ul;
   }
@@ -689,23 +730,23 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     var sum=$("sum"); sum.textContent="";
     [[deckN,"deck, commandant compris"],[q("side"),"réserve"],[q("maybe"),"à envisager"],[miss,"introuvables"]].forEach(function(p){
       var d=el("div"); d.appendChild(el("b",null,String(p[0]))); d.appendChild(document.createTextNode(p[1])); sum.appendChild(d); });
-    Array.prototype.forEach.call($("viewSeg").querySelectorAll("button"),function(b){ b.setAttribute("aria-pressed",b.getAttribute("data-view")===prefs.view?"true":"false"); });
-    Array.prototype.forEach.call($("dispSeg").querySelectorAll("button"),function(b){ b.setAttribute("aria-pressed",b.getAttribute("data-disp")===prefs.display?"true":"false"); });
-    Array.prototype.forEach.call($("colSeg").querySelectorAll("button"),function(b){ b.setAttribute("aria-pressed",parseInt(b.getAttribute("data-cols"),10)===prefs.cols?"true":"false"); });
-    $("colWrap").hidden=prefs.display!=="grid";
+    Array.prototype.forEach.call($("viewSeg").querySelectorAll("button"),function(b){ b.setAttribute("aria-pressed",b.getAttribute("data-view")===live.view?"true":"false"); });
+    Array.prototype.forEach.call($("dispSeg").querySelectorAll("button"),function(b){ b.setAttribute("aria-pressed",b.getAttribute("data-disp")===live.display?"true":"false"); });
+    Array.prototype.forEach.call($("colSeg").querySelectorAll("button"),function(b){ b.setAttribute("aria-pressed",parseInt(b.getAttribute("data-cols"),10)===live.cols?"true":"false"); });
+    $("colWrap").hidden=live.display!=="grid";
     var mdfcAll=qsum(es.filter(function(e){return e.card&&e.card.mdfc}));
-    var vn=prefs.view==="type"?(mdfcAll?VIEWNOTE.type:""):VIEWNOTE[prefs.view]; $("viewNote").textContent=vn; $("viewNote").hidden=!vn;
+    var vn=live.view==="type"?(mdfcAll?VIEWNOTE.type:""):VIEWNOTE[live.view]; $("viewNote").textContent=vn; $("viewNote").hidden=!vn;
     BORDER.forEach(function(b){
       var list=es.filter(function(e){return e.board===b}); if(!list.length) return;
-      var def=(b==="side"||b==="maybe");
+      var def=!!prefs.def.fold[b];
       var sec=mkDetails("sec","b|"+b,def,[el("span",null,BLABEL[b]),el("span","cnt","· "+qsum(list))]);
       if(b==="commander"||b==="companion"){
         sec.appendChild(mkList(list));
       } else {
-        groupsFor(list,prefs.view).forEach(function(g){
+        groupsFor(list,live.view).forEach(function(g){
           var cnt=qsum(g.items), ctext="· "+cnt;
-          if(prefs.view==="type"&&g.name===TLABEL.land){ var md=qsum(list.filter(function(x){return x.card&&x.card.mdfc})); if(md) ctext="· "+(cnt+md)+" ("+cnt+" + "+md+" MDFC)"; }
-          var grp=mkDetails("grp","g|"+b+"|"+prefs.view+"|"+g.name,false,[el("span",null,g.name),el("span","cnt",ctext)]);
+          if(live.view==="type"&&g.name===TLABEL.land){ var md=qsum(list.filter(function(x){return x.card&&x.card.mdfc})); if(md) ctext="· "+(cnt+md)+" ("+cnt+" + "+md+" MDFC)"; }
+          var grp=mkDetails("grp","g|"+b+"|"+live.view+"|"+g.name,!!prefs.def.groups,[el("span",null,g.name),el("span","cnt",ctext)]);
           grp.appendChild(mkList(g.items)); sec.appendChild(grp);
         });
       }
@@ -713,7 +754,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     });
     updateFoldBtn();
     if(refocus){ var kf=refocus; refocus=false; var i=out.querySelector('[data-taginput="'+kf+'"]'); if(i) i.focus(); }
-    if(prefs.display==="grid"&&editing){ var edE=es.filter(function(x){return x.name.toLowerCase()===editing})[0]; if(edE) out.appendChild(sheet(edE)); }
+    if(live.display==="grid"&&editing){ var edE=es.filter(function(x){return x.name.toLowerCase()===editing})[0]; if(edE) out.appendChild(sheet(edE)); }
     if(tk){ var i2=out.querySelector('[data-taginput="'+tk+'"]'); if(i2){ i2.value=tv; i2.focus(); } }
     renderGoals(entries);
   }
@@ -777,7 +818,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   }
   function route(){
     var h=location.hash.replace(/^#/,""), m=h.match(/^d-(.+)$/), d=m&&decks.filter(function(x){return x.id===m[1]})[0];
-    resetDel(); runId++; editing=null; fold={};
+    resetDel(); runId++; editing=null; fold={}; if(d) applyDefaults();
     if(d){
       activeId=d.id; $("home").hidden=true; $("deckView").hidden=false;
       $("deckName").value=d.name; $("dtitle").textContent=d.name; $("list").value=d.list; $("go").disabled=false; say(""); $("saved").textContent="";
@@ -804,7 +845,15 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   decks=read(DK,[]); cache=read(CK,{}); var p0=read(PK,null);
   if(!Array.isArray(decks)) decks=[];
   if(!cache||typeof cache!=="object") cache={};
-  if(p0&&typeof p0==="object"){ if(["auto","light","dark"].indexOf(p0.theme)>=0) prefs.theme=p0.theme; if(["type","cat","tag"].indexOf(p0.view)>=0) prefs.view=p0.view; if(["text","list","grid"].indexOf(p0.display)>=0) prefs.display=p0.display; if([1,2,3,4].indexOf(p0.cols)>=0) prefs.cols=p0.cols; }
+  if(p0&&typeof p0==="object"){
+    if(["auto","light","dark"].indexOf(p0.theme)>=0) prefs.theme=p0.theme;
+    var d0=p0.def||p0, D=prefs.def;
+    if(["type","cat","tag"].indexOf(d0.view)>=0) D.view=d0.view;
+    if(["text","list","grid"].indexOf(d0.display)>=0) D.display=d0.display;
+    if([1,2,3,4].indexOf(d0.cols)>=0) D.cols=d0.cols;
+    if(p0.def){ BORDER.forEach(function(b){ if(p0.def.fold&&typeof p0.def.fold[b]==="boolean") D.fold[b]=p0.def.fold[b]; }); if(typeof p0.def.groups==="boolean") D.groups=p0.def.groups; }
+  }
+  applyDefaults();
   if(!storeOK) $("storeWarn").hidden=false;
   $("boot").hidden=true; applyTheme();
   var saveT;
@@ -820,10 +869,32 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   gear.addEventListener("click",function(){ setPanelOpen(panel.hidden); });
   document.addEventListener("click",function(ev){ if(!panel.hidden&&!$("settings").contains(ev.target)) setPanelOpen(false); });
   document.addEventListener("keydown",function(ev){ if(ev.key==="Escape"&&!panel.hidden){ setPanelOpen(false); gear.focus(); } });
+  function mark(seg,attr,val){ Array.prototype.forEach.call(seg.querySelectorAll("button"),function(b){ b.setAttribute("aria-pressed",b.getAttribute(attr)===val?"true":"false"); }); }
+  function renderSettings(){
+    var D=prefs.def;
+    mark($("defView"),"data-def-view",D.view); mark($("defDisp"),"data-def-disp",D.display); mark($("defCols"),"data-def-cols",String(D.cols));
+    $("defColWrap").hidden=D.display!=="grid";
+    Array.prototype.forEach.call(document.querySelectorAll("[data-deffold]"),function(c){ c.checked=!!D.fold[c.getAttribute("data-deffold")]; });
+    $("defGroups").checked=!!D.groups;
+  }
+  function defChanged(){ savePrefs(); applyDefaults(); fold={}; renderSettings(); if(entries.length) renderList(); }
+  panel.addEventListener("click",function(ev){
+    var b=ev.target.closest("button"); if(!b) return;
+    if(b.hasAttribute("data-def-view")){ prefs.def.view=b.getAttribute("data-def-view"); defChanged(); }
+    else if(b.hasAttribute("data-def-disp")){ prefs.def.display=b.getAttribute("data-def-disp"); defChanged(); }
+    else if(b.hasAttribute("data-def-cols")){ prefs.def.cols=parseInt(b.getAttribute("data-def-cols"),10); defChanged(); }
+    else if(b.id==="defReset"){ prefs.def=factoryDef(); defChanged(); }
+  });
+  panel.addEventListener("change",function(ev){
+    var c=ev.target; if(!c||c.type!=="checkbox") return;
+    if(c.hasAttribute("data-deffold")) prefs.def.fold[c.getAttribute("data-deffold")]=c.checked; else if(c.id==="defGroups") prefs.def.groups=c.checked; else return;
+    defChanged();
+  });
+  renderSettings();
   $("themeSeg").addEventListener("click",function(ev){ var b=ev.target.closest("button[data-theme-set]"); if(!b) return; prefs.theme=b.getAttribute("data-theme-set"); savePrefs(); applyTheme(); });
-  $("dispSeg").addEventListener("click",function(ev){ var b=ev.target.closest("button[data-disp]"); if(!b) return; prefs.display=b.getAttribute("data-disp"); savePrefs(); if(entries.length) renderList(); });
-  $("colSeg").addEventListener("click",function(ev){ var b=ev.target.closest("button[data-cols]"); if(!b) return; prefs.cols=parseInt(b.getAttribute("data-cols"),10); savePrefs(); if(entries.length) renderList(); });
-  $("viewSeg").addEventListener("click",function(ev){ var b=ev.target.closest("button[data-view]"); if(!b) return; prefs.view=b.getAttribute("data-view"); savePrefs(); if(entries.length) renderList(); });
+  $("dispSeg").addEventListener("click",function(ev){ var b=ev.target.closest("button[data-disp]"); if(!b) return; live.display=b.getAttribute("data-disp"); savePrefs(); if(entries.length) renderList(); });
+  $("colSeg").addEventListener("click",function(ev){ var b=ev.target.closest("button[data-cols]"); if(!b) return; live.cols=parseInt(b.getAttribute("data-cols"),10); savePrefs(); if(entries.length) renderList(); });
+  $("viewSeg").addEventListener("click",function(ev){ var b=ev.target.closest("button[data-view]"); if(!b) return; live.view=b.getAttribute("data-view"); savePrefs(); if(entries.length) renderList(); });
   $("foldAll").addEventListener("click",function(){
     var all=$("out").querySelectorAll("details"), anyOpen=false;
     Array.prototype.forEach.call(all,function(d){ if(d.open) anyOpen=true; });

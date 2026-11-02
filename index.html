@@ -81,6 +81,8 @@ a{color:var(--accent)}
 .ms.big{width:30px;height:30px;font-size:15px}
 .ms .h{flex:1;height:100%;display:flex;align-items:center;justify-content:center;font-size:9px;background:#d0cbc6;color:#111}
 .ms .h.W{background:#f6efc2;color:#2b2616}.ms .h.U{background:#0e68ab;color:#fff}.ms .h.B{background:#1a1a1a;color:#f2f2f2}.ms .h.R{background:#d3202a;color:#fff}.ms .h.G{background:#00733e;color:#fff}
+.ms.C::after{content:"\25C6";font-size:9px;opacity:.55}
+.ms.big.C::after{font-size:13px}
 .cost{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:2px;max-width:150px;margin-top:2px}
 
 /* stats */
@@ -138,15 +140,30 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
 .ids{display:inline-flex;gap:3px;flex:0 0 auto;align-items:center}
 .idline{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:14px;margin-bottom:12px}
 .idline .note{margin:0}
+.settings{position:relative}
+.gear{min-width:44px;padding:0;background:var(--surface);color:var(--ink);border:1px solid var(--line);display:grid;place-items:center}
+.gear[aria-expanded="true"]{border-color:var(--accent);color:var(--accent)}
+.setpanel{position:absolute;right:0;top:calc(100% + 8px);z-index:10;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;min-width:250px;box-shadow:0 8px 28px rgba(0,0,0,.25)}
+.sethead{font-weight:700;margin:0 0 10px}
+.setlab{font-size:13px;color:var(--muted);margin:0 0 6px}
 .foot{font-size:12px;color:var(--muted)}
 </style></head><body>
 <div class="wrap">
   <div class="top">
     <h1>Deck Commander</h1>
-    <div class="seg" role="group" aria-label="Thème de l'interface" id="themeSeg">
-      <button type="button" data-theme-set="auto" aria-pressed="true">Auto</button>
-      <button type="button" data-theme-set="light" aria-pressed="false">Clair</button>
-      <button type="button" data-theme-set="dark" aria-pressed="false">Sombre</button>
+    <div class="settings" id="settings">
+      <button type="button" class="gear" id="gear" aria-label="Réglages" aria-haspopup="dialog" aria-expanded="false" aria-controls="setPanel">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      </button>
+      <div class="setpanel" id="setPanel" role="dialog" aria-label="Réglages" hidden>
+        <p class="sethead">Réglages</p>
+        <p class="setlab" id="themeLab">Thème</p>
+        <div class="seg" role="group" aria-labelledby="themeLab" id="themeSeg">
+          <button type="button" data-theme-set="auto" aria-pressed="true">Auto</button>
+          <button type="button" data-theme-set="light" aria-pressed="false">Clair</button>
+          <button type="button" data-theme-set="dark" aria-pressed="false">Sombre</button>
+        </div>
+      </div>
     </div>
   </div>
   <p class="warnbox" id="boot">Le script de la page ne s'est pas lancé : rien ne fonctionnera. Ouvre la page dans un vrai navigateur (Chrome, Safari, Firefox), pas dans un aperçu.</p>
@@ -230,8 +247,8 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   var BLABEL={commander:"Commandant",companion:"Compagnon",main:"Deck",side:"Réserve",maybe:"À envisager"};
   var BORDER=["commander","companion","main","side","maybe"];
   var CATS=["Ramp","Pioche","Removal","Balayage","Menace","Protection","Récursion","Tuteur","Utilitaire"];
-  var TLABEL={creature:"Créatures",planeswalker:"Planeswalkers",instant:"Éphémères",sorcery:"Rituels",artifact:"Artefacts",enchantment:"Enchantements",battle:"Batailles",land:"Terrains",other:"Autres"};
-  var TORDER=["creature","planeswalker","instant","sorcery","artifact","enchantment","battle","land","other"];
+  var TLABEL={planeswalker:"Planeswalkers",battle:"Batailles",room:"Chambres",creature:"Créatures",artifact:"Artefacts",enchantment:"Enchantements",instant:"Éphémères",sorcery:"Rituels",land:"Terrains",other:"Autres"};
+  var TORDER=["planeswalker","battle","room","creature","artifact","enchantment","instant","sorcery","land","other"];
   var VIEWNOTE={type:"",cat:"Catégorie : une par carte. Attribue-la avec « Étiqueter ».",tag:"Une carte avec plusieurs tags apparaît dans chacun de ses groupes. Attribue les tags avec « Étiqueter »."};
   var DK="deckv2.decks", CK="deckv2.cards", PK="deckv2.prefs", MAXAGE=7*864e5;
   var storeOK=true, decks=[], cache={}, prefs={theme:"auto",view:"type"}, activeId=null, entries=[], tab="saisie";
@@ -329,16 +346,20 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   }
 
   /* ---------- symboles de mana ---------- */
-  function half(code){ return el("span","h"+(COLORS.indexOf(code)>=0?" "+code:""),code); }
+  var CNAMES={W:"Blanc",U:"Bleu",B:"Noir",R:"Rouge",G:"Vert",C:"Incolore"};
+  function half(code){ var isC=COLORS.indexOf(code)>=0; return el("span","h"+(isC?" "+code:""),isC?"":code); }
   function symbol(tok,big){
-    var t=tok.toUpperCase(), s=el("span","ms"+(big?" big":"")), parts=t.split("/");
-    s.title="{"+tok+"}";
+    var t=tok.toUpperCase(), s=el("span","ms"+(big?" big":"")), parts=t.split("/"), label=t;
     var isC=function(x){return COLORS.indexOf(x)>=0};
-    if(/^\d+$/.test(t)||/^[XYZSC]$/.test(t)) s.textContent=t;
-    else if(isC(t)){ s.className+=" "+t; s.textContent=t; }
-    else if(parts.length===2&&parts[1]==="P"&&isC(parts[0])){ s.className+=" "+parts[0]; s.textContent="Φ"; }
-    else if(parts.length===2&&(isC(parts[0])||parts[0]==="2")&&isC(parts[1])){ s.appendChild(half(parts[0])); s.appendChild(half(parts[1])); }
+    if(/^\d+$/.test(t)){ s.textContent=t; label=t+" générique"; }
+    else if(/^[XYZ]$/.test(t)){ s.textContent=t; label=t+" (variable)"; }
+    else if(t==="S"){ s.textContent="\u2744"; label="Neige"; }
+    else if(t==="C"){ s.className+=" C"; label=CNAMES.C; }
+    else if(isC(t)){ s.className+=" "+t; label=CNAMES[t]; }
+    else if(parts.length===2&&parts[1]==="P"&&isC(parts[0])){ s.className+=" "+parts[0]; label=CNAMES[parts[0]]+" ou 2 points de vie"; }
+    else if(parts.length===2&&(isC(parts[0])||parts[0]==="2")&&isC(parts[1])){ s.appendChild(half(parts[0])); s.appendChild(half(parts[1])); label=(isC(parts[0])?CNAMES[parts[0]]:"2")+" ou "+CNAMES[parts[1]]; }
     else s.textContent=t;
+    s.title=label; s.setAttribute("role","img"); s.setAttribute("aria-label",label);
     return s;
   }
   function symbols(cost){
@@ -445,7 +466,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   function primary(tl){
     var f=tl.split(" // ")[0];
     if(/Land/.test(f)) return "land"; if(/Creature/.test(f)) return "creature"; if(/Planeswalker/.test(f)) return "planeswalker";
-    if(/Battle/.test(f)) return "battle"; if(/Artifact/.test(f)) return "artifact"; if(/Enchantment/.test(f)) return "enchantment";
+    if(/Battle/.test(f)) return "battle"; if(/\bRoom\b/.test(f)) return "room"; if(/Artifact/.test(f)) return "artifact"; if(/Enchantment/.test(f)) return "enchantment";
     if(/Instant/.test(f)) return "instant"; if(/Sorcery/.test(f)) return "sorcery"; return "other";
   }
   function groupsFor(list,view){
@@ -649,6 +670,11 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   $("back").addEventListener("click",goHome);
   $("del").addEventListener("click",delDeck);
   $("tabs").addEventListener("click",function(ev){ var b=ev.target.closest("button[data-tab]"); if(b) setTab(b.getAttribute("data-tab")); });
+  var gear=$("gear"), panel=$("setPanel");
+  function setPanelOpen(o){ panel.hidden=!o; gear.setAttribute("aria-expanded",o?"true":"false"); }
+  gear.addEventListener("click",function(){ setPanelOpen(panel.hidden); });
+  document.addEventListener("click",function(ev){ if(!panel.hidden&&!$("settings").contains(ev.target)) setPanelOpen(false); });
+  document.addEventListener("keydown",function(ev){ if(ev.key==="Escape"&&!panel.hidden){ setPanelOpen(false); gear.focus(); } });
   $("themeSeg").addEventListener("click",function(ev){ var b=ev.target.closest("button[data-theme-set]"); if(!b) return; prefs.theme=b.getAttribute("data-theme-set"); savePrefs(); applyTheme(); });
   $("viewSeg").addEventListener("click",function(ev){ var b=ev.target.closest("button[data-view]"); if(!b) return; prefs.view=b.getAttribute("data-view"); savePrefs(); if(entries.length) renderList(); });
   $("foldAll").addEventListener("click",function(){

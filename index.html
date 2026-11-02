@@ -505,6 +505,8 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   function goalKey(kind,label){ return kind+":"+label.toLowerCase(); }
   function renderGoals(es){
     var d=cur(); if(!d) return; d.goals=d.goals||{};
+    var act=document.activeElement, ak=null, av="";
+    if(!focusGoal&&act&&act.getAttribute){ ak=act.getAttribute("data-goal")||(act.hasAttribute("data-add")?"add:"+act.getAttribute("data-add"):null); av=act.value; }
     ["cat","tag"].forEach(function(kind){
       var K=KINDS[kind], box=$(kind==="cat"?"goalsCat":"goalsTag"); box.textContent="";
       var labels=knownLabels(kind), have={}; labels.forEach(function(l){ have[l.toLowerCase()]=1; });
@@ -539,11 +541,12 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
         });
         paint(); box.appendChild(row);
         if(focusGoal===gk){ focusGoal=null; setTimeout(function(){ inp.focus(); },0); }
+        else if(ak===gk){ inp.focus(); }
       });
       $(kind+"Count").textContent="· "+used+" utilisée"+(used>1?"s":"");
       if(!Object.keys(shown).length) box.appendChild(el("p","note","Aucune "+(kind==="cat"?"catégorie":"tag")+" utilisé"+(kind==="cat"?"e":"")+" pour l'instant. Étiquette des cartes dans l'onglet Liste, ou ajoute-en une ci-dessous pour lui fixer un objectif."));
       var addBox=el("div","addlabel"), ai=el("input"); ai.type="text"; ai.maxLength=30; ai.autocomplete="off";
-      ai.placeholder=kind==="cat"?"Ajouter une catégorie":"Ajouter un tag"; ai.setAttribute("aria-label",ai.placeholder);
+      ai.placeholder=kind==="cat"?"Ajouter une catégorie":"Ajouter un tag"; ai.setAttribute("aria-label",ai.placeholder); ai.setAttribute("data-add",kind);
       var ab=el("button",null,"Ajouter"); ab.type="button";
       function reg(t){ t=normLabel(t); if(!t) return; t=canon(kind,t); d.labels=d.labels||{cat:[],tag:[]};
         if(!registry(kind).some(function(x){return x.toLowerCase()===t.toLowerCase()})) d.labels[kind]=registry(kind).concat([t]);
@@ -551,6 +554,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
       ab.addEventListener("click",function(){ reg(ai.value); });
       ai.addEventListener("keydown",function(ev){ if(ev.key==="Enter"){ ev.preventDefault(); reg(ai.value); } });
       addBox.appendChild(ai); addBox.appendChild(ab); box.appendChild(addBox);
+      if(ak==="add:"+kind){ ai.value=av; ai.focus(); }
       var rest=K.presets.filter(function(t){ return !shown[t.toLowerCase()]; });
       if(rest.length){ var sg=el("div","sugg"); sg.style.marginTop="8px";
         rest.forEach(function(t){ var b=el("button",null,"+ "+t); b.type="button"; b.addEventListener("click",function(){ reg(t); }); sg.appendChild(b); }); box.appendChild(sg); }
@@ -639,7 +643,9 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     $("foldAll").textContent=anyOpen?"Tout replier":"Tout déplier";
   }
   function renderList(){
-    var es=entries, out=$("out"); out.textContent="";
+    var es=entries, out=$("out"); var act=document.activeElement, tk=null, tv="";
+    if(!refocus&&act&&act.getAttribute&&act.hasAttribute("data-taginput")){ tk=act.getAttribute("data-taginput"); tv=act.value; }
+    out.textContent="";
     var q=function(b){ return qsum(es.filter(function(e){return e.board===b})); };
     var deckN=q("commander")+q("main"), miss=qsum(es.filter(function(e){return !e.card}));
     var sum=$("sum"); sum.textContent="";
@@ -666,6 +672,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     });
     updateFoldBtn();
     if(refocus){ var kf=refocus; refocus=false; var i=out.querySelector('[data-taginput="'+kf+'"]'); if(i) i.focus(); }
+    if(tk){ var i2=out.querySelector('[data-taginput="'+tk+'"]'); if(i2){ i2.value=tv; i2.focus(); } }
     renderGoals(entries);
   }
 

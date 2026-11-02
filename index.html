@@ -135,6 +135,9 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
 .edit button.add{padding:6px 14px}
 .sugg{display:flex;flex-wrap:wrap;gap:6px}
 .sugg button{background:var(--chip);color:var(--ink);min-height:36px;padding:4px 12px;font-weight:500;font-size:13px;border-radius:999px}
+.ids{display:inline-flex;gap:3px;flex:0 0 auto;align-items:center}
+.idline{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:14px;margin-bottom:12px}
+.idline .note{margin:0}
 .foot{font-size:12px;color:var(--muted)}
 </style></head><body>
 <div class="wrap">
@@ -206,7 +209,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
         <p class="note" id="curveNote"></p>
         <h2>Couleurs : symboles et sources</h2>
         <div id="colors"></div>
-        <p class="note">Symboles : symboles de mana dans les coûts des sorts. Sources : terrains qui produisent la couleur, d'après Scryfall. Un terrain à plusieurs couleurs compte pour chacune. Un symbole hybride compte pour ses deux couleurs.</p>
+        <p class="note">Symboles : symboles de mana dans les coûts des sorts. Sources : terrains qui produisent la couleur, d'après Scryfall. Un terrain à plusieurs couleurs compte pour chacune. Un symbole hybride compte pour ses deux couleurs. Les couleurs hors de l'identité du commandant ne sont pas affichées.</p>
       </div>
     </section>
 
@@ -384,6 +387,20 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   }
   function setPill(s){ var p=$("dpill"); p.hidden=!s; if(s){ p.className="pill "+s; p.textContent=PILL[s]; } }
 
+  /* ---------- identité de couleur ---------- */
+  function identityOf(es){
+    var cmd=es.filter(function(e){return e.board==="commander"});
+    if(!cmd.length||cmd.some(function(e){return !e.card})) return null;
+    var has={}; cmd.forEach(function(e){ e.card.ci.forEach(function(x){ has[x]=1; }); });
+    return COLORS.filter(function(k){ return has[k]; });
+  }
+  function idPips(ci){
+    var w=el("span","ids"); w.setAttribute("aria-label","Identité de couleur : "+(ci.length?ci.join(" "):"incolore"));
+    if(!ci.length){ var c=symbol("C"); c.title="Incolore"; w.appendChild(c); }
+    else ci.forEach(function(k){ w.appendChild(symbol(k)); });
+    return w;
+  }
+
   /* ---------- stats de mana ---------- */
   function isLand(c){ return /Land/.test(c.tl); }
   function stats(es){
@@ -405,8 +422,13 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
       var bar=el("div","bar"); bar.style.height=Math.round(110*n/mx)+"px"; col.appendChild(bar); col.appendChild(el("span","x",i===7?"7+":String(i))); wrap.appendChild(col); });
     cv.appendChild(wrap);
     $("curveNote").textContent="Valeur de mana des sorts, terrains exclus. Deck = commandant + liste principale"+(miss?(" ("+miss+" carte(s) introuvable(s) exclue(s))."):".");
-    var totP=COLORS.reduce(function(a,k){return a+pip[k]},0), any=false;
-    COLORS.forEach(function(k){
+    var ident=identityOf(es), shown=ident===null?COLORS:ident;
+    var head=el("div","idline"); head.appendChild(el("span",null,"Identité de couleur du deck"));
+    if(ident===null) head.appendChild(el("span","note","inconnue : commandant absent ou introuvable, toutes les couleurs sont affichées"));
+    else head.appendChild(idPips(ident));
+    cb.appendChild(head);
+    var totP=shown.reduce(function(a,k){return a+pip[k]},0), any=false;
+    shown.forEach(function(k){
       if(!pip[k]&&!src[k]) return; any=true;
       var row=el("div","crow"); row.appendChild(symbol(k,true));
       var dual=el("div");
@@ -416,7 +438,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
         line.appendChild(el("span","v",String(l[1]))); dual.appendChild(line); });
       row.appendChild(dual); cb.appendChild(row);
     });
-    if(!any) cb.appendChild(el("p","note","Aucun symbole de couleur ni source détecté."));
+    if(!any) cb.appendChild(el("p","note",ident&&!ident.length?"Identité incolore : aucune couleur à afficher.":"Aucun symbole de couleur ni source détecté."));
   }
 
   /* ---------- liste : regroupement, repli, étiquettes ---------- */
@@ -542,7 +564,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
 
   function say(msg,cls){ var s=$("status"); s.textContent=msg; s.className="status"+(cls?" "+cls:""); }
   function stamp(d){ var t=new Date(d.updated||Date.now()); $("saved").textContent=storeOK?("Enregistré sur cet appareil à "+t.toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"})+"."):"Non enregistré : ce navigateur refuse le stockage."; }
-  function persistDeck(d,L){ d.updated=Date.now(); d.legal=L?{s:L.s,n:L.total}:null; saveDecks(); stamp(d); }
+  function persistDeck(d,L){ d.updated=Date.now(); d.legal=L?{s:L.s,n:L.total}:null; d.ci=entries.length?identityOf(entries):null; saveDecks(); stamp(d); }
   function setTab(t){
     tab=t;
     Array.prototype.forEach.call($("tabs").querySelectorAll("button"),function(b){ b.setAttribute("aria-selected",b.getAttribute("data-tab")===t?"true":"false"); });
@@ -580,6 +602,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
       var left=el("span","dname",d.name||"Sans nom");
       left.appendChild(el("span","dmeta",(d.legal?d.legal.n+" cartes":"Pas encore analysé")+" · "+new Date(d.updated||Date.now()).toLocaleDateString("fr-FR")));
       b.appendChild(left);
+      if(Array.isArray(d.ci)) b.appendChild(idPips(d.ci));
       var s=d.legal?d.legal.s:"none"; b.appendChild(el("span","pill "+s,PILL[s]));
       b.addEventListener("click",function(){ location.hash="d-"+d.id; });
       li.appendChild(b); ul.appendChild(li);

@@ -222,11 +222,11 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
         </div>
         <p class="setlab">Repliés par défaut</p>
         <div class="chks">
-          <label class="chk"><input type="checkbox" data-deffold="commander"> Commandant</label>
-          <label class="chk"><input type="checkbox" data-deffold="companion"> Compagnon</label>
+          <label class="chk"><input type="checkbox" data-deffold="commander"> Commander</label>
+          <label class="chk"><input type="checkbox" data-deffold="companion"> Companion</label>
           <label class="chk"><input type="checkbox" data-deffold="main"> Deck</label>
-          <label class="chk"><input type="checkbox" data-deffold="side"> Réserve</label>
-          <label class="chk"><input type="checkbox" data-deffold="maybe"> À envisager</label>
+          <label class="chk"><input type="checkbox" data-deffold="side"> Sideboard</label>
+          <label class="chk"><input type="checkbox" data-deffold="maybe"> Maybeboard</label>
           <label class="chk"><input type="checkbox" id="defGroups"> Groupes (type, catégorie, tag)</label>
         </div>
         <button type="button" class="ghost" id="defReset" style="margin-top:12px;min-height:40px;padding:6px 12px;font-size:14px">Rétablir les valeurs d'origine</button>
@@ -305,19 +305,19 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     <section class="box" id="p-stats" role="tabpanel" hidden>
       <p class="empty" id="statsEmpty">Rien à afficher : analyse d'abord le deck dans l'onglet Saisie.</p>
       <div id="statsBody" hidden>
-        <h2>Stats de mana</h2>
+        <h2>Mana stats</h2>
         <div class="tiles" id="tiles"></div>
-        <h2>Courbe de mana</h2>
+        <h2>Mana curve</h2>
         <div id="curve"></div>
         <p class="note" id="curveNote"></p>
-        <h2>Couleurs : symboles et sources</h2>
+        <h2>Colors : pips et sources</h2>
         <div id="colors"></div>
-        <p class="note">Symboles : symboles de mana dans les coûts des sorts. Sources : terrains qui produisent la couleur, d'après Scryfall. Un terrain à plusieurs couleurs compte pour chacune. Un symbole hybride compte pour ses deux couleurs. Les couleurs hors de l'identité du commandant ne sont pas affichées.</p>
+        <p class="note">Pips : symboles de mana dans les coûts des spells. Sources : lands qui produisent la couleur, d'après Scryfall. Un land à plusieurs couleurs compte pour chacune. Un symbole hybride compte pour ses deux couleurs. Les couleurs hors de la color identity du Commander ne sont pas affichées.</p>
         <h2>Catégories <span class="cnt" id="catCount"></span></h2>
         <div id="goalsCat"></div>
         <h2>Tags <span class="cnt" id="tagCount"></span></h2>
         <div id="goalsTag"></div>
-        <p class="note">Nombre de cartes du deck (commandant et liste principale) par catégorie ou tag. Fixe un objectif à atteindre : la barre se remplit jusqu'à l'objectif. Une carte avec plusieurs étiquettes compte dans chacune.</p>
+        <p class="note">Nombre de cartes du deck (Commander et liste principale) par catégorie ou tag. Fixe un objectif à atteindre : la barre se remplit jusqu'à l'objectif. Une carte avec plusieurs étiquettes compte dans chacune.</p>
       </div>
     </section>
 
@@ -331,13 +331,14 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   var $=function(i){return document.getElementById(i)};
   var COLORS=["W","U","B","R","G"];
   var HEAD={commander:"commander",commandant:"commander",companion:"companion",deck:"main",mainboard:"main",main:"main",sideboard:"side",side:"side","réserve":"side",reserve:"side",maybeboard:"maybe"};
-  var BLABEL={commander:"Commandant",companion:"Compagnon",main:"Deck",side:"Réserve",maybe:"À envisager"};
+  var BLABEL={commander:"Commander",companion:"Companion",main:"Deck",side:"Sideboard",maybe:"Maybeboard"};
+  var NOTFOUND="Not found";
   var BORDER=["commander","companion","main","side","maybe"];
   var CATS=["Ramp","Card Draw","Removal","Board Wipe","Burn","Protection","Recursion","Tutor","Fixing","Utility"];
   var CAT_RENAME={"Pioche":"Card Draw","Balayage":"Board Wipe","Menace":"Threat","Récursion":"Recursion","Tuteur":"Tutor","Utilitaire":"Utility"};
-  var TLABEL={planeswalker:"Planeswalkers",battle:"Batailles",room:"Chambres",creature:"Créatures",artifact:"Artefacts",enchantment:"Enchantements",instant:"Éphémères",sorcery:"Rituels",land:"Terrains",other:"Autres"};
+  var TLABEL={planeswalker:"Planeswalkers",battle:"Battles",room:"Rooms",creature:"Creatures",artifact:"Artifacts",enchantment:"Enchantments",instant:"Instants",sorcery:"Sorceries",land:"Lands",other:"Other"};
   var TORDER=["planeswalker","battle","room","creature","artifact","enchantment","instant","sorcery","land","other"];
-  var VIEWNOTE={type:"Les MDFC dont une face est un terrain sont comptées dans Terrains (entre parenthèses) mais restent listées avec leur type de sort.",cat:"Une carte avec plusieurs catégories apparaît dans chacune. Attribue-les avec « Étiqueter ».",tag:"Une carte avec plusieurs tags apparaît dans chacun. Attribue-les avec « Étiqueter »."};
+  var VIEWNOTE={type:"Les MDFC dont une face est un land sont comptées dans Lands (entre parenthèses) mais restent listées avec leur type de spell.",cat:"Une carte avec plusieurs catégories apparaît dans chacune. Attribue-les avec « Étiqueter ».",tag:"Une carte avec plusieurs tags apparaît dans chacun. Attribue-les avec « Étiqueter »."};
   var DK="deckv2.decks", CK="deckv2.cards", PK="deckv2.prefs", MAXAGE=7*864e5;
   var storeOK=true, decks=[], cache={}, prefs={theme:"auto",def:factoryDef()}, live={view:"type",display:"list",cols:2}, activeId=null, entries=[], tab="saisie";
   var fold={}, editing=null, refocus=false, lastL=null;
@@ -360,7 +361,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   }
 
   /* ---------- étiquettes : catégories et tags, gérés de la même façon ---------- */
-  var KINDS={cat:{k:"cats",many:"Catégories",none:"Sans catégorie",presets:CATS},tag:{k:"tags",many:"Tags",none:"Sans tag",presets:[]}};
+  var KINDS={cat:{k:"cats",many:"Catégories",none:"Uncategorized",presets:CATS},tag:{k:"tags",many:"Tags",none:"Untagged",presets:[]}};
   function mget(name){ var d=cur(), m=(d&&d.meta&&d.meta[name.toLowerCase()])||{};
     return {cats:(m.cats||(m.cat?[m.cat]:[])).slice(),tags:(m.tags||[]).slice()}; }
   function renameCat(t){ return CAT_RENAME.hasOwnProperty(t)?CAT_RENAME[t]:t; }
@@ -469,18 +470,18 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   }
 
   /* ---------- symboles de mana ---------- */
-  var CNAMES={W:"Blanc",U:"Bleu",B:"Noir",R:"Rouge",G:"Vert",C:"Incolore"};
+  var CNAMES={W:"White",U:"Blue",B:"Black",R:"Red",G:"Green",C:"Colorless"};
   function half(code){ var isC=COLORS.indexOf(code)>=0; return el("span","h"+(isC?" "+code:""),isC?"":code); }
   function symbol(tok,big){
     var t=tok.toUpperCase(), s=el("span","ms"+(big?" big":"")), parts=t.split("/"), label=t;
     var isC=function(x){return COLORS.indexOf(x)>=0};
-    if(/^\d+$/.test(t)){ s.textContent=t; label=t+" générique"; }
+    if(/^\d+$/.test(t)){ s.textContent=t; label=t+" generic"; }
     else if(/^[XYZ]$/.test(t)){ s.textContent=t; label=t+" (variable)"; }
-    else if(t==="S"){ s.textContent="\u2744"; label="Neige"; }
+    else if(t==="S"){ s.textContent="\u2744"; label="Snow"; }
     else if(t==="C"){ s.className+=" C"; label=CNAMES.C; }
     else if(isC(t)){ s.className+=" "+t; label=CNAMES[t]; }
-    else if(parts.length===2&&parts[1]==="P"&&isC(parts[0])){ s.className+=" "+parts[0]; label=CNAMES[parts[0]]+" ou 2 points de vie"; }
-    else if(parts.length===2&&(isC(parts[0])||parts[0]==="2")&&isC(parts[1])){ s.appendChild(half(parts[0])); s.appendChild(half(parts[1])); label=(isC(parts[0])?CNAMES[parts[0]]:"2")+" ou "+CNAMES[parts[1]]; }
+    else if(parts.length===2&&parts[1]==="P"&&isC(parts[0])){ s.className+=" "+parts[0]; label=CNAMES[parts[0]]+" or 2 life"; }
+    else if(parts.length===2&&(isC(parts[0])||parts[0]==="2")&&isC(parts[1])){ s.appendChild(half(parts[0])); s.appendChild(half(parts[1])); label=(isC(parts[0])?CNAMES[parts[0]]:"2")+" or "+CNAMES[parts[1]]; }
     else s.textContent=t;
     s.title=label; s.setAttribute("role","img"); s.setAttribute("aria-label",label);
     return s;
@@ -520,7 +521,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     var s=issues.length?"illegal":(unknown.length?"unknown":"legal");
     return {s:s,issues:issues,unknown:unknown,total:total};
   }
-  var PILL={legal:"Légal",illegal:"Illégal",unknown:"À vérifier",none:"Non analysé"};
+  var PILL={legal:"Legal",illegal:"Illegal",unknown:"Unverified",none:"Not analyzed"};
   function setPill(s){ var p=$("dpill"); p.hidden=!s; if(s){ p.className="pill "+s; p.textContent=PILL[s]; } }
 
   /* ---------- identité de couleur ---------- */
@@ -531,8 +532,8 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     return COLORS.filter(function(k){ return has[k]; });
   }
   function idPips(ci){
-    var w=el("span","ids"); w.setAttribute("aria-label","Identité de couleur : "+(ci.length?ci.join(" "):"incolore"));
-    if(!ci.length){ var c=symbol("C"); c.title="Incolore"; w.appendChild(c); }
+    var w=el("span","ids"); w.setAttribute("aria-label","Color identity : "+(ci.length?ci.join(" "):"colorless"));
+    if(!ci.length){ var c=symbol("C"); c.title="Colorless"; w.appendChild(c); }
     else ci.forEach(function(k){ w.appendChild(symbol(k)); });
     return w;
   }
@@ -550,17 +551,17 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
       else { spells+=q; if(c.mdfc) mdfc+=q; var mv=Math.round(c.cmc||0); mvSum+=mv*q; curve[Math.min(7,mv)]+=q; var p=pips(c.mc); COLORS.forEach(function(k){ pip[k]+=p[k]*q; }); }
     });
     var total=spells+lands, miss=es.filter(function(e){return !e.card&&(e.board==="main"||e.board==="commander")}).reduce(function(a,e){return a+e.qty},0);
-    [[spells?(mvSum/spells).toFixed(2).replace(".",","):"–","VM moyenne des sorts"],[spells,"sorts"],[(lands+mdfc)+" · "+Math.round(100*(lands+mdfc)/total)+"%",mdfc?("terrains ("+lands+" + "+mdfc+" MDFC)"):"terrains"]].forEach(function(x){
+    [[spells?(mvSum/spells).toFixed(2).replace(".",","):"–","Mana value moyenne"],[spells,"spells"],[(lands+mdfc)+" · "+Math.round(100*(lands+mdfc)/total)+"%",mdfc?("lands ("+lands+" + "+mdfc+" MDFC)"):"lands"]].forEach(function(x){
       var d=el("div","tile"); d.appendChild(el("b",null,String(x[0]))); d.appendChild(el("span",null,x[1])); t.appendChild(d); });
-    var wrap=el("div","curve"); wrap.setAttribute("role","img"); wrap.setAttribute("aria-label","Nombre de sorts par valeur de mana");
+    var wrap=el("div","curve"); wrap.setAttribute("role","img"); wrap.setAttribute("aria-label","Nombre de spells par mana value");
     var mx=Math.max.apply(null,curve.concat([1]));
     curve.forEach(function(n,i){ var col=el("div","col"); col.appendChild(el("span","n",String(n)));
       var bar=el("div","bar"); bar.style.height=Math.round(110*n/mx)+"px"; col.appendChild(bar); col.appendChild(el("span","x",i===7?"7+":String(i))); wrap.appendChild(col); });
     cv.appendChild(wrap);
-    $("curveNote").textContent="Valeur de mana des sorts, terrains exclus. Deck = commandant + liste principale"+(miss?(" ("+miss+" carte(s) introuvable(s) exclue(s))."):".")+(mdfc?" Les MDFC avec une face terrain comptent comme sort et comme terrain.":"");
+    $("curveNote").textContent="Mana value des spells, lands exclus. Deck = Commander + liste principale"+(miss?(" ("+miss+" carte(s) introuvable(s) exclue(s))."):".")+(mdfc?" Les MDFC avec une face land comptent comme spell et comme land.":"");
     var ident=identityOf(es), shown=ident===null?COLORS:ident;
-    var head=el("div","idline"); head.appendChild(el("span",null,"Identité de couleur du deck"));
-    if(ident===null) head.appendChild(el("span","note","inconnue : commandant absent ou introuvable, toutes les couleurs sont affichées"));
+    var head=el("div","idline"); head.appendChild(el("span",null,"Color identity"));
+    if(ident===null) head.appendChild(el("span","note","inconnue : Commander absent ou introuvable, toutes les couleurs sont affichées"));
     else head.appendChild(idPips(ident));
     cb.appendChild(head);
     var totP=shown.reduce(function(a,k){return a+pip[k]},0), any=false;
@@ -568,13 +569,13 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
       if(!pip[k]&&!src[k]) return; any=true;
       var row=el("div","crow"); row.appendChild(symbol(k,true));
       var dual=el("div");
-      [["symboles",pip[k],totP],["sources",src[k],lands]].forEach(function(l){
+      [["pips",pip[k],totP],["sources",src[k],lands]].forEach(function(l){
         var line=el("div","line"); line.appendChild(el("span",null,l[0]));
         var tr=el("div","track"), f=el("div","fill "+k); f.style.width=Math.round(100*l[1]/Math.max(l[2],1))+"%"; tr.appendChild(f); line.appendChild(tr);
         line.appendChild(el("span","v",String(l[1]))); dual.appendChild(line); });
       row.appendChild(dual); cb.appendChild(row);
     });
-    if(!any) cb.appendChild(el("p","note",ident&&!ident.length?"Identité incolore : aucune couleur à afficher.":"Aucun symbole de couleur ni source détecté."));
+    if(!any) cb.appendChild(el("p","note",ident&&!ident.length?"Color identity colorless : aucune couleur à afficher.":"Aucun symbole de couleur ni source détecté."));
   }
 
   /* ---------- suggestions de catégories ---------- */
@@ -721,10 +722,10 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     var map={}, order=[];
     function add(g,e){ if(!map[g]){ map[g]=[]; order.push(g); } map[g].push(e); }
     list.forEach(function(e){
-      if(view==="type") add(e.card?TLABEL[primary(e.card.tl)]:"Introuvables",e);
+      if(view==="type") add(e.card?TLABEL[primary(e.card.tl)]:NOTFOUND,e);
       else { var labs=mget(e.name)[KINDS[view].k]; if(!labs.length) add(KINDS[view].none,e); else labs.forEach(function(x){ add(x,e); }); }
     });
-    var last=view==="type"?"Introuvables":KINDS[view].none;
+    var last=view==="type"?NOTFOUND:KINDS[view].none;
     var tl=TORDER.map(function(k){return TLABEL[k]});
     order.sort(function(a,b){
       if(a===last) return 1; if(b===last) return -1;
@@ -743,7 +744,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   }
   function chipsFor(e){
     var m=mget(e.name), box=el("div","chips");
-    if(e.card&&e.card.mdfc) box.appendChild(el("span","chip mdfc","MDFC · terrain"));
+    if(e.card&&e.card.mdfc) box.appendChild(el("span","chip mdfc","MDFC · land"));
     m.cats.forEach(function(t){ box.appendChild(el("span","chip cat",t)); });
     m.tags.forEach(function(t){ box.appendChild(el("span","chip",t)); });
     pendingFor(e).forEach(function(cat){
@@ -838,7 +839,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     var q=function(b){ return qsum(es.filter(function(e){return e.board===b})); };
     var deckN=q("commander")+q("main"), miss=qsum(es.filter(function(e){return !e.card}));
     var sum=$("sum"); sum.textContent="";
-    [[deckN,"deck, commandant compris"],[q("side"),"réserve"],[q("maybe"),"à envisager"],[miss,"introuvables"]].forEach(function(p){
+    [[deckN,"deck, Commander inclus"],[q("side"),"Sideboard"],[q("maybe"),"Maybeboard"],[miss,"introuvables"]].forEach(function(p){
       var d=el("div"); d.appendChild(el("b",null,String(p[0]))); d.appendChild(document.createTextNode(p[1])); sum.appendChild(d); });
     Array.prototype.forEach.call($("viewSeg").querySelectorAll("button"),function(b){ b.setAttribute("aria-pressed",b.getAttribute("data-view")===live.view?"true":"false"); });
     Array.prototype.forEach.call($("dispSeg").querySelectorAll("button"),function(b){ b.setAttribute("aria-pressed",b.getAttribute("data-disp")===live.display?"true":"false"); });

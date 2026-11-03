@@ -629,13 +629,13 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     try{ tags=await fetchTagCats(names,say); }catch(x){ err=(x&&x.message)||"erreur réseau"; }
     var nt=0,nx=0,none=0;
     targets.forEach(function(e){
-      var k=e.name.toLowerCase(), t=tags&&(tags.map[k]||tags.map[k.split(" // ")[0]]), cats=[], src="text";
-      if(t){ cats=Object.keys(TAGMAP).filter(function(c){ return t[c]; }); src="tags"; }
-      if(!cats.length){ cats=rulesCats(e.card); src="text"; }
+      var k=e.name.toLowerCase(), t=tags&&(tags.map[k]||tags.map[k.split(" // ")[0]]);
+      var tc=t?Object.keys(TAGMAP).filter(function(c){ return t[c]; }):[], rc=rulesCats(e.card);
+      var cats=CATS.filter(function(c){ return tc.indexOf(c)>=0||rc.indexOf(c)>=0; }), src=tc.length?"tags":"text";
       if(cats.length){ sugg[k]={c:cats,s:src,t:Date.now()}; if(src==="tags") nt++; else nx++; } else { delete sugg[k]; none++; }
     });
     write(SG,sugg);
-    var parts=[nt+" via les tags Scryfall",nx+" via le texte de règles",none+" sans suggestion"];
+    var parts=[nt+" avec les tags Scryfall (complétés par le texte de règles)",nx+" via le texte de règles seulement",none+" sans suggestion"];
     var warn=!!err||(tags&&tags.fails>0);
     var extra=err?(" Scryfall injoignable ("+err+") : texte de règles seulement."):(tags&&tags.hits===0?" Scryfall n'a renvoyé aucun tag : texte de règles seulement.":(tags&&tags.fails?" "+tags.fails+" requête(s) de tags ont échoué.":""));
     say("Suggestions : "+parts.join(", ")+"."+extra,warn?"warn":"ok");

@@ -148,6 +148,11 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
 .sheet{position:fixed;left:0;right:0;bottom:0;z-index:8;background:var(--surface);border-top:1px solid var(--line);box-shadow:0 -8px 28px rgba(0,0,0,.28);padding:12px max(16px,env(safe-area-inset-right)) max(16px,env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-left));max-height:70vh;overflow:auto;border-radius:14px 14px 0 0}
 .sheet>*{max-width:728px;margin-left:auto;margin-right:auto}
 .sheethead{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.chip.sg{background:transparent;border:1px dashed var(--accent);color:var(--accent);padding:0;gap:0}
+.chip.sg button{all:unset;cursor:pointer;display:inline-flex;align-items:center;min-height:32px;padding:0 8px 0 10px;font-size:12px;font-weight:600}
+.chip.sg button.dis{padding:0 10px 0 4px;color:var(--muted);font-size:15px}
+.chip.sg button:focus-visible{outline:2px solid var(--accent);border-radius:999px}
+.tile .sdot{position:absolute;top:6px;right:6px;background:var(--accent);color:var(--accent-ink);border-radius:999px;min-width:24px;height:22px;padding:0 6px;display:grid;place-items:center;font-size:12px;font-weight:700}
 .chip.mdfc{background:transparent;border:1px dashed var(--muted);color:var(--muted)}
 .grow{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
 .gtop{display:flex;flex-direction:column;min-width:0}
@@ -288,6 +293,10 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
             </div>
           </div>
         </div>
+        <div class="bar2">
+          <button type="button" class="ghost" id="suggBtn" style="min-height:40px;padding:6px 12px;font-size:14px">Suggérer les catégories</button>
+          <button type="button" id="suggAll" style="min-height:40px;padding:6px 12px;font-size:14px" hidden>Tout accepter</button>
+        </div>
         <p class="note" id="viewNote" style="margin:0 0 6px"></p>
         <div id="out"></div>
       </div>
@@ -407,12 +416,13 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
       basic:/Basic/.test(tl),
       img:(c.image_uris&&c.image_uris.small)||(f.image_uris&&f.image_uris.small)||"",
       imgN:(c.image_uris&&c.image_uris.normal)||(f.image_uris&&f.image_uris.normal)||"",
-      uri:c.scryfall_uri||"",t:Date.now(),v:3,
+      ot:text.slice(0,700),kw:c.keywords||[],
+      uri:c.scryfall_uri||"",t:Date.now(),v:4,
       mdfc:c.layout==="modal_dfc"&&faces.length>1&&!/Land/.test(faces[0].type_line||"")&&faces.slice(1).some(function(x){return /Land/.test(x.type_line||"")})};
   }
   function keep(c){ var s=slim(c); cache[c.name.toLowerCase()]=s; c.name.split(" // ").forEach(function(n){ cache[n.toLowerCase()]=s; }); return s; }
   function lookupCache(n){ var k=n.toLowerCase(); return cache[k]||cache[k.split(" // ")[0]]||null; }
-  function fresh(n){ var s=lookupCache(n); return !!s&&s.v>=3&&(Date.now()-(s.t||0)<MAXAGE); }
+  function fresh(n){ var s=lookupCache(n); return !!s&&s.v>=4&&(Date.now()-(s.t||0)<MAXAGE); }
   async function fetchCards(names,say){
     var missing=[];
     for(var i=0;i<names.length;i+=75){
@@ -548,6 +558,71 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     if(!any) cb.appendChild(el("p","note",ident&&!ident.length?"Identité incolore : aucune couleur à afficher.":"Aucun symbole de couleur ni source détecté."));
   }
 
+  /* ---------- suggestions de catégories ---------- */
+  var SG="deckv2.sugg", sugg={};
+  var TAGMAP={"Ramp":["ramp","mana-rock","mana-dork"],"Pioche":["draw"],"Removal":["removal"],"Balayage":["sweeper"],"Tuteur":["tutor"],"Récursion":["recursion"]};
+  var RULES=[
+    ["Ramp",/\badd \{[^}]+\}|\badd (?:one|two|three|four|x) mana|search your library for (?:a|an|up to \w+|two|three) (?:basic )?(?:land|plains|island|swamp|mountain|forest)[^.]*onto the battlefield|put (?:a|that) land card[^.]*onto the battlefield|create (?:a|an|\w+) treasure tokens?|untap target land/i],
+    ["Pioche",/\bdraws? (?:a|an|two|three|four|five|x|that many|\w+) cards?\b|\binvestigate\b|create (?:a|an|\w+) clue tokens?|exile the top (?:card|\w+ cards) of your library[^.]*you may (?:play|cast)/i],
+    ["Removal",/\b(?:destroy|exile) (?:up to \w+ )?(?:another )?target (?:\w+ )*?(?:creature|artifact|enchantment|planeswalker|permanent|battle)s?|deals? (?:\d+|x) damage to (?:any target|target (?:creature|planeswalker|opponent or planeswalker|player or planeswalker))|target creature gets -\d+\/-\d+|counter target (?:\w+ )*?(?:spell|ability)|return target (?:\w+ )*?(?:permanent|creature) to its owner's hand|(?:target opponent|target player) sacrifices (?:a|an) (?:creature|permanent)/i],
+    ["Balayage",/\b(?:destroy|exile) all (?:\w+ )*?(?:creatures?|artifacts?|enchantments?|permanents?|planeswalkers?)|deals? (?:\d+|x) damage to each (?:other )?creature|all creatures get -\d+\/-\d+|return all (?:\w+ )*?(?:permanents|creatures) to their owners' hands/i],
+    ["Tuteur",/search your library for (?!(?:a |an |up to \w+ |two |three )?(?:basic )?(?:land|plains|islands?|swamps?|mountains?|forests?)\b)(?:a|an|up to \w+|two|three|x)(?: \w+)* cards?/i],
+    ["Récursion",/return (?:target|up to \w+ target|that|those|each|all|a|an|another)[^.]{0,80}?(?:card|creature|permanent)s?[^.]{0,60}?from (?:your|a|any|that player's|their) graveyard to (?:your hand|the battlefield|their hand)|from (?:your|a|any) graveyard to the battlefield|put (?:target|up to \w+ target|that)[^.]{0,60}?from (?:a|your|any) graveyard onto the battlefield/i],
+    ["Protection",/(?:gain|gains|have|has) (?:hexproof|indestructible|protection from|shroud)|\bphases? out\b|can't be countered|prevent (?:all|the next)[^.]*damage/i]
+  ];
+  function rulesCats(c){ var t=c.ot||"", out=[]; RULES.forEach(function(r){ if(r[1].test(t)) out.push(r[0]); }); return out; }
+  function frontName(n){ return n.split(" // ")[0].replace(/"/g,""); }
+  async function fetchTagCats(names,progress){
+    var jobs=[]; Object.keys(TAGMAP).forEach(function(cat){ TAGMAP[cat].forEach(function(tag){ jobs.push([cat,tag]); }); });
+    var chunks=[]; for(var i=0;i<names.length;i+=30) chunks.push(names.slice(i,i+30));
+    var out={}, fails=0, hits=0, done=0, total=jobs.length*chunks.length;
+    function mark(card,cat){ var l=card.name.toLowerCase(); [l,l.split(" // ")[0]].forEach(function(k){ out[k]=out[k]||{}; out[k][cat]=1; }); }
+    for(var c=0;c<chunks.length;c++){
+      var part="("+chunks[c].map(function(n){ return '!"'+frontName(n)+'"'; }).join(" or ")+")";
+      for(var j=0;j<jobs.length;j++){
+        progress("Scryfall : tags "+(++done)+" / "+total+"…");
+        var res=await fetch("https://api.scryfall.com/cards/search?unique=cards&q="+encodeURIComponent("otag:"+jobs[j][1]+" "+part),{headers:{"Accept":"application/json"}});
+        if(res.status===429) throw new Error("trop de requêtes, réessaie dans une minute");
+        if(res.status===404){ }
+        else if(!res.ok){ fails++; }
+        else { var data=await res.json(); (data.data||[]).forEach(function(card){ mark(card,jobs[j][0]); hits++; }); }
+        await sleep(110);
+      }
+    }
+    return {map:out,fails:fails,hits:hits,total:total};
+  }
+  function pendingFor(e){
+    var k=e.name.toLowerCase(), s=sugg[k], d=cur(); if(!s||!d) return [];
+    var have=mget(e.name).cats.map(function(x){return x.toLowerCase()}), dis=((d.dismiss||{})[k]||[]).map(function(x){return x.toLowerCase()});
+    return s.c.filter(function(c){ var l=c.toLowerCase(); return have.indexOf(l)<0&&dis.indexOf(l)<0; });
+  }
+  function acceptSugg(e,cat){ addLabels(e.name,"cat",cat); renderList(); }
+  function dismissSugg(e,cat){ var d=cur(); d.dismiss=d.dismiss||{}; var k=e.name.toLowerCase(); d.dismiss[k]=(d.dismiss[k]||[]).concat([cat]); saveDecks(); renderList(); }
+  function deckTargets(){ return entries.filter(function(e){ return (e.board==="main"||e.board==="commander")&&e.card&&!isLand(e.card); }); }
+  function pendingTotal(){ var n=0; deckTargets().forEach(function(e){ n+=pendingFor(e).length; }); return n; }
+  function acceptAll(){ var n=0; deckTargets().forEach(function(e){ pendingFor(e).forEach(function(c){ addLabels(e.name,"cat",c); n++; }); }); renderList(); say(n+" suggestion"+(n>1?"s":"")+" acceptée"+(n>1?"s":"")+".","ok"); }
+  async function runSuggest(){
+    var d=cur(), targets=deckTargets(); if(!d) return;
+    if(!targets.length){ say("Aucune carte à analyser : lance d'abord l'analyse du deck.","warn"); return; }
+    $("suggBtn").disabled=true; say("Suggestions : lecture du texte des cartes…");
+    var names=[], seen={}; targets.forEach(function(e){ var k=e.name.toLowerCase(); if(!seen[k]){ seen[k]=1; names.push(e.name); } });
+    var tags=null, err=null;
+    try{ tags=await fetchTagCats(names,say); }catch(x){ err=(x&&x.message)||"erreur réseau"; }
+    var nt=0,nx=0,none=0;
+    targets.forEach(function(e){
+      var k=e.name.toLowerCase(), t=tags&&(tags.map[k]||tags.map[k.split(" // ")[0]]), cats=[], src="text";
+      if(t){ cats=Object.keys(TAGMAP).filter(function(c){ return t[c]; }); src="tags"; }
+      if(!cats.length){ cats=rulesCats(e.card); src="text"; }
+      if(cats.length){ sugg[k]={c:cats,s:src,t:Date.now()}; if(src==="tags") nt++; else nx++; } else { delete sugg[k]; none++; }
+    });
+    write(SG,sugg);
+    var parts=[nt+" via les tags Scryfall",nx+" via le texte de règles",none+" sans suggestion"];
+    var warn=!!err||(tags&&tags.fails>0);
+    var extra=err?(" Scryfall injoignable ("+err+") : texte de règles seulement."):(tags&&tags.hits===0?" Scryfall n'a renvoyé aucun tag : texte de règles seulement.":(tags&&tags.fails?" "+tags.fails+" requête(s) de tags ont échoué.":""));
+    say("Suggestions : "+parts.join(", ")+"."+extra,warn?"warn":"ok");
+    $("suggBtn").disabled=false; renderList();
+  }
+
   /* ---------- objectifs par catégorie / tag ---------- */
   var focusGoal=null, goalT;
   function countLabel(es,kind,label){
@@ -650,10 +725,23 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     if(e.card&&e.card.mdfc) box.appendChild(el("span","chip mdfc","MDFC · terrain"));
     m.cats.forEach(function(t){ box.appendChild(el("span","chip cat",t)); });
     m.tags.forEach(function(t){ box.appendChild(el("span","chip",t)); });
+    pendingFor(e).forEach(function(cat){
+      var c=el("span","chip sg"), a=el("button",null,"+ "+cat), x=el("button","dis","×");
+      a.type="button"; x.type="button";
+      a.setAttribute("aria-label","Accepter la catégorie suggérée "+cat+" pour "+e.name); x.setAttribute("aria-label","Ignorer la suggestion "+cat+" pour "+e.name);
+      a.addEventListener("click",function(){ acceptSugg(e,cat); }); x.addEventListener("click",function(){ dismissSugg(e,cat); });
+      c.appendChild(a); c.appendChild(x); box.appendChild(c);
+    });
     return box.childNodes.length?box:null;
   }
   function labelBlock(e,kind){
     var K=KINDS[kind], m=mget(e.name), g=el("div"); g.appendChild(el("label","l",K.many));
+    if(kind==="cat"&&live.display==="grid"){ var ps=pendingFor(e);
+      if(ps.length){ var sr=el("div","sugg"); sr.style.marginBottom="8px"; sr.appendChild(el("span","note","Suggérées :"));
+        ps.forEach(function(cat){ var c=el("span","chip sg"), a=el("button",null,"+ "+cat), x=el("button","dis","×"); a.type="button"; x.type="button";
+          a.setAttribute("aria-label","Accepter "+cat); x.setAttribute("aria-label","Ignorer "+cat);
+          a.addEventListener("click",function(){ acceptSugg(e,cat); }); x.addEventListener("click",function(){ dismissSugg(e,cat); }); c.appendChild(a); c.appendChild(x); sr.appendChild(c); });
+        g.appendChild(sr); } }
     if(m[K.k].length){ var chips=el("div","chips"); chips.style.marginBottom="8px";
       m[K.k].forEach(function(t){ var c=el("span","chip"+(kind==="cat"?" cat":""),t); var x=el("button",null,"×"); x.type="button"; x.setAttribute("aria-label","Retirer "+t);
         x.addEventListener("click",function(){ var mm=mget(e.name); mm[K.k]=mm[K.k].filter(function(y){return y!==t}); mset(e.name,mm); renderList(); }); c.appendChild(x); chips.appendChild(c); });
@@ -699,6 +787,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     if(src){ var img=el("img"); img.alt=""; img.loading="lazy"; img.src=src; b.appendChild(img); }
     else b.appendChild(el("span","ph",c?c.name:e.name));
     if(e.qty>1) b.appendChild(el("span","qty",e.qty+"×"));
+    var np=pendingFor(e).length; if(np){ var sd=el("span","sdot","+"+np); sd.setAttribute("aria-hidden","true"); b.appendChild(sd); }
     b.addEventListener("click",function(){ editing=editing===key?null:key; renderList(); });
     li.appendChild(b); return li;
   }
@@ -734,6 +823,9 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     Array.prototype.forEach.call($("dispSeg").querySelectorAll("button"),function(b){ b.setAttribute("aria-pressed",b.getAttribute("data-disp")===live.display?"true":"false"); });
     Array.prototype.forEach.call($("colSeg").querySelectorAll("button"),function(b){ b.setAttribute("aria-pressed",parseInt(b.getAttribute("data-cols"),10)===live.cols?"true":"false"); });
     $("colWrap").hidden=live.display!=="grid";
+    var pt=pendingTotal(), hasS=Object.keys(sugg).length>0;
+    $("suggBtn").textContent=hasS?"Recalculer les suggestions":"Suggérer les catégories";
+    $("suggAll").hidden=!pt; $("suggAll").textContent="Tout accepter ("+pt+")";
     var mdfcAll=qsum(es.filter(function(e){return e.card&&e.card.mdfc}));
     var vn=live.view==="type"?(mdfcAll?VIEWNOTE.type:""):VIEWNOTE[live.view]; $("viewNote").textContent=vn; $("viewNote").hidden=!vn;
     BORDER.forEach(function(b){
@@ -842,7 +934,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   }
 
   /* ---------- démarrage ---------- */
-  decks=read(DK,[]); cache=read(CK,{}); var p0=read(PK,null);
+  decks=read(DK,[]); cache=read(CK,{}); sugg=read(SG,{}); if(!sugg||typeof sugg!=="object") sugg={}; var p0=read(PK,null);
   if(!Array.isArray(decks)) decks=[];
   if(!cache||typeof cache!=="object") cache={};
   if(p0&&typeof p0==="object"){
@@ -894,6 +986,8 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   $("themeSeg").addEventListener("click",function(ev){ var b=ev.target.closest("button[data-theme-set]"); if(!b) return; prefs.theme=b.getAttribute("data-theme-set"); savePrefs(); applyTheme(); });
   $("dispSeg").addEventListener("click",function(ev){ var b=ev.target.closest("button[data-disp]"); if(!b) return; live.display=b.getAttribute("data-disp"); savePrefs(); if(entries.length) renderList(); });
   $("colSeg").addEventListener("click",function(ev){ var b=ev.target.closest("button[data-cols]"); if(!b) return; live.cols=parseInt(b.getAttribute("data-cols"),10); savePrefs(); if(entries.length) renderList(); });
+  $("suggBtn").addEventListener("click",runSuggest);
+  $("suggAll").addEventListener("click",acceptAll);
   $("viewSeg").addEventListener("click",function(ev){ var b=ev.target.closest("button[data-view]"); if(!b) return; live.view=b.getAttribute("data-view"); savePrefs(); if(entries.length) renderList(); });
   $("foldAll").addEventListener("click",function(){
     var all=$("out").querySelectorAll("details"), anyOpen=false;

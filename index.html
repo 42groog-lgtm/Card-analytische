@@ -333,7 +333,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   var HEAD={commander:"commander",commandant:"commander",companion:"companion",deck:"main",mainboard:"main",main:"main",sideboard:"side",side:"side","réserve":"side",reserve:"side",maybeboard:"maybe"};
   var BLABEL={commander:"Commandant",companion:"Compagnon",main:"Deck",side:"Réserve",maybe:"À envisager"};
   var BORDER=["commander","companion","main","side","maybe"];
-  var CATS=["Ramp","Card Draw","Removal","Board Wipe","Threat","Protection","Recursion","Tutor","Utility"];
+  var CATS=["Ramp","Card Draw","Removal","Board Wipe","Burn","Protection","Recursion","Tutor","Fixing","Utility"];
   var CAT_RENAME={"Pioche":"Card Draw","Balayage":"Board Wipe","Menace":"Threat","Récursion":"Recursion","Tuteur":"Tutor","Utilitaire":"Utility"};
   var TLABEL={planeswalker:"Planeswalkers",battle:"Batailles",room:"Chambres",creature:"Créatures",artifact:"Artefacts",enchantment:"Enchantements",instant:"Éphémères",sorcery:"Rituels",land:"Terrains",other:"Autres"};
   var TORDER=["planeswalker","battle","room","creature","artifact","enchantment","instant","sorcery","land","other"];
@@ -578,16 +578,18 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   }
 
   /* ---------- suggestions de catégories ---------- */
-  var SG="deckv2.sugg", sugg={};
-  var TAGMAP={"Ramp":["ramp","mana-rock","mana-dork"],"Card Draw":["draw"],"Removal":["removal"],"Board Wipe":["sweeper"],"Tutor":["tutor"],"Recursion":["recursion"]};
+  var SG="deckv2.sugg2", sugg={};
+  var TAGMAP={"Ramp":["ramp","mana-rock","mana-dork"],"Card Draw":["draw"],"Removal":["removal"],"Board Wipe":["sweeper"],"Tutor":["tutor"],"Recursion":["recursion"],"Protection":["counterspell","fog"]};
   var RULES=[
     ["Ramp",/\badd \{[^}]+\}|\badd (?:one|two|three|four|x) mana|search your library for (?:a|an|up to \w+|two|three) (?:basic )?(?:land|plains|island|swamp|mountain|forest)[^.]*onto the battlefield|put (?:a|that) land card[^.]*onto the battlefield|create (?:a|an|\w+) treasure tokens?|untap target land/i],
     ["Card Draw",/\bdraws? (?:a|an|two|three|four|five|x|that many|\w+) cards?\b|\binvestigate\b|create (?:a|an|\w+) clue tokens?|exile the top (?:card|\w+ cards) of your library[^.]*you may (?:play|cast)/i],
-    ["Removal",/\b(?:destroy|exile) (?:up to \w+ )?(?:another )?target (?:\w+ )*?(?:creature|artifact|enchantment|planeswalker|permanent|battle)s?|deals? (?:\d+|x) damage to (?:any target|target (?:creature|planeswalker|opponent or planeswalker|player or planeswalker))|target creature gets -\d+\/-\d+|counter target (?:\w+ )*?(?:spell|ability)|return target (?:\w+ )*?(?:permanent|creature) to its owner's hand|(?:target opponent|target player) sacrifices (?:a|an) (?:creature|permanent)/i],
+    ["Removal",/\b(?:destroy|exile) (?:up to \w+ )?(?:another )?target (?:\w+ )*?(?:creature|artifact|enchantment|planeswalker|permanent|battle)s?|deals? (?:\d+|x) damage to (?:any target|target (?:\w+ )*?creature)|target creature gets -\d+\/-\d+|(?:target opponent|target player) sacrifices (?:a|an) (?:creature|permanent)/i],
     ["Board Wipe",/\b(?:destroy|exile) all (?:\w+ )*?(?:creatures?|artifacts?|enchantments?|permanents?|planeswalkers?)|deals? (?:\d+|x) damage to each (?:other )?creature|all creatures get -\d+\/-\d+|return all (?:\w+ )*?(?:permanents|creatures) to their owners' hands/i],
     ["Tutor",/search your library for (?!(?:a |an |up to \w+ |two |three )?(?:basic )?(?:land|plains|islands?|swamps?|mountains?|forests?)\b)(?:a|an|up to \w+|two|three|x)(?: \w+)* cards?/i],
     ["Recursion",/return (?:target|up to \w+ target|that|those|each|all|a|an|another)[^.]{0,80}?(?:card|creature|permanent)s?[^.]{0,60}?from (?:your|a|any|that player's|their) graveyard to (?:your hand|the battlefield|their hand)|from (?:your|a|any) graveyard to the battlefield|put (?:target|up to \w+ target|that)[^.]{0,60}?from (?:a|your|any) graveyard onto the battlefield/i],
-    ["Protection",/(?:gain|gains|have|has) (?:hexproof|indestructible|protection from|shroud)|\bphases? out\b|can't be countered|prevent (?:all|the next)[^.]*damage/i]
+    ["Protection",/(?:gain|gains|have|has) (?:hexproof|indestructible|protection from|shroud)|\bphases? out\b|can't be countered|can't be the target of|counter target (?:\w+ )*?(?:spell|ability)|\bregenerate target\b|prevent (?:all|the next)[^.]*damage/i],
+    ["Burn",/deals? (?:\d+|x) damage to (?:any target|target (?:\w+ )*?(?:player|opponent)|each opponent|each player|that player)/i],
+    ["Fixing",/mana of any (?:one |that )?(?:color|type)|mana of (?:the chosen|that) color|search your library for [^.]*\b(?:forest|island|plains|swamp|mountain)\b[^.]*\bor\b[^.]*\bcards?\b|basic land cards? with different names/i]
   ];
   function rulesCats(c){ var t=c.ot||"", out=[]; RULES.forEach(function(r){ if(r[1].test(t)) out.push(r[0]); }); return out; }
   function frontName(n){ return n.split(" // ")[0].replace(/"/g,""); }
@@ -953,7 +955,8 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   }
 
   /* ---------- démarrage ---------- */
-  decks=read(DK,[]); cache=read(CK,{}); sugg=read(SG,{}); if(!sugg||typeof sugg!=="object") sugg={}; migrateCats(); var p0=read(PK,null);
+  decks=read(DK,[]); cache=read(CK,{}); try{ localStorage.removeItem("deckv2.sugg"); }catch(e){}
+  sugg=read(SG,{}); if(!sugg||typeof sugg!=="object") sugg={}; migrateCats(); var p0=read(PK,null);
   if(!Array.isArray(decks)) decks=[];
   if(!cache||typeof cache!=="object") cache={};
   if(p0&&typeof p0==="object"){

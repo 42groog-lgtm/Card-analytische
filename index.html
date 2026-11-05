@@ -394,6 +394,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   function mset(name,m){ var d=cur(); if(!d) return; d.meta=d.meta||{}; var k=name.toLowerCase();
     if(!m.cats.length&&!m.tags.length) delete d.meta[k]; else d.meta[k]={cats:m.cats,tags:m.tags};
     d.updated=Date.now(); saveDecks(); }
+  function alpha(a,b){ return a.localeCompare(b,"fr",{sensitivity:"base"}); }
   function normLabel(t){ return t.replace(/\s+/g," ").trim().slice(0,30); }
   function registry(kind){ var d=cur(); return (d&&d.labels&&d.labels[kind])||[]; }
   function knownLabels(kind){
@@ -634,7 +635,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   function pendingFor(e){
     var k=e.name.toLowerCase(), s=sugg[k], d=cur(); if(!s||!d) return [];
     var have=mget(e.name).cats.map(function(x){return x.toLowerCase()}), dis=((d.dismiss||{})[k]||[]).map(function(x){return x.toLowerCase()});
-    return s.c.filter(function(c){ var l=c.toLowerCase(); return have.indexOf(l)<0&&dis.indexOf(l)<0; });
+    return s.c.filter(function(c){ var l=c.toLowerCase(); return have.indexOf(l)<0&&dis.indexOf(l)<0; }).sort(alpha);
   }
   function acceptSugg(e,cat){ addLabels(e.name,"cat",cat); renderList(); }
   function dismissSugg(e,cat){ var d=cur(); d.dismiss=d.dismiss||{}; var k=e.name.toLowerCase(); d.dismiss[k]=(d.dismiss[k]||[]).concat([cat]); saveDecks(); renderList(); }
@@ -723,7 +724,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
       ai.addEventListener("keydown",function(ev){ if(ev.key==="Enter"){ ev.preventDefault(); reg(ai.value); } });
       addBox.appendChild(ai); addBox.appendChild(ab); box.appendChild(addBox);
       if(ak==="add:"+kind){ ai.value=av; ai.focus(); }
-      var rest=K.presets.filter(function(t){ return !shown[t.toLowerCase()]; });
+      var rest=K.presets.filter(function(t){ return !shown[t.toLowerCase()]; }).sort(alpha);
       if(rest.length){ var sg=el("div","sugg"); sg.style.marginTop="8px";
         rest.forEach(function(t){ var b=el("button",null,"+ "+t); b.type="button"; b.addEventListener("click",function(){ reg(t); }); sg.appendChild(b); }); box.appendChild(sg); }
     });
@@ -795,7 +796,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     var have={}, pool=[], seenP={}; m[K.k].forEach(function(t){ have[t.toLowerCase()]=1; });
     K.presets.concat(knownLabels(kind)).forEach(function(t){ var l=t.toLowerCase(); if(!have[l]&&!seenP[l]){ seenP[l]=1; pool.push(t); } });
     if(pool.length){ var sg=el("div","sugg"); sg.style.marginTop="8px";
-      pool.forEach(function(t){ var b=el("button",null,"+ "+t); b.type="button"; b.addEventListener("click",function(){ addLabels(e.name,kind,t); renderList(); }); sg.appendChild(b); });
+      pool.sort(alpha); pool.forEach(function(t){ var b=el("button",null,"+ "+t); b.type="button"; b.addEventListener("click",function(){ addLabels(e.name,kind,t); renderList(); }); sg.appendChild(b); });
       g.appendChild(sg); }
     return g;
   }

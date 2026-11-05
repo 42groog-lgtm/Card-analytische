@@ -75,6 +75,7 @@ a{color:var(--accent)}
 .ms .h.W{background:#f6efc2;color:#2b2616}.ms .h.U{background:#0e68ab;color:#fff}.ms .h.B{background:#1a1a1a;color:#f2f2f2}.ms .h.R{background:#d3202a;color:#fff}.ms .h.G{background:#00733e;color:#fff}
 .ms.C::after{content:"\25C6";font-size:9px;opacity:.55}
 .ms.big.C::after{font-size:13px}
+.costsep{color:var(--muted);font-weight:700;align-self:center;padding:0 1px}
 .cost{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:2px;max-width:150px;margin-top:2px}
 
 /* stats */
@@ -339,7 +340,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
 (function(){
   var $=function(i){return document.getElementById(i)};
   var COLORS=["W","U","B","R","G"];
-  var HEAD={commander:"commander",commandant:"commander",companion:"companion",deck:"main",mainboard:"main",main:"main",sideboard:"side",side:"side","réserve":"side",reserve:"side",maybeboard:"maybe"};
+  var HEAD={commander:"commander",commanders:"commander",commandant:"commander",commandants:"commander",companions:"companion",maybe:"maybe",considering:"maybe",companion:"companion",deck:"main",mainboard:"main",main:"main",sideboard:"side",side:"side","réserve":"side",reserve:"side",maybeboard:"maybe"};
   var BLABEL={commander:"Commander",companion:"Companion",main:"Deck",side:"Sideboard",maybe:"Maybeboard"};
   var NOTFOUND="Not found";
   var BORDER=["commander","companion","main","side","maybe"];
@@ -449,9 +450,11 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   function sleep(ms){ return new Promise(function(r){ setTimeout(r,ms); }); }
   function slim(c){
     var f=(c.card_faces&&c.card_faces[0])||c, faces=c.card_faces||[c];
-    var text=faces.map(function(x){return x.oracle_text||""}).join("\n")+"\n"+(c.oracle_text||"");
+    var text=c.card_faces?c.card_faces.map(function(x){return x.oracle_text||""}).join("\n"):(c.oracle_text||"");
+    var faceCosts=(c.card_faces||[]).map(function(x){return x.mana_cost||""}).filter(Boolean);
+    var allCost=(c.mana_cost&&c.mana_cost.indexOf("//")>=0)?c.mana_cost:(faceCosts.length>1?faceCosts.join(" // "):(f.mana_cost||c.mana_cost||""));
     var tl=f.type_line||c.type_line||"", kw=c.keywords||[];
-    return {name:c.name,tl:tl,mc:f.mana_cost||c.mana_cost||"",cmc:c.cmc||0,prod:c.produced_mana||[],ci:c.color_identity||[],
+    return {name:c.name,tl:tl,mc:allCost,cmc:c.cmc||0,prod:c.produced_mana||[],ci:c.color_identity||[],
       lg:(c.legalities&&c.legalities.commander)||"",
       cmd:(/Legendary/.test(tl)&&/Creature/.test(tl))||/can be your commander/i.test(text)||/Background/.test(tl),
       ptn:kw.some(function(k){return /^(Partner|Friends forever|Choose a background|Doctor's companion)/i.test(k)})||/Background/.test(tl),
@@ -459,15 +462,15 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
       basic:/Basic/.test(tl),
       img:(c.image_uris&&c.image_uris.small)||(f.image_uris&&f.image_uris.small)||"",
       imgN:(c.image_uris&&c.image_uris.normal)||(f.image_uris&&f.image_uris.normal)||"",
-      ot:text.slice(0,700),kw:c.keywords||[],
+      ot:text.slice(0,2000),kw:c.keywords||[],
       img2:(c.card_faces&&c.card_faces.length>1&&c.card_faces[1].image_uris&&c.card_faces[1].image_uris.small)||"",
       imgN2:(c.card_faces&&c.card_faces.length>1&&c.card_faces[1].image_uris&&c.card_faces[1].image_uris.normal)||"",
-      uri:c.scryfall_uri||"",t:Date.now(),v:5,
+      uri:c.scryfall_uri||"",t:Date.now(),v:6,
       mdfc:c.layout==="modal_dfc"&&faces.length>1&&!/Land/.test(faces[0].type_line||"")&&faces.slice(1).some(function(x){return /Land/.test(x.type_line||"")})};
   }
   function keep(c){ var s=slim(c); cache[c.name.toLowerCase()]=s; c.name.split(" // ").forEach(function(n){ cache[n.toLowerCase()]=s; }); return s; }
   function lookupCache(n){ var k=n.toLowerCase(); return cache[k]||cache[k.split(" // ")[0]]||null; }
-  function fresh(n){ var s=lookupCache(n); return !!s&&s.v>=5&&(Date.now()-(s.t||0)<MAXAGE); }
+  function fresh(n){ var s=lookupCache(n); return !!s&&s.v>=6&&(Date.now()-(s.t||0)<MAXAGE); }
   async function fetchCards(names,say){
     var missing=[];
     for(var i=0;i<names.length;i+=75){
@@ -512,9 +515,13 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     return s;
   }
   function symbols(cost){
-    var w=el("div","cost"), toks=(cost||"").match(/\{[^}]+\}/g)||[];
-    w.setAttribute("aria-label",toks.map(function(t){return t.slice(1,-1)}).join(" "));
-    toks.forEach(function(t){ w.appendChild(symbol(t.slice(1,-1))); });
+    var w=el("div","cost"), parts=(cost||"").split(/\s*\/\/\s*/), lab=[];
+    parts.forEach(function(part,i){
+      var toks=part.match(/\{[^}]+\}/g)||[]; if(!toks.length) return;
+      if(w.childNodes.length){ var sep=el("span","costsep","/"); sep.setAttribute("aria-hidden","true"); w.appendChild(sep); }
+      toks.forEach(function(t){ w.appendChild(symbol(t.slice(1,-1))); }); lab.push(toks.map(function(t){return t.slice(1,-1)}).join(" "));
+    });
+    w.setAttribute("aria-label",lab.join(" ou "));
     return w;
   }
   function pips(cost){ var p={W:0,U:0,B:0,R:0,G:0}; (cost.match(/\{[^}]+\}/g)||[]).forEach(function(t){ t.slice(1,-1).toUpperCase().split("/").forEach(function(x){ if(p[x]!==undefined) p[x]++; }); }); return p; }
@@ -534,7 +541,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     }
     if(total!==100) issues.push("Le deck compte "+total+" carte(s) au lieu de 100, commandant compris.");
     var counts={};
-    deck.forEach(function(e){ var k=e.name.toLowerCase(); counts[k]=counts[k]||{n:0,e:e}; counts[k].n+=e.qty; });
+    deck.forEach(function(e){ var k=(e.card?e.card.name:e.name).toLowerCase(); counts[k]=counts[k]||{n:0,e:e}; counts[k].n+=e.qty; });
     Object.keys(counts).forEach(function(k){ var o=counts[k], c=o.e.card; if(o.n>1&&!(c&&(c.basic||c.any))) issues.push(o.n+" exemplaires de "+(c?c.name:o.e.name)+" (une seule copie autorisée)."); });
     deck.forEach(function(e){ var c=e.card; if(!c) return;
       if(c.lg==="banned") issues.push(c.name+" est bannie en Commander.");
@@ -945,7 +952,9 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
       var miss=entries.filter(function(e){return !e.card}).length;
       say(miss?(miss+" carte(s) introuvable(s)."):"Toutes les cartes ont été trouvées.",miss?"warn":"ok");
     }catch(e){
-      if(id===runId) say("Scryfall est injoignable ("+(e&&e.message||"erreur réseau")+"). Les cartes déjà connues restent affichées.","warn");
+      saveCache();
+      if(id===runId&&activeId===deckId){ link(entries); L=render(entries); persistDeck(d,L); }
+      if(id===runId) say("Scryfall est injoignable ("+(e&&e.message||"erreur réseau")+"). Les cartes déjà reçues restent affichées ; relance « Analyser » pour le reste.","warn");
     }finally{ if(id===runId) $("go").disabled=false; }
   }
 

@@ -334,7 +334,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   var BLABEL={commander:"Commander",companion:"Companion",main:"Deck",side:"Sideboard",maybe:"Maybeboard"};
   var NOTFOUND="Not found";
   var BORDER=["commander","companion","main","side","maybe"];
-  var CATS=["Ramp","Card Draw","Removal","Board Wipe","Burn","Protection","Recursion","Tutor","Fixing","Utility"];
+  var CATS=["Ramp","Card Draw","Removal","Board Wipe","Burn","Ping","Protection","Recursion","Tutor","Fixing","Utility"];
   var CAT_RENAME={"Pioche":"Card Draw","Balayage":"Board Wipe","Menace":"Threat","Récursion":"Recursion","Tuteur":"Tutor","Utilitaire":"Utility"};
   var TLABEL={planeswalker:"Planeswalkers",battle:"Battles",room:"Rooms",creature:"Creatures",artifact:"Artifacts",enchantment:"Enchantments",instant:"Instants",sorcery:"Sorceries",land:"Lands",other:"Other"};
   var TORDER=["planeswalker","battle","room","creature","artifact","enchantment","instant","sorcery","land","other"];
@@ -579,8 +579,8 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   }
 
   /* ---------- suggestions de catégories ---------- */
-  var SG="deckv2.sugg2", sugg={};
-  var TAGMAP={"Ramp":["ramp","mana-rock","mana-dork"],"Card Draw":["draw"],"Removal":["removal"],"Board Wipe":["sweeper"],"Tutor":["tutor"],"Recursion":["recursion"],"Protection":["counterspell","fog"]};
+  var SG="deckv2.sugg3", sugg={};
+  var TAGMAP={"Ramp":["ramp","mana-rock","mana-dork"],"Card Draw":["draw"],"Removal":["removal"],"Board Wipe":["sweeper"],"Tutor":["tutor"],"Recursion":["recursion"],"Protection":["counterspell","fog"],"Ping":["pinger"]};
   var RULES=[
     ["Ramp",/\badd \{[^}]+\}|\badd (?:one|two|three|four|x) mana|search your library for (?:a|an|up to \w+|two|three) (?:basic )?(?:land|plains|island|swamp|mountain|forest)[^.]*onto the battlefield|put (?:a|that) land card[^.]*onto the battlefield|create (?:a|an|\w+) treasure tokens?|untap target land/i],
     ["Card Draw",/\bdraws? (?:a|an|two|three|four|five|x|that many|\w+) cards?\b|\binvestigate\b|create (?:a|an|\w+) clue tokens?|exile the top (?:card|\w+ cards) of your library[^.]*you may (?:play|cast)/i],
@@ -592,7 +592,14 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     ["Burn",/deals? (?:\d+|x) damage to (?:any target|target (?:\w+ )*?(?:player|opponent)|each opponent|each player|that player)/i],
     ["Fixing",/mana of any (?:one |that )?(?:color|type)|mana of (?:the chosen|that) color|search your library for [^.]*\b(?:forest|island|plains|swamp|mountain)\b[^.]*\bor\b[^.]*\bcards?\b|basic land cards? with different names/i]
   ];
-  function rulesCats(c){ var t=c.ot||"", out=[]; RULES.forEach(function(r){ if(r[1].test(t)) out.push(r[0]); }); return out; }
+  var PING=/\{T\}(?:, (?!sacrifice\b)[^:,.]*)*: [^.]*\bdeals? 1 damage to [^.]*\.?/gi;
+  function rulesCats(c){
+    var t=c.ot||"", out=[], ping=false;
+    var rest=t.replace(PING,function(){ ping=true; return " "; });
+    RULES.forEach(function(r){ if(r[1].test(rest)) out.push(r[0]); });
+    if(ping) out.push("Ping");
+    return out;
+  }
   function frontName(n){ return n.split(" // ")[0].replace(/"/g,""); }
   async function fetchTagCats(names,progress){
     var jobs=[]; Object.keys(TAGMAP).forEach(function(cat){ TAGMAP[cat].forEach(function(tag){ jobs.push([cat,tag]); }); });
@@ -956,7 +963,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   }
 
   /* ---------- démarrage ---------- */
-  decks=read(DK,[]); cache=read(CK,{}); try{ localStorage.removeItem("deckv2.sugg"); }catch(e){}
+  decks=read(DK,[]); cache=read(CK,{}); try{ localStorage.removeItem("deckv2.sugg"); localStorage.removeItem("deckv2.sugg2"); }catch(e){}
   sugg=read(SG,{}); if(!sugg||typeof sugg!=="object") sugg={}; migrateCats(); var p0=read(PK,null);
   if(!Array.isArray(decks)) decks=[];
   if(!cache||typeof cache!=="object") cache={};

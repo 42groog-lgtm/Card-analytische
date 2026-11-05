@@ -243,7 +243,7 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     </div>
   </div>
   <p class="warnbox" id="boot">Le script de la page ne s'est pas lancé : rien ne fonctionnera. Ouvre la page dans un vrai navigateur (Chrome, Safari, Firefox), pas dans un aperçu.</p>
-  <p class="warnbox" id="storeWarn" hidden>Ce navigateur refuse d'enregistrer des données : tes decks seront perdus à la fermeture de la page.</p>
+  <p class="warnbox" id="storeWarn" hidden>Le stockage de ce navigateur est plein ou indisponible : tes dernières modifications peuvent être perdues à la fermeture de la page.</p>
 
   <div id="home" hidden>
     <section class="box">
@@ -355,8 +355,21 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
   function factoryDef(){ return {view:"type",display:"list",cols:2,fold:{commander:false,companion:false,main:false,side:true,maybe:true},groups:false}; }
   function applyDefaults(){ live.view=prefs.def.view; live.display=prefs.def.display; live.cols=prefs.def.cols; }
   function el(tag,cls,text){ var e=document.createElement(tag); if(cls) e.className=cls; if(text!==undefined) e.textContent=text; return e; }
-  function read(k,def){ try{ var v=localStorage.getItem(k); return v?JSON.parse(v):def; }catch(e){ storeOK=false; return def; } }
-  function write(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){ storeOK=false; $("storeWarn").hidden=false; } }
+  var corruptKeys=[];
+  function read(k,def){ var raw=null;
+    try{ raw=localStorage.getItem(k); return raw?JSON.parse(raw):def; }
+    catch(e){ if(raw===null) storeOK=false; else { corruptKeys.push(k); try{ localStorage.setItem(k+".corrupt",raw); }catch(e2){} } return def; } }
+  function usedNames(){ var u={}; (Array.isArray(decks)?decks:[]).forEach(function(d){ parse((d&&d.list)||"").forEach(function(e){ var l=e.name.toLowerCase(); u[l]=1; u[l.split(" // ")[0]]=1; }); }); return u; }
+  function pruneCache(){ var u=usedNames(), n=0; Object.keys(cache).forEach(function(k){ if(!u[k]){ delete cache[k]; n++; } }); return n; }
+  function write(k,v){
+    var soft=(k===CK||k===SG);
+    try{ localStorage.setItem(k,JSON.stringify(v)); return true; }
+    catch(e){
+      try{ if(pruneCache()>0) localStorage.setItem(CK,JSON.stringify(cache)); localStorage.setItem(k,JSON.stringify(v)); return true; }catch(e2){}
+      if(!soft){ storeOK=false; $("storeWarn").hidden=false; }
+      return false;
+    }
+  }
   function saveDecks(){ write(DK,decks); }
   function saveCache(){ write(CK,cache); }
   function savePrefs(){ write(PK,prefs); }
@@ -421,10 +434,10 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
       var h=HEAD[line.replace(/:$/,"").toLowerCase()];
       if(h){ board=h; return; }
       var sb=line.match(/^SB:\s*(.*)$/i), b=board; if(sb){ b="side"; line=sb[1]; }
-      line=line.replace(/\[[^\]]*\]/g,"").replace(/#\S+/g,"").replace(/\*[^*]*\*/g,"").trim();
+      line=line.replace(/\^[^^]*\^/g,"").replace(/\[[^\]]*\]/g,"").replace(/#\S+/g,"").replace(/\*[^*]*\*/g,"").trim();
       var m=line.match(/^(\d+)\s*x?\s+(.+)$/i), qty=1, name=line;
       if(m){ qty=parseInt(m[1],10); name=m[2]; }
-      name=name.replace(/\s+\([A-Za-z0-9]{2,6}\)(\s+[\w★-]+)?\s*$/,"").replace(/\s*\/\/\s*/g," // ").trim();
+      name=name.replace(/\s+\([A-Za-z0-9]{2,6}\)(\s+[\w★-]+)?\s*$/,"").replace(/\s*\/\/\s*/g," // ").replace(/\s+/g," ").trim();
       if(!name||qty<1) return;
       var key=b+"|"+name.toLowerCase();
       if(idx[key]!==undefined) out[idx[key]].qty+=qty; else { idx[key]=out.length; out.push({qty:qty,name:name,board:b,card:null}); }
@@ -991,7 +1004,8 @@ button.tagbtn{background:none;color:var(--accent);padding:0;min-height:36px;font
     if(p0.def){ BORDER.forEach(function(b){ if(p0.def.fold&&typeof p0.def.fold[b]==="boolean") D.fold[b]=p0.def.fold[b]; }); if(typeof p0.def.groups==="boolean") D.groups=p0.def.groups; }
   }
   applyDefaults();
-  if(!storeOK) $("storeWarn").hidden=false;
+  if(corruptKeys.length){ var cw=$("storeWarn"); cw.textContent="Des données enregistrées étaient illisibles. Elles ont été mises de côté sans être supprimées (clés « "+corruptKeys.map(function(k){return k+".corrupt"}).join(", ")+" »), et la page repart de zéro pour ces données."; cw.hidden=false; }
+  else if(!storeOK) $("storeWarn").hidden=false;
   $("boot").hidden=true; applyTheme();
   var saveT;
   $("list").addEventListener("input",function(){ var d=cur(); if(!d) return; d.list=$("list").value; clearTimeout(saveT); saveT=setTimeout(function(){ d.updated=Date.now(); saveDecks(); stamp(d); },300); });

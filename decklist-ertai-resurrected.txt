@@ -1,0 +1,86 @@
+Commander
+1 Ertai Resurrected
+
+Deck
+1 Thassa's Oracle
+1 Laboratory Maniac
+1 Demonic Consultation
+1 Mystical Tutor
+1 Merchant Scroll
+1 Muddle the Mixture
+1 Dizzy Spell
+1 Shred Memory
+1 Drift of Phantasms
+1 Counterspell
+1 Flusterstorm
+1 An Offer You Can't Refuse
+1 Spell Pierce
+1 Arcane Denial
+1 Mystical Dispute
+1 Spell Snare
+1 Stern Scolding
+1 Dispel
+1 Miscalculation
+1 Daze
+1 Memory Lapse
+1 Delay
+1 Commandeer
+1 Mana Leak
+1 Lose Focus
+1 Negate
+1 Essence Scatter
+1 Syncopate
+1 Quench
+1 Exclude
+1 Censor
+1 Fatal Push
+1 Infernal Grasp
+1 Dismember
+1 Pongify
+1 Rapid Hybridization
+1 Feed the Swarm
+1 Into the Roil
+1 Snapback
+1 Bloodchief's Thirst
+1 Go for the Throat
+1 Reality Shift
+1 Vapor Snag
+1 Bitter Triumph
+1 Tishana's Tidebinder
+1 Brazen Borrower
+1 Malevolent Hermit
+1 Nimble Obstructionist
+1 Kitesail Freebooter
+1 Brainstorm
+1 Ponder
+1 Preordain
+1 Consider
+1 Opt
+1 Night's Whisper
+1 Sign in Blood
+1 Frantic Search
+1 Fact or Fiction
+1 Sleight of Hand
+1 Impulse
+1 Serum Visions
+1 Chart a Course
+1 Sol Ring
+1 Arcane Signet
+1 Dimir Signet
+1 Talisman of Dominance
+1 Fellwar Stone
+1 Mind Stone
+1 Dark Ritual
+1 Coldsteel Heart
+1 Underground River
+1 Drowned Catacomb
+1 Sunken Hollow
+1 Darkslick Shores
+1 Choked Estuary
+1 Shipwreck Marsh
+1 Restless Reef
+1 Command Tower
+1 Fabled Passage
+1 Dimir Aqueduct
+10 Island
+9 Swamp

@@ -1,0 +1,10115 @@
+[
+ {
+  "hand7": [
+   "Bloodstained Mire",
+   "Brain Freeze",
+   "Faithless Looting",
+   "Jace, Wielder of Mysteries",
+   "Lion's Eye Diamond",
+   "Mox Opal",
+   "Ornithopter"
+  ],
+  "draw": "Demonic Consultation",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "fetch",
+      "Bloodstained Mire",
+      "Steam Vents",
+      "U"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "jace",
+      "Jace, Wielder of Mysteries"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Ancient Tomb",
+   "Culling the Weak",
+   "Jeska's Will",
+   "Mox Amber",
+   "Prismatic Vista",
+   "Serum Visions"
+  ],
+  "draw": "Verdant Catacombs",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Verdant Catacombs",
+      "Badlands",
+      "B"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "jeska",
+      "Jeska's Will"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Bloodstained Mire",
+     "Brainstorm",
+     "Command Tower",
+     "Dark Petition",
+     "Dark Ritual",
+     "Demonic Consultation",
+     "Demonic Tutor",
+     "Doomsday",
+     "Flooded Strand",
+     "Grim Monolith",
+     "Imperial Seal",
+     "Island",
+     "Jace, Wielder of Mysteries",
+     "Lotus Petal",
+     "Merchant Scroll",
+     "Morphic Pool",
+     "Mox Opal",
+     "Night's Whisper",
+     "Pyretic Ritual",
+     "Scheming Symmetry",
+     "Sleight of Hand",
+     "Steam Vents",
+     "Swamp",
+     "Underground Sea"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "ritual",
+      "Pyretic Ritual"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "draw",
+      "Sleight of Hand"
+     ],
+     [
+      "rock",
+      "Grim Monolith"
+     ],
+     [
+      "tutor",
+      "Demonic Tutor",
+      "Springleaf Drum"
+     ],
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "toptutor",
+      "Scheming Symmetry",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "draw",
+      "Night's Whisper"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "jace",
+      "Jace, Wielder of Mysteries"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Brainstorm",
+   "Culling the Weak",
+   "Lotus Petal",
+   "Phyrexian Walker",
+   "Serum Powder",
+   "Simian Spirit Guide",
+   "Sleight of Hand"
+  ],
+  "draw": "Blood Crypt",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "guide",
+      "Simian Spirit Guide"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "land",
+      "Blood Crypt",
+      "B"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "draw",
+      "Brainstorm"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Ad Nauseam",
+     "Dizzy Spell",
+     "Tendrils of Agony"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Cabal Ritual",
+     "City of Brass",
+     "Command Tower",
+     "Dark Ritual",
+     "Demonic Tutor",
+     "Diabolic Intent",
+     "Forbidden Orchard",
+     "Gemstone Mine",
+     "Gitaxian Probe",
+     "Grim Tutor",
+     "Jace, Wielder of Mysteries",
+     "Laboratory Maniac",
+     "Lim-Dûl's Vault",
+     "Lion's Eye Diamond",
+     "Mana Vault",
+     "Mishra's Workshop",
+     "Misty Rainforest",
+     "Morphic Pool",
+     "Mox Amber",
+     "Mox Opal",
+     "Mystical Tutor",
+     "Opt",
+     "Phyrexian Walker",
+     "Polluted Delta",
+     "Pyretic Ritual",
+     "Scheming Symmetry",
+     "Serum Powder",
+     "Steam Vents",
+     "Strike It Rich",
+     "Swamp",
+     "Thassa's Oracle",
+     "Tolaria West",
+     "Volcanic Island"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "freecre",
+      "Phyrexian Walker"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "treasure",
+      "Strike It Rich"
+     ],
+     [
+      "treastap"
+     ],
+     [
+      "toptutor",
+      "Scheming Symmetry",
+      "Mox Diamond"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Volcanic Island"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "cmdr"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "tutor",
+      "Diabolic Intent",
+      "Springleaf Drum"
+     ],
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "tutor",
+      "Demonic Tutor",
+      "Demonic Consultation"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Gamble",
+   "Grim Monolith",
+   "Lion's Eye Diamond",
+   "Mana Confluence",
+   "Mystical Tutor",
+   "Simian Spirit Guide",
+   "Windfall"
+  ],
+  "draw": "Serum Powder",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "guide",
+      "Simian Spirit Guide"
+     ],
+     [
+      "land",
+      "Mana Confluence",
+      "A"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "rock",
+      "Grim Monolith"
+     ],
+     [
+      "wheel",
+      "Windfall"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Cabal Ritual",
+     "Culling the Weak",
+     "Diabolic Intent",
+     "Jeska's Will",
+     "Mox Diamond",
+     "Ornithopter",
+     "Tendrils of Agony"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "jeska",
+      "Jeska's Will"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Faithless Looting",
+     "Grapeshot",
+     "Mox Amber"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "draw",
+      "Faithless Looting"
+     ]
+    ],
+    [
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Demonic Consultation",
+     "Springleaf Drum"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "tutor",
+      "Diabolic Intent",
+      "Beseech the Mirror"
+     ],
+     [
+      "cmdr"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "beseech",
+      "Beseech the Mirror",
+      "Thassa's Oracle",
+      true
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Chrome Mox",
+   "Drift of Phantasms",
+   "Island",
+   "Mox Opal",
+   "Pyretic Ritual",
+   "Scalding Tarn"
+  ],
+  "draw": "Culling the Weak",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Scalding Tarn",
+      "Badlands",
+      "B"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Pyretic Ritual",
+      "R"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Brainstorm",
+     "Command Tower",
+     "Dark Petition",
+     "Dark Ritual",
+     "Demonic Consultation",
+     "Diabolic Intent",
+     "Flooded Strand",
+     "Gemstone Mine",
+     "Grim Monolith",
+     "Grim Tutor",
+     "Lion's Eye Diamond",
+     "Marsh Flats",
+     "Misty Rainforest",
+     "Mystical Tutor",
+     "Night's Whisper",
+     "Ornithopter",
+     "Polluted Delta",
+     "Scheming Symmetry",
+     "Simian Spirit Guide",
+     "Solve the Equation",
+     "Street Wraith",
+     "Swamp",
+     "Underground Sea",
+     "Vampiric Tutor",
+     "Verdant Catacombs",
+     "Watery Grave"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "cycle",
+      "Street Wraith"
+     ],
+     [
+      "guide",
+      "Simian Spirit Guide"
+     ],
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "draw",
+      "Brainstorm"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Desperate Ritual",
+     "Mox Amber",
+     "Mox Diamond",
+     "Springleaf Drum"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "toptutor",
+      "Vampiric Tutor",
+      "Thassa's Oracle"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Watery Grave"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "draw",
+      "Night's Whisper"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Demonic Consultation",
+   "Flooded Strand",
+   "Lion's Eye Diamond",
+   "Merchant Scroll",
+   "Scalding Tarn",
+   "Sol Ring",
+   "Thassa's Oracle"
+  ],
+  "draw": "Grim Monolith",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Scalding Tarn",
+      "Badlands",
+      "B"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Beseech the Mirror",
+   "Desperate Ritual",
+   "Lotus Petal",
+   "Mountain",
+   "Night's Whisper",
+   "Thassa's Oracle"
+  ],
+  "draw": "Culling the Weak",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "land",
+      "Mountain",
+      "R"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "ritual",
+      "Desperate Ritual"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Cabal Ritual",
+     "Chrome Mox",
+     "Dark Petition",
+     "Demonic Consultation",
+     "Faithless Looting",
+     "Flooded Strand",
+     "Grim Monolith",
+     "Lion's Eye Diamond",
+     "Memnite",
+     "Merchant Scroll",
+     "Mishra's Workshop",
+     "Misty Rainforest",
+     "Morphic Pool",
+     "Mox Diamond",
+     "Mystical Tutor",
+     "Ornithopter",
+     "Prismatic Vista",
+     "Pyretic Ritual",
+     "Rite of Flame",
+     "Serum Visions",
+     "Simian Spirit Guide",
+     "Sol Ring",
+     "Steam Vents",
+     "Tainted Pact",
+     "Tarnished Citadel",
+     "Timetwister",
+     "Underworld Breach",
+     "Volcanic Island",
+     "Windfall",
+     "Wooded Foothills"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "cmdr"
+     ],
+     [
+      "guide",
+      "Simian Spirit Guide"
+     ],
+     [
+      "ritual",
+      "Rite of Flame"
+     ],
+     [
+      "ritual",
+      "Pyretic Ritual"
+     ],
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Wooded Foothills"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "freecre",
+      "Memnite"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Command Tower",
+   "Flooded Strand",
+   "Imperial Seal",
+   "Lion's Eye Diamond",
+   "Scalding Tarn",
+   "Thassa's Oracle",
+   "Watery Grave"
+  ],
+  "draw": "Demonic Consultation",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "land",
+      "Watery Grave",
+      "B"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Demonic Consultation",
+   "Lim-Dûl's Vault",
+   "Lion's Eye Diamond",
+   "Misty Rainforest",
+   "Ornithopter",
+   "Shred Memory",
+   "Thassa's Oracle"
+  ],
+  "draw": "Watery Grave",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "land",
+      "Watery Grave",
+      "B"
+     ],
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Beseech the Mirror",
+   "Blood Crypt",
+   "Demonic Consultation",
+   "Marsh Flats",
+   "Morphic Pool",
+   "Serum Powder",
+   "Thassa's Oracle"
+  ],
+  "draw": "Lion's Eye Diamond",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "land",
+      "Morphic Pool",
+      "B"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Culling the Weak",
+   "Dark Ritual",
+   "Jeska's Will",
+   "Mox Opal",
+   "Phyrexian Walker",
+   "Polluted Delta"
+  ],
+  "draw": "Sol Ring",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Polluted Delta",
+      "Badlands",
+      "B"
+     ],
+     [
+      "freecre",
+      "Phyrexian Walker"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "jeska",
+      "Jeska's Will"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Arid Mesa",
+     "Blood Crypt",
+     "Bloodstained Mire",
+     "Cabal Ritual",
+     "Dark Petition",
+     "Diabolic Intent",
+     "Flooded Strand",
+     "Imperial Seal",
+     "Island",
+     "Jace, Wielder of Mysteries",
+     "Lim-Dûl's Vault",
+     "Lion's Eye Diamond",
+     "Lotus Petal",
+     "Mana Vault",
+     "Marsh Flats",
+     "Morphic Pool",
+     "Muddle the Mixture",
+     "Night's Whisper",
+     "Ornithopter",
+     "Preordain",
+     "Prismatic Vista",
+     "Shield Sphere",
+     "Solve the Equation",
+     "Steam Vents",
+     "Tarnished Citadel",
+     "Timetwister",
+     "Vampiric Tutor",
+     "Volcanic Island",
+     "Wheel of Fortune",
+     "Wooded Foothills"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "toptutor",
+      "Vampiric Tutor",
+      "Thassa's Oracle"
+     ],
+     [
+      "freecre",
+      "Shield Sphere"
+     ],
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "draw",
+      "Night's Whisper"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "tutor",
+      "Solve the Equation",
+      "Tainted Pact"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "jace",
+      "Jace, Wielder of Mysteries"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Blood Crypt",
+   "Dark Ritual",
+   "Gitaxian Probe",
+   "Grim Monolith",
+   "Simian Spirit Guide",
+   "Tainted Pact"
+  ],
+  "draw": "Jeska's Will",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "guide",
+      "Simian Spirit Guide"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "land",
+      "Blood Crypt",
+      "B"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "rock",
+      "Grim Monolith"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Beseech the Mirror",
+     "Bloodstained Mire",
+     "Consider",
+     "Dark Petition",
+     "Dizzy Spell",
+     "Flooded Strand",
+     "Forbidden Orchard",
+     "Gamble",
+     "Lotus Petal",
+     "Merchant Scroll",
+     "Mishra's Workshop",
+     "Mox Opal",
+     "Muddle the Mixture",
+     "Mystical Tutor",
+     "Night's Whisper",
+     "Opt",
+     "Pyretic Ritual",
+     "Scalding Tarn",
+     "Sleight of Hand",
+     "Springleaf Drum",
+     "Street Wraith",
+     "Thassa's Oracle",
+     "Tolaria West",
+     "Vampiric Tutor",
+     "Verdant Catacombs",
+     "Volcanic Island",
+     "Watery Grave"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "cycle",
+      "Street Wraith"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "ritual",
+      "Pyretic Ritual"
+     ],
+     [
+      "jeska",
+      "Jeska's Will"
+     ],
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "draw",
+      "Night's Whisper"
+     ],
+     [
+      "tutor",
+      "Gamble",
+      "Cabal Ritual"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Cabal Ritual",
+     "Gemstone Mine",
+     "Imperial Seal",
+     "Island",
+     "Seething Song",
+     "Strike It Rich",
+     "Wheel of Fortune"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "treasure",
+      "Strike It Rich"
+     ],
+     [
+      "treastap"
+     ],
+     [
+      "ritual",
+      "Seething Song"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "toptutor",
+      "Vampiric Tutor",
+      "Sol Ring"
+     ],
+     [
+      "tutor",
+      "Dark Petition",
+      "Mox Diamond"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Watery Grave"
+     ],
+     [
+      "toptutor",
+      "Imperial Seal",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "draw",
+      "Sleight of Hand"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Culling the Weak",
+   "Gemstone Caverns",
+   "Mox Diamond",
+   "Opt",
+   "Tendrils of Agony",
+   "Wheel of Fortune"
+  ],
+  "draw": "Ancient Tomb",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Gemstone Caverns"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "land",
+      "Ancient Tomb",
+      "CC"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Bloodstained Mire",
+     "Brain Freeze",
+     "Chrome Mox",
+     "Dark Petition",
+     "Diabolic Intent",
+     "Doomsday",
+     "Drift of Phantasms",
+     "Gamble",
+     "Gitaxian Probe",
+     "Jeska's Will",
+     "Lim-Dûl's Vault",
+     "Lotus Petal",
+     "Mana Vault",
+     "Marsh Flats",
+     "Misty Rainforest",
+     "Mox Opal",
+     "Mystical Tutor",
+     "Ornithopter",
+     "Ponder",
+     "Shield Sphere",
+     "Shred Memory",
+     "Sleight of Hand",
+     "Strike It Rich",
+     "Thassa's Oracle",
+     "Underground Sea",
+     "Verdant Catacombs",
+     "Wooded Foothills"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "freecre",
+      "Shield Sphere"
+     ],
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "treasure",
+      "Strike It Rich"
+     ],
+     [
+      "treastap"
+     ],
+     [
+      "toptutor",
+      "Mystical Tutor",
+      "Dark Ritual"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Shred Memory",
+      "B"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "tutor",
+      "Dark Petition",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "tutor",
+      "Diabolic Intent",
+      "Demonic Consultation"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "City of Brass",
+   "Command Tower",
+   "Dark Ritual",
+   "Doomsday",
+   "Grapeshot",
+   "Rite of Flame"
+  ],
+  "draw": "Mox Amber",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "ritual",
+      "Rite of Flame"
+     ],
+     [
+      "land",
+      "Command Tower",
+      "A"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Arid Mesa",
+     "Bloodstained Mire",
+     "Cabal Ritual",
+     "Dark Petition",
+     "Demonic Consultation",
+     "Dizzy Spell",
+     "Faithless Looting",
+     "Flooded Strand",
+     "Grim Tutor",
+     "Imperial Seal",
+     "Island",
+     "Laboratory Maniac",
+     "Lion's Eye Diamond",
+     "Mana Confluence",
+     "Mana Vault",
+     "Marsh Flats",
+     "Memnite",
+     "Merchant Scroll",
+     "Mountain",
+     "Mox Diamond",
+     "Muddle the Mixture",
+     "Mystical Tutor",
+     "Personal Tutor",
+     "Scalding Tarn",
+     "Scheming Symmetry",
+     "Shield Sphere",
+     "Shred Memory",
+     "Sleight of Hand",
+     "Sol Ring",
+     "Springleaf Drum",
+     "Steam Vents",
+     "Vampiric Tutor",
+     "Verdant Catacombs"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "freecre",
+      "Shield Sphere"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Verdant Catacombs"
+     ],
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "freecre",
+      "Memnite"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "transmute",
+      "Shred Memory",
+      "Thassa's Oracle"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Dizzy Spell",
+   "Gitaxian Probe",
+   "Lotus Petal",
+   "Mana Vault",
+   "Misty Rainforest",
+   "Scheming Symmetry",
+   "Timetwister"
+  ],
+  "draw": "Springleaf Drum",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Misty Rainforest",
+      "Underground Sea",
+      "B"
+     ],
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "toptutor",
+      "Scheming Symmetry",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "wheel",
+      "Timetwister"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Dark Ritual",
+     "Demonic Consultation",
+     "Demonic Tutor",
+     "Forbidden Orchard",
+     "Mox Amber",
+     "Mox Diamond",
+     "Serum Visions"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "diamond",
+      "Mox Diamond",
+      "Forbidden Orchard"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "tutor",
+      "Demonic Tutor",
+      "Beseech the Mirror"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "beseech",
+      "Beseech the Mirror",
+      "Thassa's Oracle",
+      true
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Command Tower",
+   "Culling the Weak",
+   "Gitaxian Probe",
+   "Lion's Eye Diamond",
+   "Lotus Petal",
+   "Personal Tutor",
+   "Seething Song"
+  ],
+  "draw": "Demonic Consultation",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "toptutor",
+      "Personal Tutor",
+      "Demonic Tutor"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "land",
+      "Command Tower",
+      "A"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "tutor",
+      "Demonic Tutor",
+      "Thassa's Oracle"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ancient Tomb",
+   "Badlands",
+   "Demonic Consultation",
+   "Lion's Eye Diamond",
+   "Scalding Tarn",
+   "Street Wraith",
+   "Thassa's Oracle"
+  ],
+  "draw": "Mishra's Workshop",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "cycle",
+      "Street Wraith"
+     ],
+     [
+      "fetch",
+      "Scalding Tarn",
+      "Blood Crypt",
+      "B"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Dark Ritual",
+   "Gitaxian Probe",
+   "Lion's Eye Diamond",
+   "Mana Confluence",
+   "Mox Amber",
+   "Serum Visions",
+   "Thassa's Oracle"
+  ],
+  "draw": "Demonic Consultation",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "land",
+      "Mana Confluence",
+      "A"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "City of Brass",
+   "Culling the Weak",
+   "Demonic Tutor",
+   "Gemstone Caverns",
+   "Lion's Eye Diamond",
+   "Lotus Petal",
+   "Strike It Rich"
+  ],
+  "draw": "Demonic Consultation",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "treasure",
+      "Strike It Rich"
+     ],
+     [
+      "treastap"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "land",
+      "Gemstone Caverns",
+      "C"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "cmdr"
+     ],
+     [
+      "tutor",
+      "Demonic Tutor",
+      "Thassa's Oracle"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Gemstone Mine",
+   "Jace, Wielder of Mysteries",
+   "Lion's Eye Diamond",
+   "Lotus Petal",
+   "Opt",
+   "Ponder",
+   "Tainted Pact"
+  ],
+  "draw": "Cabal Ritual",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "land",
+      "Gemstone Mine",
+      "A"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "jace",
+      "Jace, Wielder of Mysteries"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Culling the Weak",
+   "Demonic Consultation",
+   "Forbidden Orchard",
+   "Lim-Dûl's Vault",
+   "Lion's Eye Diamond",
+   "Misty Rainforest",
+   "Thassa's Oracle"
+  ],
+  "draw": "Preordain",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Misty Rainforest",
+      "Underground Sea",
+      "B"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Consider",
+   "Lion's Eye Diamond",
+   "Mountain",
+   "Mox Opal",
+   "Muddle the Mixture",
+   "Shield Sphere"
+  ],
+  "draw": "Forbidden Orchard",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "freecre",
+      "Shield Sphere"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "land",
+      "Mountain",
+      "R"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Badlands",
+     "Beseech the Mirror",
+     "Cabal Ritual",
+     "Chrome Mox",
+     "City of Brass",
+     "Culling the Weak",
+     "Dark Petition",
+     "Dark Ritual",
+     "Diabolic Intent",
+     "Gemstone Mine",
+     "Gitaxian Probe",
+     "Grapeshot",
+     "Marsh Flats",
+     "Memnite",
+     "Merchant Scroll",
+     "Ornithopter",
+     "Personal Tutor",
+     "Prismatic Vista",
+     "Scalding Tarn",
+     "Serum Powder",
+     "Serum Visions",
+     "Sol Ring",
+     "Street Wraith",
+     "Verdant Catacombs",
+     "Volcanic Island"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "cycle",
+      "Street Wraith"
+     ],
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "freecre",
+      "Memnite"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Diabolic Intent",
+      "B"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "tutor",
+      "Dark Petition",
+      "Tainted Pact"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "beseech",
+      "Beseech the Mirror",
+      "Thassa's Oracle",
+      true
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ancient Tomb",
+   "Culling the Weak",
+   "Dark Petition",
+   "Flooded Strand",
+   "Lotus Petal",
+   "Rite of Flame",
+   "Tainted Pact"
+  ],
+  "draw": "Seething Song",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "ritual",
+      "Rite of Flame"
+     ],
+     [
+      "fetch",
+      "Flooded Strand",
+      "Underground Sea",
+      "B"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "ritual",
+      "Seething Song"
+     ],
+     [
+      "tutor",
+      "Dark Petition",
+      "Beseech the Mirror"
+     ],
+     [
+      "beseech",
+      "Beseech the Mirror",
+      "Thassa's Oracle",
+      true
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Culling the Weak",
+   "Gemstone Mine",
+   "Island",
+   "Mana Vault",
+   "Mox Amber",
+   "Tainted Pact",
+   "Thassa's Oracle"
+  ],
+  "draw": "Dark Petition",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "land",
+      "Gemstone Mine",
+      "A"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "tutor",
+      "Dark Petition",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Laboratory Maniac",
+   "Lion's Eye Diamond",
+   "Mana Vault",
+   "Phyrexian Walker",
+   "Polluted Delta",
+   "Street Wraith"
+  ],
+  "draw": "Underground Sea",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "land",
+      "Underground Sea",
+      "B"
+     ],
+     [
+      "cycle",
+      "Street Wraith"
+     ],
+     [
+      "freecre",
+      "Phyrexian Walker"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Ancient Tomb",
+     "Badlands",
+     "Beseech the Mirror",
+     "Blood Crypt",
+     "Bloodstained Mire",
+     "Cabal Ritual",
+     "Chrome Mox",
+     "Dark Ritual",
+     "Demonic Consultation",
+     "Dizzy Spell",
+     "Gamble",
+     "Gitaxian Probe",
+     "Grapeshot",
+     "Grim Tutor",
+     "Lim-Dûl's Vault",
+     "Lotus Petal",
+     "Mishra's Workshop",
+     "Morphic Pool",
+     "Mox Diamond",
+     "Ornithopter",
+     "Ponder",
+     "Prismatic Vista",
+     "Rite of Flame",
+     "Scheming Symmetry",
+     "Tendrils of Agony",
+     "Tolaria West",
+     "Vampiric Tutor",
+     "Watery Grave",
+     "Windfall"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "toptutor",
+      "Vampiric Tutor",
+      "Thassa's Oracle"
+     ],
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Watery Grave"
+     ],
+     [
+      "toptutor",
+      "Scheming Symmetry",
+      "Thassa's Oracle"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "ritual",
+      "Rite of Flame"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Lim-Dûl's Vault",
+      "B"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "tutor",
+      "Grim Tutor",
+      "Culling the Weak"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "beseech",
+      "Beseech the Mirror",
+      "Jace, Wielder of Mysteries",
+      true
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Brain Freeze",
+   "Demonic Consultation",
+   "Laboratory Maniac",
+   "Lion's Eye Diamond",
+   "Morphic Pool",
+   "Swamp",
+   "Thassa's Oracle"
+  ],
+  "draw": "Imperial Seal",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "land",
+      "Swamp",
+      "B"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Mana Vault",
+   "Misty Rainforest",
+   "Mox Opal",
+   "Ornithopter",
+   "Rite of Flame",
+   "Tainted Pact"
+  ],
+  "draw": "Cabal Ritual",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "fetch",
+      "Misty Rainforest",
+      "Steam Vents",
+      "R"
+     ],
+     [
+      "ritual",
+      "Rite of Flame"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Arid Mesa",
+     "Command Tower",
+     "Dark Petition",
+     "Dark Ritual",
+     "Desperate Ritual",
+     "Gamble",
+     "Jace, Wielder of Mysteries",
+     "Lim-Dûl's Vault",
+     "Merchant Scroll",
+     "Morphic Pool",
+     "Mox Amber",
+     "Muddle the Mixture",
+     "Night's Whisper",
+     "Polluted Delta",
+     "Sleight of Hand",
+     "Sol Ring",
+     "Springleaf Drum",
+     "Strike It Rich",
+     "Swamp",
+     "Tolaria West",
+     "Wheel of Fortune",
+     "Windfall"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "treasure",
+      "Strike It Rich"
+     ],
+     [
+      "treastap"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "tutor",
+      "Dark Petition",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "jace",
+      "Jace, Wielder of Mysteries"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Flooded Strand",
+   "Jeska's Will",
+   "Mana Vault",
+   "Mox Amber",
+   "Mox Opal",
+   "Ponder"
+  ],
+  "draw": "Diabolic Intent",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "jeska",
+      "Jeska's Will"
+     ],
+     [
+      "fetch",
+      "Flooded Strand",
+      "Underground Sea",
+      "B"
+     ],
+     [
+      "tutor",
+      "Diabolic Intent",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Badlands",
+     "Demonic Consultation",
+     "Desperate Ritual",
+     "Dizzy Spell",
+     "Doomsday",
+     "Grim Monolith",
+     "Island",
+     "Jace, Wielder of Mysteries",
+     "Lim-Dûl's Vault",
+     "Lotus Petal",
+     "Mox Diamond",
+     "Mystical Tutor",
+     "Night's Whisper",
+     "Personal Tutor",
+     "Rite of Flame",
+     "Sleight of Hand",
+     "Springleaf Drum",
+     "Street Wraith",
+     "Tainted Pact",
+     "Underworld Breach"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "ritual",
+      "Rite of Flame"
+     ],
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Island"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "jace",
+      "Jace, Wielder of Mysteries"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Culling the Weak",
+   "Doomsday",
+   "Jeska's Will",
+   "Lotus Petal",
+   "Morphic Pool",
+   "Ornithopter",
+   "Preordain"
+  ],
+  "draw": "Gamble",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "land",
+      "Morphic Pool",
+      "B"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "jeska",
+      "Jeska's Will"
+     ],
+     [
+      "tutor",
+      "Gamble",
+      "Beseech the Mirror"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Ad Nauseam",
+     "Ancient Tomb",
+     "Beseech the Mirror",
+     "Simian Spirit Guide"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "guide",
+      "Simian Spirit Guide"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Arid Mesa",
+     "Badlands",
+     "Bloodstained Mire",
+     "Brain Freeze",
+     "Cabal Ritual",
+     "Command Tower",
+     "Demonic Consultation",
+     "Diabolic Intent",
+     "Drift of Phantasms",
+     "Flooded Strand",
+     "Grapeshot",
+     "Jace, Wielder of Mysteries",
+     "Mana Confluence",
+     "Mana Vault",
+     "Memnite",
+     "Mountain",
+     "Mox Amber",
+     "Mox Diamond",
+     "Mox Opal",
+     "Night's Whisper",
+     "Personal Tutor",
+     "Prismatic Vista",
+     "Rite of Flame",
+     "Scalding Tarn",
+     "Shield Sphere",
+     "Shred Memory",
+     "Sleight of Hand",
+     "Sol Ring",
+     "Springleaf Drum",
+     "Tainted Pact",
+     "Tarnished Citadel",
+     "Tendrils of Agony",
+     "Tolaria West",
+     "Underground Sea",
+     "Wooded Foothills"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "draw",
+      "Night's Whisper"
+     ]
+    ],
+    [
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Desperate Ritual",
+     "Lim-Dûl's Vault"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "freecre",
+      "Shield Sphere"
+     ],
+     [
+      "ritual",
+      "Rite of Flame"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "draw",
+      "Sleight of Hand"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Faithless Looting"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "diamond",
+      "Mox Diamond",
+      "Wooded Foothills"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "freecre",
+      "Memnite"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "draw",
+      "Faithless Looting"
+     ],
+     [
+      "ritual",
+      "Desperate Ritual"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "tutor",
+      "Diabolic Intent",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "jace",
+      "Jace, Wielder of Mysteries"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Bloodstained Mire",
+   "Brain Freeze",
+   "Cabal Ritual",
+   "Mishra's Workshop",
+   "Mox Diamond",
+   "Tolaria West"
+  ],
+  "draw": "Dark Ritual",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Tolaria West"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "fetch",
+      "Bloodstained Mire",
+      "Steam Vents",
+      "U"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Arid Mesa",
+     "Culling the Weak",
+     "Dark Petition",
+     "Dizzy Spell",
+     "Faithless Looting",
+     "Grim Tutor",
+     "Jace, Wielder of Mysteries",
+     "Laboratory Maniac",
+     "Lion's Eye Diamond",
+     "Lotus Petal",
+     "Merchant Scroll",
+     "Mountain",
+     "Mox Opal",
+     "Ponder",
+     "Preordain",
+     "Pyretic Ritual",
+     "Seething Song",
+     "Solve the Equation",
+     "Tarnished Citadel",
+     "Verdant Catacombs",
+     "Wooded Foothills"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "tutor",
+      "Solve the Equation",
+      "Demonic Consultation"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "jace",
+      "Jace, Wielder of Mysteries"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "City of Brass",
+   "Dark Ritual",
+   "Demonic Tutor",
+   "Drift of Phantasms",
+   "Jeska's Will",
+   "Memnite",
+   "Simian Spirit Guide"
+  ],
+  "draw": "Ad Nauseam",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "freecre",
+      "Memnite"
+     ],
+     [
+      "land",
+      "City of Brass",
+      "A"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "tutor",
+      "Demonic Tutor",
+      "Culling the Weak"
+     ],
+     [
+      "guide",
+      "Simian Spirit Guide"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "jeska",
+      "Jeska's Will"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Ancient Tomb",
+     "Blood Crypt",
+     "Demonic Consultation",
+     "Desperate Ritual",
+     "Diabolic Intent",
+     "Flooded Strand",
+     "Gamble",
+     "Gemstone Caverns",
+     "Gemstone Mine",
+     "Grim Monolith",
+     "Island",
+     "Jace, Wielder of Mysteries",
+     "Lim-Dûl's Vault",
+     "Lion's Eye Diamond",
+     "Mana Confluence",
+     "Mishra's Workshop",
+     "Morphic Pool",
+     "Mountain",
+     "Mox Opal",
+     "Night's Whisper",
+     "Ornithopter",
+     "Phyrexian Walker",
+     "Polluted Delta",
+     "Ponder",
+     "Serum Visions",
+     "Sol Ring",
+     "Solve the Equation",
+     "Street Wraith",
+     "Strike It Rich",
+     "Thassa's Oracle",
+     "Tolaria West",
+     "Underworld Breach",
+     "Vampiric Tutor"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "treasure",
+      "Strike It Rich"
+     ],
+     [
+      "treastap"
+     ],
+     [
+      "toptutor",
+      "Vampiric Tutor",
+      "Tainted Pact"
+     ],
+     [
+      "cycle",
+      "Street Wraith"
+     ],
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "freecre",
+      "Phyrexian Walker"
+     ],
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "jace",
+      "Jace, Wielder of Mysteries"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Culling the Weak",
+   "Doomsday",
+   "Jace, Wielder of Mysteries",
+   "Mana Confluence",
+   "Merchant Scroll",
+   "Pyretic Ritual"
+  ],
+  "draw": "Mana Vault",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "land",
+      "Mana Confluence",
+      "A"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Badlands",
+     "Cabal Ritual",
+     "City of Brass",
+     "Dark Petition",
+     "Demonic Consultation",
+     "Flooded Strand",
+     "Forbidden Orchard",
+     "Gitaxian Probe",
+     "Grapeshot",
+     "Island",
+     "Jeska's Will",
+     "Laboratory Maniac",
+     "Lotus Petal",
+     "Marsh Flats",
+     "Mishra's Workshop",
+     "Misty Rainforest",
+     "Mountain",
+     "Mox Amber",
+     "Night's Whisper",
+     "Opt",
+     "Scalding Tarn",
+     "Scheming Symmetry",
+     "Shred Memory",
+     "Sol Ring",
+     "Strike It Rich",
+     "Swamp",
+     "Tainted Pact",
+     "Tendrils of Agony",
+     "Underground Sea",
+     "Verdant Catacombs",
+     "Watery Grave"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "treasure",
+      "Strike It Rich"
+     ],
+     [
+      "treastap"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "toptutor",
+      "Scheming Symmetry",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "jace",
+      "Jace, Wielder of Mysteries"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Bloodstained Mire",
+   "Chrome Mox",
+   "Dark Ritual",
+   "Gamble",
+   "Merchant Scroll",
+   "Springleaf Drum",
+   "Thassa's Oracle"
+  ],
+  "draw": "Tainted Pact",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Merchant Scroll",
+      "U"
+     ],
+     [
+      "fetch",
+      "Bloodstained Mire",
+      "Badlands",
+      "B"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Dark Ritual",
+   "Lim-Dûl's Vault",
+   "Lion's Eye Diamond",
+   "Springleaf Drum",
+   "Street Wraith",
+   "Thassa's Oracle",
+   "Wooded Foothills"
+  ],
+  "draw": "Mox Opal",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Wooded Foothills",
+      "Steam Vents",
+      "U"
+     ],
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "toptutor",
+      "Lim-Dûl's Vault",
+      "Tainted Pact"
+     ],
+     [
+      "cycle",
+      "Street Wraith"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Badlands",
+   "Beseech the Mirror",
+   "Cabal Ritual",
+   "Culling the Weak",
+   "Flooded Strand",
+   "Mox Amber",
+   "Tainted Pact"
+  ],
+  "draw": "Ancient Tomb",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "fetch",
+      "Flooded Strand",
+      "Underground Sea",
+      "B"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "beseech",
+      "Beseech the Mirror",
+      "Thassa's Oracle",
+      true
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Cabal Ritual",
+   "Culling the Weak",
+   "Dark Petition",
+   "Demonic Tutor",
+   "Desperate Ritual",
+   "Forbidden Orchard",
+   "Lion's Eye Diamond"
+  ],
+  "draw": "Misty Rainforest",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Misty Rainforest",
+      "Underground Sea",
+      "B"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "tutor",
+      "Dark Petition",
+      "Thassa's Oracle"
+     ],
+     [
+      "tutor",
+      "Demonic Tutor",
+      "Demonic Consultation"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Beseech the Mirror",
+   "Culling the Weak",
+   "Dark Ritual",
+   "Jeska's Will",
+   "Morphic Pool",
+   "Shield Sphere",
+   "Tainted Pact"
+  ],
+  "draw": "Lotus Petal",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "freecre",
+      "Shield Sphere"
+     ],
+     [
+      "land",
+      "Morphic Pool",
+      "B"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "jeska",
+      "Jeska's Will"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "beseech",
+      "Beseech the Mirror",
+      "Thassa's Oracle",
+      true
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Cabal Ritual",
+   "Diabolic Intent",
+   "Doomsday",
+   "Memnite",
+   "Misty Rainforest",
+   "Tainted Pact",
+   "Thassa's Oracle"
+  ],
+  "draw": "Culling the Weak",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Misty Rainforest",
+      "Underground Sea",
+      "B"
+     ],
+     [
+      "freecre",
+      "Memnite"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "tutor",
+      "Diabolic Intent",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Culling the Weak",
+   "Gemstone Mine",
+   "Gitaxian Probe",
+   "Grim Tutor",
+   "Laboratory Maniac",
+   "Vampiric Tutor"
+  ],
+  "draw": "Brain Freeze",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "land",
+      "Gemstone Mine",
+      "A"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "toptutor",
+      "Vampiric Tutor",
+      "Mana Vault"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Cabal Ritual",
+     "Chrome Mox",
+     "Consider",
+     "Dark Ritual",
+     "Demonic Consultation",
+     "Drift of Phantasms",
+     "Flooded Strand",
+     "Gemstone Caverns",
+     "Grim Monolith",
+     "Imperial Seal",
+     "Lion's Eye Diamond",
+     "Mana Confluence",
+     "Marsh Flats",
+     "Misty Rainforest",
+     "Muddle the Mixture",
+     "Phyrexian Walker",
+     "Ponder",
+     "Scalding Tarn",
+     "Sleight of Hand",
+     "Street Wraith",
+     "Tainted Pact",
+     "Timetwister",
+     "Wheel of Fortune"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "cycle",
+      "Street Wraith"
+     ],
+     [
+      "freecre",
+      "Phyrexian Walker"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Tainted Pact",
+      "B"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "rock",
+      "Grim Monolith"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "tutor",
+      "Grim Tutor",
+      "Thassa's Oracle"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Badlands",
+   "Demonic Tutor",
+   "Drift of Phantasms",
+   "Lion's Eye Diamond",
+   "Pyretic Ritual",
+   "Thassa's Oracle",
+   "Wheel of Fortune"
+  ],
+  "draw": "Dark Ritual",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "land",
+      "Badlands",
+      "B"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "tutor",
+      "Demonic Tutor",
+      "Demonic Consultation"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Beseech the Mirror",
+   "Dark Ritual",
+   "Island",
+   "Lion's Eye Diamond",
+   "Simian Spirit Guide",
+   "Sol Ring",
+   "Springleaf Drum"
+  ],
+  "draw": "Thassa's Oracle",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "guide",
+      "Simian Spirit Guide"
+     ],
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "land",
+      "Island",
+      "U"
+     ],
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "beseech",
+      "Beseech the Mirror",
+      "Demonic Consultation",
+      true
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Dark Ritual",
+   "Diabolic Intent",
+   "Flooded Strand",
+   "Jeska's Will",
+   "Lion's Eye Diamond",
+   "Sol Ring",
+   "Tainted Pact"
+  ],
+  "draw": "Tarnished Citadel",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "land",
+      "Tarnished Citadel",
+      "A"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "tutor",
+      "Diabolic Intent",
+      "Thassa's Oracle"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Command Tower",
+   "Demonic Consultation",
+   "Flooded Strand",
+   "Lion's Eye Diamond",
+   "Mox Amber",
+   "Night's Whisper",
+   "Thassa's Oracle"
+  ],
+  "draw": "Mystical Tutor",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "fetch",
+      "Flooded Strand",
+      "Underground Sea",
+      "B"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Chrome Mox",
+   "Culling the Weak",
+   "Laboratory Maniac",
+   "Lim-Dûl's Vault",
+   "Lion's Eye Diamond",
+   "Strike It Rich",
+   "Tainted Pact"
+  ],
+  "draw": "Thassa's Oracle",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Lim-Dûl's Vault",
+      "B"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "cmdr"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Command Tower",
+   "Dark Ritual",
+   "Demonic Consultation",
+   "Gitaxian Probe",
+   "Laboratory Maniac",
+   "Thassa's Oracle",
+   "Vampiric Tutor"
+  ],
+  "draw": "Mox Amber",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "land",
+      "Command Tower",
+      "A"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "toptutor",
+      "Vampiric Tutor",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Brainstorm",
+   "Demonic Consultation",
+   "Gemstone Caverns",
+   "Lion's Eye Diamond",
+   "Solve the Equation",
+   "Thassa's Oracle",
+   "Wheel of Fortune"
+  ],
+  "draw": "Polluted Delta",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Polluted Delta",
+      "Badlands",
+      "B"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Cabal Ritual",
+   "Demonic Tutor",
+   "Lotus Petal",
+   "Mox Opal",
+   "Pyretic Ritual",
+   "Rite of Flame",
+   "Tainted Pact"
+  ],
+  "draw": "Lion's Eye Diamond",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "ritual",
+      "Rite of Flame"
+     ],
+     [
+      "ritual",
+      "Pyretic Ritual"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "tutor",
+      "Demonic Tutor",
+      "Thassa's Oracle"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Beseech the Mirror",
+   "Culling the Weak",
+   "Dark Ritual",
+   "Forbidden Orchard",
+   "Mana Vault",
+   "Polluted Delta",
+   "Tainted Pact"
+  ],
+  "draw": "Grim Monolith",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Polluted Delta",
+      "Badlands",
+      "B"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "rock",
+      "Grim Monolith"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "cmdr"
+     ],
+     [
+      "beseech",
+      "Beseech the Mirror",
+      "Thassa's Oracle",
+      true
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Chrome Mox",
+   "Diabolic Intent",
+   "Lion's Eye Diamond",
+   "Marsh Flats",
+   "Merchant Scroll",
+   "Pyretic Ritual",
+   "Springleaf Drum"
+  ],
+  "draw": "Ad Nauseam",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Marsh Flats",
+      "Underground Sea",
+      "U"
+     ],
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Merchant Scroll",
+      "U"
+     ],
+     [
+      "ritual",
+      "Pyretic Ritual"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Arid Mesa",
+     "City of Brass",
+     "Command Tower",
+     "Consider",
+     "Dark Petition",
+     "Dark Ritual",
+     "Demonic Tutor",
+     "Doomsday",
+     "Flooded Strand",
+     "Gamble",
+     "Gitaxian Probe",
+     "Grim Monolith",
+     "Grim Tutor",
+     "Jeska's Will",
+     "Lotus Petal",
+     "Mox Diamond",
+     "Mox Opal",
+     "Ornithopter",
+     "Preordain",
+     "Shred Memory",
+     "Tarnished Citadel",
+     "Watery Grave",
+     "Wheel of Fortune",
+     "Windfall"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "draw",
+      "Preordain"
+     ],
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Watery Grave"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "jeska",
+      "Jeska's Will"
+     ],
+     [
+      "rock",
+      "Grim Monolith"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "tutor",
+      "Gamble",
+      "Beseech the Mirror"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Beseech the Mirror",
+     "Laboratory Maniac",
+     "Opt",
+     "Shield Sphere",
+     "Strike It Rich"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "treasure",
+      "Strike It Rich"
+     ],
+     [
+      "treastap"
+     ],
+     [
+      "freecre",
+      "Shield Sphere"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "transmute",
+      "Shred Memory",
+      "Cabal Ritual"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "tutor",
+      "Grim Tutor",
+      "Culling the Weak"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "tutor",
+      "Demonic Tutor",
+      "Mana Vault"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "tutor",
+      "Dark Petition",
+      "Demonic Consultation"
+     ],
+     [
+      "beseech",
+      "Beseech the Mirror",
+      "Thassa's Oracle",
+      true
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Dark Ritual",
+   "Diabolic Intent",
+   "Prismatic Vista",
+   "Pyretic Ritual",
+   "Simian Spirit Guide",
+   "Solve the Equation",
+   "Thassa's Oracle"
+  ],
+  "draw": "Dark Petition",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "guide",
+      "Simian Spirit Guide"
+     ],
+     [
+      "fetch",
+      "Prismatic Vista",
+      "Swamp",
+      "B"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "ritual",
+      "Pyretic Ritual"
+     ],
+     [
+      "tutor",
+      "Dark Petition",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "tutor",
+      "Diabolic Intent",
+      "Demonic Consultation"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Brainstorm",
+   "Demonic Consultation",
+   "Doomsday",
+   "Lim-Dûl's Vault",
+   "Lion's Eye Diamond",
+   "Mountain",
+   "Thassa's Oracle"
+  ],
+  "draw": "Prismatic Vista",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Prismatic Vista",
+      "Swamp",
+      "B"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Badlands",
+   "Drift of Phantasms",
+   "Lion's Eye Diamond",
+   "Memnite",
+   "Merchant Scroll",
+   "Mox Amber"
+  ],
+  "draw": "Diabolic Intent",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "freecre",
+      "Memnite"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "land",
+      "Badlands",
+      "R"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Ancient Tomb",
+     "Command Tower",
+     "Consider",
+     "Culling the Weak",
+     "Demonic Consultation",
+     "Faithless Looting",
+     "Forbidden Orchard",
+     "Gamble",
+     "Gitaxian Probe",
+     "Jace, Wielder of Mysteries",
+     "Lim-Dûl's Vault",
+     "Lotus Petal",
+     "Morphic Pool",
+     "Mountain",
+     "Mox Diamond",
+     "Mox Opal",
+     "Mystical Tutor",
+     "Ponder",
+     "Pyretic Ritual",
+     "Rite of Flame",
+     "Scheming Symmetry",
+     "Serum Visions",
+     "Solve the Equation",
+     "Steam Vents",
+     "Swamp",
+     "Tainted Pact",
+     "Timetwister",
+     "Tolaria West",
+     "Verdant Catacombs",
+     "Windfall"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "draw",
+      "Serum Visions"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Verdant Catacombs"
+     ],
+     [
+      "toptutor",
+      "Scheming Symmetry",
+      "Jeska's Will"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "ritual",
+      "Rite of Flame"
+     ],
+     [
+      "ritual",
+      "Pyretic Ritual"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "jeska",
+      "Jeska's Will"
+     ],
+     [
+      "draw",
+      "Faithless Looting"
+     ],
+     [
+      "tutor",
+      "Gamble",
+      "Beseech the Mirror"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Beseech the Mirror",
+     "Chrome Mox",
+     "Flooded Strand",
+     "Laboratory Maniac",
+     "Scalding Tarn",
+     "Street Wraith",
+     "Vampiric Tutor"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "cycle",
+      "Street Wraith"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Vampiric Tutor",
+      "B"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "beseech",
+      "Beseech the Mirror",
+      "Thassa's Oracle",
+      true
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Culling the Weak",
+   "Mox Amber",
+   "Muddle the Mixture",
+   "Personal Tutor",
+   "Simian Spirit Guide",
+   "Volcanic Island"
+  ],
+  "draw": "Verdant Catacombs",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Verdant Catacombs",
+      "Badlands",
+      "B"
+     ],
+     [
+      "guide",
+      "Simian Spirit Guide"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Arid Mesa",
+     "Beseech the Mirror",
+     "Blood Crypt",
+     "Brain Freeze",
+     "Brainstorm",
+     "Cabal Ritual",
+     "City of Brass",
+     "Demonic Consultation",
+     "Desperate Ritual",
+     "Dizzy Spell",
+     "Doomsday",
+     "Drift of Phantasms",
+     "Gamble",
+     "Gemstone Caverns",
+     "Gemstone Mine",
+     "Gitaxian Probe",
+     "Island",
+     "Jace, Wielder of Mysteries",
+     "Lion's Eye Diamond",
+     "Lotus Petal",
+     "Marsh Flats",
+     "Morphic Pool",
+     "Mox Diamond",
+     "Phyrexian Walker",
+     "Polluted Delta",
+     "Scalding Tarn",
+     "Serum Visions",
+     "Strike It Rich",
+     "Tarnished Citadel",
+     "Tendrils of Agony",
+     "Watery Grave"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "freecre",
+      "Phyrexian Walker"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Watery Grave"
+     ],
+     [
+      "treasure",
+      "Strike It Rich"
+     ],
+     [
+      "treastap"
+     ],
+     [
+      "draw",
+      "Serum Visions"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "jace",
+      "Jace, Wielder of Mysteries"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ancient Tomb",
+   "Dark Ritual",
+   "Mox Amber",
+   "Ornithopter",
+   "Sol Ring",
+   "Springleaf Drum",
+   "Wheel of Fortune"
+  ],
+  "draw": "Ad Nauseam",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "land",
+      "Ancient Tomb",
+      "CC"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Beseech the Mirror",
+     "Brain Freeze",
+     "Brainstorm",
+     "Cabal Ritual",
+     "Faithless Looting",
+     "Forbidden Orchard",
+     "Gamble",
+     "Gemstone Caverns",
+     "Grapeshot",
+     "Jace, Wielder of Mysteries",
+     "Lion's Eye Diamond",
+     "Marsh Flats",
+     "Memnite",
+     "Morphic Pool",
+     "Mox Opal",
+     "Personal Tutor",
+     "Phyrexian Walker",
+     "Ponder",
+     "Preordain",
+     "Serum Visions",
+     "Street Wraith",
+     "Tainted Pact",
+     "Vampiric Tutor",
+     "Volcanic Island",
+     "Windfall"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "cycle",
+      "Street Wraith"
+     ],
+     [
+      "freecre",
+      "Phyrexian Walker"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "freecre",
+      "Memnite"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "jace",
+      "Jace, Wielder of Mysteries"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Culling the Weak",
+   "Dark Ritual",
+   "Laboratory Maniac",
+   "Lion's Eye Diamond",
+   "Misty Rainforest",
+   "Tainted Pact",
+   "Windfall"
+  ],
+  "draw": "Grapeshot",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Misty Rainforest",
+      "Underground Sea",
+      "B"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "wheel",
+      "Windfall"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Ad Nauseam",
+     "Doomsday",
+     "Faithless Looting",
+     "Opt",
+     "Pyretic Ritual",
+     "Rite of Flame",
+     "Timetwister"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "ritual",
+      "Rite of Flame"
+     ],
+     [
+      "ritual",
+      "Pyretic Ritual"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Beseech the Mirror",
+     "Cabal Ritual",
+     "City of Brass",
+     "Demonic Consultation",
+     "Drift of Phantasms",
+     "Flooded Strand",
+     "Gitaxian Probe",
+     "Grim Monolith",
+     "Jace, Wielder of Mysteries",
+     "Jeska's Will",
+     "Mishra's Workshop",
+     "Mox Amber",
+     "Mox Opal",
+     "Muddle the Mixture",
+     "Mystical Tutor",
+     "Ornithopter",
+     "Scheming Symmetry",
+     "Simian Spirit Guide",
+     "Steam Vents",
+     "Swamp",
+     "Thassa's Oracle",
+     "Underworld Breach",
+     "Verdant Catacombs"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "guide",
+      "Simian Spirit Guide"
+     ],
+     [
+      "toptutor",
+      "Scheming Symmetry",
+      "Springleaf Drum"
+     ],
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "jeska",
+      "Jeska's Will"
+     ],
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "rock",
+      "Grim Monolith"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "draw",
+      "Faithless Looting"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Dark Petition",
+     "Lotus Petal",
+     "Prismatic Vista",
+     "Shield Sphere",
+     "Tolaria West"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "freecre",
+      "Shield Sphere"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "draw",
+      "Opt"
+     ],
+     [
+      "tutor",
+      "Dark Petition",
+      "Mox Diamond"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Verdant Catacombs"
+     ],
+     [
+      "beseech",
+      "Beseech the Mirror",
+      "Chrome Mox",
+      true
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Timetwister",
+      "U"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Imperial Seal",
+   "Lion's Eye Diamond",
+   "Serum Visions",
+   "Sol Ring",
+   "Tarnished Citadel",
+   "Verdant Catacombs"
+  ],
+  "draw": "Faithless Looting",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Verdant Catacombs",
+      "Underground Sea",
+      "U"
+     ],
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Arid Mesa",
+     "Bloodstained Mire",
+     "Chrome Mox",
+     "Command Tower",
+     "Culling the Weak",
+     "Dark Ritual",
+     "Desperate Ritual",
+     "Doomsday",
+     "Gemstone Mine",
+     "Gitaxian Probe",
+     "Grapeshot",
+     "Jeska's Will",
+     "Laboratory Maniac",
+     "Lim-Dûl's Vault",
+     "Mishra's Workshop",
+     "Morphic Pool",
+     "Mountain",
+     "Mox Amber",
+     "Mox Diamond",
+     "Mox Opal",
+     "Mystical Tutor",
+     "Personal Tutor",
+     "Phyrexian Walker",
+     "Prismatic Vista",
+     "Rite of Flame",
+     "Serum Powder",
+     "Shield Sphere",
+     "Simian Spirit Guide",
+     "Sleight of Hand",
+     "Strike It Rich",
+     "Underworld Breach",
+     "Volcanic Island"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "guide",
+      "Simian Spirit Guide"
+     ],
+     [
+      "treasure",
+      "Strike It Rich"
+     ],
+     [
+      "treastap"
+     ],
+     [
+      "draw",
+      "Sleight of Hand"
+     ],
+     [
+      "freecre",
+      "Shield Sphere"
+     ],
+     [
+      "freecre",
+      "Phyrexian Walker"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "ritual",
+      "Rite of Flame"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Volcanic Island"
+     ],
+     [
+      "toptutor",
+      "Personal Tutor",
+      "Demonic Tutor"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "jeska",
+      "Jeska's Will"
+     ],
+     [
+      "ritual",
+      "Desperate Ritual"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Lim-Dûl's Vault",
+      "B"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Demonic Consultation",
+     "Demonic Tutor",
+     "Ponder",
+     "Scheming Symmetry",
+     "Timetwister"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "toptutor",
+      "Scheming Symmetry",
+      "Thassa's Oracle"
+     ],
+     [
+      "tutor",
+      "Demonic Tutor",
+      "Beseech the Mirror"
+     ],
+     [
+      "beseech",
+      "Beseech the Mirror",
+      "Thassa's Oracle",
+      true
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Dark Ritual",
+   "Grim Tutor",
+   "Marsh Flats",
+   "Mox Amber",
+   "Rite of Flame",
+   "Timetwister"
+  ],
+  "draw": "Prismatic Vista",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Prismatic Vista",
+      "Swamp",
+      "B"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "ritual",
+      "Rite of Flame"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Ancient Tomb",
+     "Blood Crypt",
+     "Brainstorm",
+     "Cabal Ritual",
+     "Chrome Mox",
+     "Culling the Weak",
+     "Demonic Tutor",
+     "Dizzy Spell",
+     "Flooded Strand",
+     "Forbidden Orchard",
+     "Grapeshot",
+     "Imperial Seal",
+     "Jace, Wielder of Mysteries",
+     "Jeska's Will",
+     "Lion's Eye Diamond",
+     "Lotus Petal",
+     "Mana Confluence",
+     "Mishra's Workshop",
+     "Misty Rainforest",
+     "Muddle the Mixture",
+     "Mystical Tutor",
+     "Personal Tutor",
+     "Polluted Delta",
+     "Ponder",
+     "Preordain",
+     "Scalding Tarn",
+     "Seething Song",
+     "Sleight of Hand",
+     "Sol Ring",
+     "Verdant Catacombs",
+     "Volcanic Island"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Imperial Seal",
+      "B"
+     ],
+     [
+      "tutor",
+      "Demonic Tutor",
+      "Mox Diamond"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Volcanic Island"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "tutor",
+      "Grim Tutor",
+      "Tainted Pact"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "jace",
+      "Jace, Wielder of Mysteries"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Chrome Mox",
+   "Faithless Looting",
+   "Gitaxian Probe",
+   "Imperial Seal",
+   "Mana Vault",
+   "Serum Powder",
+   "Simian Spirit Guide"
+  ],
+  "draw": "Culling the Weak",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "guide",
+      "Simian Spirit Guide"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Imperial Seal",
+      "B"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Arid Mesa"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "fetch",
+      "Arid Mesa",
+      "Badlands",
+      "R"
+     ],
+     [
+      "draw",
+      "Faithless Looting"
+     ]
+    ],
+    [
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Street Wraith"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "cycle",
+      "Street Wraith"
+     ]
+    ],
+    [
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Ad Nauseam"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Brain Freeze",
+     "Brainstorm",
+     "Cabal Ritual",
+     "Command Tower",
+     "Dark Ritual",
+     "Demonic Consultation",
+     "Demonic Tutor",
+     "Diabolic Intent",
+     "Dizzy Spell",
+     "Forbidden Orchard",
+     "Gamble",
+     "Grapeshot",
+     "Jeska's Will",
+     "Lion's Eye Diamond",
+     "Misty Rainforest",
+     "Mountain",
+     "Mox Opal",
+     "Night's Whisper",
+     "Scalding Tarn",
+     "Scheming Symmetry",
+     "Sleight of Hand",
+     "Timetwister",
+     "Vampiric Tutor"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "toptutor",
+      "Vampiric Tutor",
+      "Thassa's Oracle"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "draw",
+      "Night's Whisper"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Badlands",
+   "Dark Ritual",
+   "Pyretic Ritual",
+   "Seething Song",
+   "Simian Spirit Guide",
+   "Sol Ring"
+  ],
+  "draw": "Serum Visions",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "guide",
+      "Simian Spirit Guide"
+     ],
+     [
+      "land",
+      "Badlands",
+      "B"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "ritual",
+      "Pyretic Ritual"
+     ],
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "ritual",
+      "Seething Song"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Ancient Tomb",
+     "Beseech the Mirror",
+     "Blood Crypt",
+     "Brain Freeze",
+     "Chrome Mox",
+     "Consider",
+     "Culling the Weak",
+     "Demonic Consultation",
+     "Desperate Ritual",
+     "Doomsday",
+     "Faithless Looting",
+     "Flooded Strand",
+     "Forbidden Orchard",
+     "Grim Tutor",
+     "Jeska's Will",
+     "Marsh Flats",
+     "Mishra's Workshop",
+     "Mox Amber",
+     "Mystical Tutor",
+     "Opt",
+     "Rite of Flame",
+     "Serum Powder",
+     "Shield Sphere",
+     "Shred Memory",
+     "Strike It Rich",
+     "Tarnished Citadel",
+     "Underworld Breach",
+     "Volcanic Island"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "treasure",
+      "Strike It Rich"
+     ],
+     [
+      "treastap"
+     ],
+     [
+      "freecre",
+      "Shield Sphere"
+     ],
+     [
+      "draw",
+      "Serum Visions"
+     ],
+     [
+      "ritual",
+      "Rite of Flame"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "jeska",
+      "Jeska's Will"
+     ],
+     [
+      "draw",
+      "Faithless Looting"
+     ],
+     [
+      "ritual",
+      "Desperate Ritual"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Shred Memory",
+      "B"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "tutor",
+      "Grim Tutor",
+      "Cabal Ritual"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "beseech",
+      "Beseech the Mirror",
+      "Thassa's Oracle",
+      true
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Culling the Weak",
+   "Morphic Pool",
+   "Polluted Delta",
+   "Ponder",
+   "Springleaf Drum",
+   "Timetwister"
+  ],
+  "draw": "Cabal Ritual",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Polluted Delta",
+      "Badlands",
+      "B"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Brain Freeze",
+     "Brainstorm",
+     "City of Brass",
+     "Dark Ritual",
+     "Diabolic Intent",
+     "Flooded Strand",
+     "Gemstone Caverns",
+     "Gitaxian Probe",
+     "Imperial Seal",
+     "Lion's Eye Diamond",
+     "Memnite",
+     "Mishra's Workshop",
+     "Mountain",
+     "Mox Diamond",
+     "Mox Opal",
+     "Muddle the Mixture",
+     "Mystical Tutor",
+     "Night's Whisper",
+     "Opt",
+     "Preordain",
+     "Scalding Tarn",
+     "Serum Powder",
+     "Serum Visions",
+     "Steam Vents",
+     "Swamp",
+     "Tarnished Citadel",
+     "Tendrils of Agony",
+     "Thassa's Oracle",
+     "Underground Sea",
+     "Underworld Breach",
+     "Vampiric Tutor",
+     "Verdant Catacombs",
+     "Windfall"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Verdant Catacombs"
+     ],
+     [
+      "toptutor",
+      "Vampiric Tutor",
+      "Tainted Pact"
+     ],
+     [
+      "freecre",
+      "Memnite"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Culling the Weak",
+   "Gitaxian Probe",
+   "Imperial Seal",
+   "Lion's Eye Diamond",
+   "Personal Tutor",
+   "Thassa's Oracle",
+   "Windfall"
+  ],
+  "draw": "Tarnished Citadel",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "land",
+      "Tarnished Citadel",
+      "A"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "cmdr"
+     ],
+     [
+      "toptutor",
+      "Imperial Seal",
+      "Demonic Consultation"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Brainstorm",
+   "Chrome Mox",
+   "Culling the Weak",
+   "Doomsday",
+   "Jace, Wielder of Mysteries",
+   "Timetwister"
+  ],
+  "draw": "Mana Confluence",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "land",
+      "Mana Confluence",
+      "A"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Timetwister",
+      "U"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Ancient Tomb",
+     "Arid Mesa",
+     "Badlands",
+     "Beseech the Mirror",
+     "Consider",
+     "Demonic Tutor",
+     "Desperate Ritual",
+     "Dizzy Spell",
+     "Faithless Looting",
+     "Forbidden Orchard",
+     "Gemstone Caverns",
+     "Gitaxian Probe",
+     "Jeska's Will",
+     "Lion's Eye Diamond",
+     "Merchant Scroll",
+     "Misty Rainforest",
+     "Mox Diamond",
+     "Mystical Tutor",
+     "Night's Whisper",
+     "Ornithopter",
+     "Ponder",
+     "Prismatic Vista",
+     "Simian Spirit Guide",
+     "Sleight of Hand",
+     "Solve the Equation",
+     "Springleaf Drum",
+     "Strike It Rich",
+     "Thassa's Oracle",
+     "Underground Sea"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "guide",
+      "Simian Spirit Guide"
+     ],
+     [
+      "treasure",
+      "Strike It Rich"
+     ],
+     [
+      "treastap"
+     ],
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "toptutor",
+      "Mystical Tutor",
+      "Demonic Consultation"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Underground Sea"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Chrome Mox",
+   "Culling the Weak",
+   "Dark Ritual",
+   "Mountain",
+   "Muddle the Mixture",
+   "Tainted Pact"
+  ],
+  "draw": "Strike It Rich",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "land",
+      "Mountain",
+      "R"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Tainted Pact",
+      "B"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Blood Crypt",
+     "Cabal Ritual",
+     "Consider",
+     "Demonic Consultation",
+     "Demonic Tutor",
+     "Diabolic Intent",
+     "Flooded Strand",
+     "Forbidden Orchard",
+     "Gamble",
+     "Gemstone Caverns",
+     "Grim Monolith",
+     "Jace, Wielder of Mysteries",
+     "Lim-Dûl's Vault",
+     "Lion's Eye Diamond",
+     "Mystical Tutor",
+     "Night's Whisper",
+     "Ornithopter",
+     "Phyrexian Walker",
+     "Scalding Tarn",
+     "Serum Powder",
+     "Serum Visions",
+     "Shield Sphere",
+     "Solve the Equation",
+     "Tarnished Citadel",
+     "Timetwister",
+     "Vampiric Tutor",
+     "Watery Grave"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "freecre",
+      "Shield Sphere"
+     ],
+     [
+      "freecre",
+      "Phyrexian Walker"
+     ],
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "jace",
+      "Jace, Wielder of Mysteries"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Demonic Consultation",
+   "Jace, Wielder of Mysteries",
+   "Lion's Eye Diamond",
+   "Mox Diamond",
+   "Strike It Rich",
+   "Tendrils of Agony",
+   "Wooded Foothills"
+  ],
+  "draw": "Forbidden Orchard",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Wooded Foothills",
+      "Steam Vents",
+      "U"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Forbidden Orchard"
+     ],
+     [
+      "treasure",
+      "Strike It Rich"
+     ],
+     [
+      "treastap"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "jace",
+      "Jace, Wielder of Mysteries"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Dark Ritual",
+   "Demonic Consultation",
+   "Grim Tutor",
+   "Lion's Eye Diamond",
+   "Mana Confluence",
+   "Rite of Flame",
+   "Springleaf Drum"
+  ],
+  "draw": "Demonic Tutor",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "land",
+      "Mana Confluence",
+      "A"
+     ],
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "tutor",
+      "Demonic Tutor",
+      "Thassa's Oracle"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Culling the Weak",
+   "Gamble",
+   "Lion's Eye Diamond",
+   "Mountain",
+   "Sol Ring",
+   "Street Wraith",
+   "Tarnished Citadel"
+  ],
+  "draw": "Diabolic Intent",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "land",
+      "Tarnished Citadel",
+      "A"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "cycle",
+      "Street Wraith"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Demonic Consultation"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "tutor",
+      "Diabolic Intent",
+      "Thassa's Oracle"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Badlands",
+   "Blood Crypt",
+   "Culling the Weak",
+   "Jace, Wielder of Mysteries",
+   "Lion's Eye Diamond",
+   "Misty Rainforest",
+   "Tainted Pact"
+  ],
+  "draw": "Mana Vault",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Misty Rainforest",
+      "Underground Sea",
+      "B"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "jace",
+      "Jace, Wielder of Mysteries"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Badlands",
+   "Flooded Strand",
+   "Lion's Eye Diamond",
+   "Mana Vault",
+   "Night's Whisper",
+   "Thassa's Oracle",
+   "Wheel of Fortune"
+  ],
+  "draw": "Arid Mesa",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "fetch",
+      "Flooded Strand",
+      "Underground Sea",
+      "B"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "wheel",
+      "Wheel of Fortune"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Dark Petition",
+     "Dark Ritual",
+     "Demonic Consultation",
+     "Gitaxian Probe",
+     "Mox Diamond",
+     "Polluted Delta",
+     "Serum Visions"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "diamond",
+      "Mox Diamond",
+      "Polluted Delta"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "tutor",
+      "Dark Petition",
+      "Laboratory Maniac"
+     ],
+     [
+      "labman",
+      "Laboratory Maniac"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Demonic Consultation",
+   "Lion's Eye Diamond",
+   "Muddle the Mixture",
+   "Thassa's Oracle",
+   "Verdant Catacombs",
+   "Volcanic Island",
+   "Wheel of Fortune"
+  ],
+  "draw": "Mox Amber",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Verdant Catacombs",
+      "Badlands",
+      "B"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Culling the Weak",
+   "Dark Ritual",
+   "Grim Tutor",
+   "Mox Opal",
+   "Sol Ring",
+   "Tendrils of Agony"
+  ],
+  "draw": "Scalding Tarn",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Scalding Tarn",
+      "Badlands",
+      "B"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "tutor",
+      "Grim Tutor",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Arid Mesa",
+     "Brainstorm",
+     "Consider",
+     "Dark Petition",
+     "Demonic Consultation",
+     "Desperate Ritual",
+     "Gitaxian Probe",
+     "Grapeshot",
+     "Laboratory Maniac",
+     "Merchant Scroll",
+     "Mishra's Workshop",
+     "Mox Diamond",
+     "Night's Whisper",
+     "Rite of Flame",
+     "Serum Powder",
+     "Sleight of Hand",
+     "Underground Sea",
+     "Wheel of Fortune"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "draw",
+      "Sleight of Hand"
+     ],
+     [
+      "ritual",
+      "Rite of Flame"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Underground Sea"
+     ],
+     [
+      "labman",
+      "Laboratory Maniac"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "City of Brass",
+   "Lion's Eye Diamond",
+   "Lotus Petal",
+   "Mox Amber",
+   "Rite of Flame",
+   "Timetwister",
+   "Wooded Foothills"
+  ],
+  "draw": "Polluted Delta",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Wooded Foothills",
+      "Steam Vents",
+      "U"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "ritual",
+      "Rite of Flame"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "wheel",
+      "Timetwister"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Arid Mesa",
+     "Bloodstained Mire",
+     "Brainstorm",
+     "Scheming Symmetry",
+     "Street Wraith",
+     "Thassa's Oracle",
+     "Tolaria West"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "toptutor",
+      "Scheming Symmetry",
+      "Demonic Consultation"
+     ],
+     [
+      "cycle",
+      "Street Wraith"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Brain Freeze",
+   "Doomsday",
+   "Jace, Wielder of Mysteries",
+   "Lion's Eye Diamond",
+   "Lotus Petal",
+   "Street Wraith"
+  ],
+  "draw": "Brainstorm",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "cycle",
+      "Street Wraith"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "draw",
+      "Brainstorm"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Culling the Weak",
+     "Gemstone Mine",
+     "Memnite",
+     "Tainted Pact"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "freecre",
+      "Memnite"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "land",
+      "Gemstone Mine",
+      "A"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "jace",
+      "Jace, Wielder of Mysteries"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Ancient Tomb",
+   "Dark Ritual",
+   "Mox Amber",
+   "Sol Ring",
+   "Street Wraith",
+   "Swamp"
+  ],
+  "draw": "Personal Tutor",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "land",
+      "Swamp",
+      "B"
+     ],
+     [
+      "cycle",
+      "Street Wraith"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Beseech the Mirror",
+     "Brainstorm",
+     "Demonic Consultation",
+     "Gemstone Mine",
+     "Gitaxian Probe",
+     "Grapeshot",
+     "Grim Monolith",
+     "Island",
+     "Jeska's Will",
+     "Laboratory Maniac",
+     "Lion's Eye Diamond",
+     "Lotus Petal",
+     "Mana Vault",
+     "Memnite",
+     "Merchant Scroll",
+     "Mystical Tutor",
+     "Serum Powder",
+     "Shield Sphere",
+     "Springleaf Drum",
+     "Tarnished Citadel",
+     "Tendrils of Agony",
+     "Thassa's Oracle",
+     "Underworld Breach",
+     "Verdant Catacombs",
+     "Watery Grave"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "freecre",
+      "Shield Sphere"
+     ],
+     [
+      "freecre",
+      "Memnite"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Brainstorm",
+   "Demonic Consultation",
+   "Demonic Tutor",
+   "Grim Monolith",
+   "Lion's Eye Diamond",
+   "Mana Confluence",
+   "Pyretic Ritual"
+  ],
+  "draw": "Thassa's Oracle",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "land",
+      "Mana Confluence",
+      "A"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Cabal Ritual",
+   "Dark Ritual",
+   "Gitaxian Probe",
+   "Mox Amber",
+   "Scalding Tarn",
+   "Underworld Breach"
+  ],
+  "draw": "Forbidden Orchard",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Scalding Tarn",
+      "Badlands",
+      "B"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Brain Freeze",
+     "Chrome Mox",
+     "Culling the Weak",
+     "Dark Petition",
+     "Demonic Consultation",
+     "Desperate Ritual",
+     "Faithless Looting",
+     "Gemstone Caverns",
+     "Imperial Seal",
+     "Laboratory Maniac",
+     "Lion's Eye Diamond",
+     "Mana Vault",
+     "Marsh Flats",
+     "Memnite",
+     "Morphic Pool",
+     "Mox Diamond",
+     "Mox Opal",
+     "Muddle the Mixture",
+     "Night's Whisper",
+     "Phyrexian Walker",
+     "Polluted Delta",
+     "Ponder",
+     "Scheming Symmetry",
+     "Serum Visions",
+     "Sleight of Hand",
+     "Tarnished Citadel",
+     "Tendrils of Agony",
+     "Tolaria West"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "freecre",
+      "Phyrexian Walker"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "draw",
+      "Sleight of Hand"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Tolaria West"
+     ],
+     [
+      "draw",
+      "Serum Visions"
+     ],
+     [
+      "freecre",
+      "Memnite"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Scheming Symmetry",
+      "B"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "toptutor",
+      "Imperial Seal",
+      "Thassa's Oracle"
+     ],
+     [
+      "draw",
+      "Night's Whisper"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Chrome Mox",
+   "Dark Petition",
+   "Demonic Consultation",
+   "Doomsday",
+   "Mox Opal",
+   "Ornithopter",
+   "Thassa's Oracle"
+  ],
+  "draw": "Gemstone Mine",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "land",
+      "Gemstone Mine",
+      "A"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Dark Petition",
+      "B"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Demonic Consultation",
+   "Demonic Tutor",
+   "Lion's Eye Diamond",
+   "Lotus Petal",
+   "Mox Amber",
+   "Ponder",
+   "Tendrils of Agony"
+  ],
+  "draw": "Mana Confluence",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "land",
+      "Mana Confluence",
+      "A"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "tutor",
+      "Demonic Tutor",
+      "Thassa's Oracle"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Dark Ritual",
+   "Jeska's Will",
+   "Mox Amber",
+   "Prismatic Vista",
+   "Pyretic Ritual",
+   "Swamp",
+   "Volcanic Island"
+  ],
+  "draw": "Tolaria West",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "land",
+      "Swamp",
+      "B"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "ritual",
+      "Pyretic Ritual"
+     ],
+     [
+      "jeska",
+      "Jeska's Will"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Dark Petition",
+     "Demonic Consultation",
+     "Springleaf Drum"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "tutor",
+      "Dark Petition",
+      "Beseech the Mirror"
+     ],
+     [
+      "beseech",
+      "Beseech the Mirror",
+      "Thassa's Oracle",
+      true
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Chrome Mox",
+   "Forbidden Orchard",
+   "Gamble",
+   "Gemstone Caverns",
+   "Lotus Petal",
+   "Simian Spirit Guide"
+  ],
+  "draw": "Dark Ritual",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "guide",
+      "Simian Spirit Guide"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "land",
+      "Gemstone Caverns",
+      "C"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Gamble",
+      "R"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Cabal Ritual",
+     "Demonic Consultation",
+     "Faithless Looting",
+     "Grim Monolith",
+     "Jace, Wielder of Mysteries",
+     "Jeska's Will",
+     "Laboratory Maniac",
+     "Mana Confluence",
+     "Mana Vault",
+     "Mishra's Workshop",
+     "Misty Rainforest",
+     "Mox Amber",
+     "Mox Diamond",
+     "Muddle the Mixture",
+     "Mystical Tutor",
+     "Opt",
+     "Ornithopter",
+     "Phyrexian Walker",
+     "Pyretic Ritual",
+     "Scalding Tarn",
+     "Serum Visions",
+     "Sleight of Hand",
+     "Sol Ring",
+     "Springleaf Drum",
+     "Steam Vents",
+     "Tainted Pact",
+     "Tarnished Citadel",
+     "Timetwister",
+     "Underground Sea"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "freecre",
+      "Phyrexian Walker"
+     ],
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Underground Sea"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "ritual",
+      "Pyretic Ritual"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "jeska",
+      "Jeska's Will"
+     ],
+     [
+      "rock",
+      "Grim Monolith"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "draw",
+      "Faithless Looting"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Dark Petition",
+     "Personal Tutor",
+     "Preordain",
+     "Strike It Rich"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "treasure",
+      "Strike It Rich"
+     ],
+     [
+      "treastap"
+     ],
+     [
+      "draw",
+      "Sleight of Hand"
+     ],
+     [
+      "tutor",
+      "Dark Petition",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "jace",
+      "Jace, Wielder of Mysteries"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Demonic Consultation",
+   "Flooded Strand",
+   "Laboratory Maniac",
+   "Lion's Eye Diamond",
+   "Mishra's Workshop",
+   "Thassa's Oracle",
+   "Tolaria West"
+  ],
+  "draw": "Gamble",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "fetch",
+      "Flooded Strand",
+      "Underground Sea",
+      "B"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Culling the Weak",
+   "Dizzy Spell",
+   "Flooded Strand",
+   "Lion's Eye Diamond",
+   "Polluted Delta",
+   "Prismatic Vista",
+   "Springleaf Drum"
+  ],
+  "draw": "Ad Nauseam",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Prismatic Vista",
+      "Swamp",
+      "B"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Brain Freeze",
+     "Brainstorm",
+     "Chrome Mox",
+     "City of Brass",
+     "Command Tower",
+     "Dark Ritual",
+     "Demonic Consultation",
+     "Demonic Tutor",
+     "Drift of Phantasms",
+     "Gitaxian Probe",
+     "Grapeshot",
+     "Grim Tutor",
+     "Jeska's Will",
+     "Mana Confluence",
+     "Misty Rainforest",
+     "Morphic Pool",
+     "Mox Opal",
+     "Opt",
+     "Preordain",
+     "Scheming Symmetry",
+     "Simian Spirit Guide",
+     "Sleight of Hand",
+     "Strike It Rich",
+     "Underground Sea",
+     "Vampiric Tutor",
+     "Wheel of Fortune"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "guide",
+      "Simian Spirit Guide"
+     ],
+     [
+      "treasure",
+      "Strike It Rich"
+     ],
+     [
+      "treastap"
+     ],
+     [
+      "toptutor",
+      "Vampiric Tutor",
+      "Thassa's Oracle"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Scheming Symmetry",
+      "B"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "tutor",
+      "Demonic Tutor",
+      "Mox Diamond"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Underground Sea"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Gemstone Caverns",
+   "Jeska's Will",
+   "Prismatic Vista",
+   "Seething Song",
+   "Simian Spirit Guide",
+   "Sol Ring"
+  ],
+  "draw": "Dark Ritual",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Prismatic Vista",
+      "Swamp",
+      "B"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "guide",
+      "Simian Spirit Guide"
+     ],
+     [
+      "ritual",
+      "Seething Song"
+     ],
+     [
+      "jeska",
+      "Jeska's Will"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Arid Mesa",
+     "Blood Crypt",
+     "Cabal Ritual",
+     "Chrome Mox",
+     "City of Brass",
+     "Demonic Consultation",
+     "Demonic Tutor",
+     "Faithless Looting",
+     "Flooded Strand",
+     "Gamble",
+     "Grapeshot",
+     "Grim Monolith",
+     "Imperial Seal",
+     "Island",
+     "Lion's Eye Diamond",
+     "Lotus Petal",
+     "Memnite",
+     "Merchant Scroll",
+     "Mishra's Workshop",
+     "Misty Rainforest",
+     "Mox Amber",
+     "Mox Diamond",
+     "Night's Whisper",
+     "Ornithopter",
+     "Phyrexian Walker",
+     "Ponder",
+     "Scalding Tarn",
+     "Shred Memory",
+     "Solve the Equation",
+     "Springleaf Drum",
+     "Tainted Pact",
+     "Tendrils of Agony",
+     "Timetwister",
+     "Wooded Foothills"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "tutor",
+      "Gamble",
+      "Beseech the Mirror"
+     ]
+    ],
+    [
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Beseech the Mirror"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "draw",
+      "Faithless Looting"
+     ]
+    ],
+    [
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Consider",
+     "Marsh Flats"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "draw",
+      "Consider"
+     ]
+    ],
+    [
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Gemstone Mine"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "freecre",
+      "Phyrexian Walker"
+     ],
+     [
+      "freecre",
+      "Ornithopter"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Wooded Foothills"
+     ],
+     [
+      "draw",
+      "Ponder"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Opt"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "freecre",
+      "Memnite"
+     ],
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "tutor",
+      "Solve the Equation",
+      "Culling the Weak"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "rock",
+      "Grim Monolith"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Tainted Pact",
+      "B"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "transmute",
+      "Shred Memory",
+      "Thassa's Oracle"
+     ],
+     [
+      "toptutor",
+      "Imperial Seal",
+      "Mana Vault"
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Beseech the Mirror",
+   "Dark Ritual",
+   "Gemstone Mine",
+   "Mana Vault",
+   "Ponder",
+   "Swamp"
+  ],
+  "draw": "Demonic Consultation",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "land",
+      "Swamp",
+      "B"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Ancient Tomb",
+     "Command Tower",
+     "Culling the Weak",
+     "Dizzy Spell",
+     "Flooded Strand",
+     "Gemstone Caverns",
+     "Gitaxian Probe",
+     "Grapeshot",
+     "Jeska's Will",
+     "Lim-Dûl's Vault",
+     "Memnite",
+     "Mox Diamond",
+     "Mystical Tutor",
+     "Night's Whisper",
+     "Personal Tutor",
+     "Prismatic Vista",
+     "Pyretic Ritual",
+     "Serum Powder",
+     "Shred Memory",
+     "Sol Ring",
+     "Solve the Equation",
+     "Springleaf Drum",
+     "Steam Vents",
+     "Strike It Rich",
+     "Tainted Pact",
+     "Tarnished Citadel",
+     "Tolaria West",
+     "Underworld Breach",
+     "Volcanic Island",
+     "Watery Grave"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "diamond",
+      "Mox Diamond",
+      "Watery Grave"
+     ],
+     [
+      "treasure",
+      "Strike It Rich"
+     ],
+     [
+      "treastap"
+     ],
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "freecre",
+      "Memnite"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "beseech",
+      "Beseech the Mirror",
+      "Thassa's Oracle",
+      true
+     ],
+     [
+      "consult",
+      "Demonic Consultation"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Chrome Mox",
+   "Command Tower",
+   "Culling the Weak",
+   "Demonic Consultation",
+   "Desperate Ritual",
+   "Mana Vault",
+   "Mox Amber"
+  ],
+  "draw": "Ad Nauseam",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "rock",
+      "Mox Amber"
+     ],
+     [
+      "ambertap",
+      "R"
+     ],
+     [
+      "rock",
+      "Mana Vault"
+     ],
+     [
+      "land",
+      "Command Tower",
+      "A"
+     ],
+     [
+      "ritual",
+      "Desperate Ritual"
+     ],
+     [
+      "chrome",
+      "Chrome Mox",
+      "Demonic Consultation",
+      "B"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Ancient Tomb",
+     "Badlands",
+     "Blood Crypt",
+     "Bloodstained Mire",
+     "Brain Freeze",
+     "Brainstorm",
+     "Demonic Tutor",
+     "Diabolic Intent",
+     "Dizzy Spell",
+     "Faithless Looting",
+     "Gemstone Caverns",
+     "Gitaxian Probe",
+     "Lim-Dûl's Vault",
+     "Marsh Flats",
+     "Merchant Scroll",
+     "Mox Diamond",
+     "Mox Opal",
+     "Opt",
+     "Preordain",
+     "Serum Powder",
+     "Shred Memory",
+     "Sleight of Hand",
+     "Sol Ring",
+     "Springleaf Drum",
+     "Steam Vents",
+     "Tainted Pact",
+     "Timetwister",
+     "Tolaria West",
+     "Vampiric Tutor",
+     "Verdant Catacombs"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "toptutor",
+      "Vampiric Tutor",
+      "Thassa's Oracle"
+     ],
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "rock",
+      "Sol Ring"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "diamond",
+      "Mox Diamond",
+      "Verdant Catacombs"
+     ],
+     [
+      "draw",
+      "Gitaxian Probe"
+     ],
+     [
+      "tutor",
+      "Demonic Tutor",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "oracle",
+      "Thassa's Oracle"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ]
+  ]
+ }
+]

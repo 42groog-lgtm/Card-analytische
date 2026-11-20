@@ -1,0 +1,75 @@
+Culling the Weak
+Pyretic Ritual
+Desperate Ritual
+Manamorphose
+Jeska's Will
+Chancellor of the Tangle
+Grim Tutor
+Diabolic Intent
+Personal Tutor
+Merchant Scroll
+Spoils of the Vault
+Scheming Symmetry
+Solve the Equation
+Muddle the Mixture
+Dizzy Spell
+Drift of Phantasms
+Shred Memory
+Tolaria West
+Ponder
+Preordain
+Street Wraith
+Wheel of Fortune
+Timetwister
+Windfall
+Night's Whisper
+Necropotence
+Command Tower
+City of Brass
+Mana Confluence
+Gemstone Mine
+Forbidden Orchard
+Underground Sea
+Volcanic Island
+Badlands
+Scalding Tarn
+Polluted Delta
+Bloodstained Mire
+Watery Grave
+Steam Vents
+Blood Crypt
+Island
+Swamp
+Mountain
+Forest
+Plains
+Tropical Island
+Bayou
+Taiga
+Misty Rainforest
+Verdant Catacombs
+Flooded Strand
+Marsh Flats
+Wooded Foothills
+Windswept Heath
+Arid Mesa
+Prismatic Vista
+Exotic Orchard
+Mox Tantalite
+Lotus Bloom
+Strike It Rich
+Burnt Offering
+Snap
+Frantic Search
+Gush
+Opt
+Sleight of Hand
+Mishra's Bauble
+Beseech the Mirror
+Wishclamp
+Lim-Dûl's Vault
+Intuition
+Echo of Eons
+Mystic Remora
+Rhystic Study
+Simian Spirit Guide

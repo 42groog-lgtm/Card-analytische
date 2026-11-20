@@ -1,0 +1,9 @@
+[
+ ["v1", "Deck A initial : toutes les cartes modélisées légales en UBR + cartes de remplissage ; modèle : Oracle/Lab/Jace + Consultation/Pact, mana rapide, tutors, pioches", "0,150 % sans mulligan, place 1 (8 000 parties)"],
+ ["v2", "Ajout des mulligans (1 gratuit puis London jusqu'à 3)", "0,350 % (8 000 parties)"],
+ ["v2b", "Réglage du mulligan : 1 seul mulligan gratuit, puis on garde", "0,337 % (8 000 parties), écart non significatif avec v2 ; règle retenue car plus simple"],
+ ["v3", "Ad Nauseam modélisé (il était compté comme carte vide)", "0,287 % sans mulligan (24 000 parties), contre ~0,15 % avant"],
+ ["v4", "Faithless Looting, Dark Petition et Mishra's Workshop modélisés ; Workshop ajouté à la place d'une carte vide", "0,346 % sans mulligan (24 000 parties)"],
+ ["v5", "Correction d'erreur : taxe de commandant (+{2}) quand Rograkh est relancé après un sacrifice (CR 903.8)", "0,267 % sans mulligan (24 000 parties)"],
+ ["v6", "Corrections d'erreurs : Lotus Petal sacrifié ne compte plus comme artefact ; une créature sacrifiée au bargain n'est plus réutilisable ; Transmute et Laboratory Maniac corrigés", "0,283 % sans mulligan (24 000 parties) ; chiffres finaux ci-dessus"]
+]

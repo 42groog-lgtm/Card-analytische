@@ -1,0 +1,828 @@
+
+Banned and Restricted Announcement – June 29, 2026
+Skip to main content
+              Products
+Coming Soon
+                    Coming Soon
+Nauctis: The Sunken Realm
+ Marvel Darkhold Destiny
+Kamigawa: Titanbreach
+Zhalfir
+Available Now
+                    Available Now
+Star Trek
+Reality Fracture
+The Hobbit™
+Marvel Super Heroes
+Secrets of Strixhaven
+Lorwyn Eclipsed
+Secret Lair Drop Series
+Latest Products
+Card Set Archive
+              MTG Arena
+Download
+Getting Started
+Drop Rates
+Alchemy
+Draft
+MTG Arena News
+              Play
+Play Events
+                    Play Events
+Prerelease
+Magic Academy
+Standard Showdown
+Commander Box League
+Commander Party
+Store Championship
+Friday Night Magic
+MagicCon
+Pro Tour
+All Events
+Formats
+                    Formats
+Commander
+Standard
+Modern
+Pioneer
+Booster Draft
+Pick-Two Draft
+Sealed Deck
+All Formats
+Platforms
+                    Platforms
+Store Locator
+MTG Arena
+Magic Online
+SpellTable
+Wizards Accounts
+Support
+                    Support
+Player Support
+Store Support
+Club Support
+Military Support
+              Learn
+Resources
+                    Resources
+Where to Start
+How to Play
+Product Guide
+Keyword Glossary
+Banned & Restricted List
+Card Database
+Companion App
+              SHOP
+              News
+Read
+                    Read
+Latest News
+Announcements
+Behind The Scenes
+Making Magic
+MTG Arena News
+Card Previews
+Competitive
+Watch
+                    Watch
+Drive To Work Podcast
+WeeklyMTG
+Magic Story Podcast
+Story
+                    Story
+Latest Stories
+Story Archive
+Planes and Planeswalkers
+More
+                    More
+Wallpapers
+            Locator
+            Card Database
+            Accounts
+News
+          /
+            Announcements
+Banned and Restricted Announcement – June 29, 2026
+            Announcements
+Jun 29, 2026
+                  Carmen Klomparens
+                  Jadine Klomparens
+                  Arya Karamchandani
+                  Eric Engelhard
+                  Gavin Verhey
+                  Dave Finseth
+Standard
+No changes
+Pioneer
+No changes
+Modern
+No changes
+Legacy
+Candelabra of Tawnos
+ is banned.
+Vintage
+No changes
+Pauper
+Seeker of Skybreak
+ is banned.
+Alchemy
+No changes
+Historic
+No changes
+Timeless
+No changes
+Brawl
+Force of Will
+ is banned.
+Subtlety
+ is banned.
+Wash Away
+ is banned.
+Ugin's Labyrinth
+ is banned.
+Time Warp
+ is banned.
+Temporal Manipulation
+ is banned.
+Competitive Brawl
+No changes
+Changes effective as of June 29, 2026. View 
+the list of all banned and restricted cards by format
+.
+Next announcement: August 10, 2026
+Howdy, gamers!
+My name is Carmen Klomparens, and I'm a senior game designer on 
+Magic
+'s Play Design team. We're just over halfway through 2026, so it's fitting that this is our fourth of seven banned and restricted announcements for the year. After several changes in our previous announcement, most of our formats look to be in a state of organic change that we like to see. We'll share more specific thoughts for each format below.
+As usual, we'll be on WeeklyMTG on 
+twitch.tv/magic
+ tomorrow, June 30, at 10 a.m. PT to talk through these changes and answer questions. As a reminder, the next banned and restricted announcement will be on August 10. Without further ado, let's dive into the thing we're all here to talk about: 
+Magic
+!
+Standard
+Written by Jadine Klomparens
+No changes
+Standard right now is a format where many different decks can win on any given weekend. When we spoke last during the 
+banned and restricted announcement on May 18, 2026
+, the narrative of the format was all about the battle between Izzet Prowess (and other Izzet variants) and green 
+Badgermole Cub
+ decks. Those were (and are) at the top of the metagame, and the concern was that their stifling effect on the rest of the metagame would grow and we'd see the Standard metagame becomes less diverse over time. Instead, we've seen the opposite: Standard is now more diverse than it was at the time of Pro Tour 
+Secrets of Strixhaven
+.
+The pressures exerted on the format by the twin pillars of Izzet Prowess and 
+Badgermole Cub
+ haven't changed, but decks that can exist within those parameters have been discovered, tuned, and have cemented their place within the metagame. Four-Color Control, Mardu Discard, Azorius Momo, and Dimir Excruciator are the biggest names here, having consistently respectable metagame shares and having each won a Regional Championship over the last few weeks.
+One of the largest developments in Standard over the last few weeks has been the solidification of Four-Color Control as a mainstay of the format. It was the second most played deck behind Izzet Prowess at high-level Standard tournaments in the last two weeks of May, 
+as laid out by Frank Karsten here
+. This deck was made possible by the printing of 
+Tablet of Discovery
+ in 
+Secrets of Strixhaven
+ and did not gain significant traction in time for the Pro Tour but has been climbing in popularity recently. It's a great example of a new deck finding sustained success in this Standard format.
+2 Mistrise Village
+1 Thundering Falls
+1 Three Steps Ahead
+1 Thunder Magic
+2 Shattered Sanctum
+1 Abrade
+3 Inevitable Defeat
+1 Stormcarved Coast
+2 Flashback
+3 Consult the Star Charts
+4 Great Hall of the Biblioplex
+1 Floodfarm Verge
+1 Get Lost
+1 Hallowed Fountain
+4 Jeskai Revelation
+1 Sundown Pass
+1 Mountain
+2 No More Lies
+2 Sear
+1 Multiversal Passage
+2 Day of Judgment
+1 Firebending Lesson
+3 Sacred Foundry
+1 Meticulous Archive
+4 Stock Up
+1 Together as One
+1 Plains
+4 Tablet of Discovery
+3 Steam Vents
+1 Sunbillow Verge
+2 Gloomlake Verge
+1 Godless Shrine
+1 Fire Magic
+1 Disdainful Stroke
+1 Return the Favor
+2 High Noon
+2 Strategic Betrayal
+1 Wan Shi Tong, Librarian
+1 Pest Control
+1 Stoic Sphinx
+1 Pyroclasm
+2 Emeritus of Ideation
+2 Flashfreeze
+1 Day of Judgment
+Despite the strength and consistency of the top decks, this Standard metagame has continued to evolve with time. While Standard's deep card pool does allow for extremely polished top decks to emerge, it's encouraging to see that the format's deep card pool also provides players with the tools they need to combat those decks. Because players can successfully target the top of the metagame, we continue to see churn in the format as players attack the top decks.
+Over the last several months, Standard has often been a format that does not get fully solved quickly. There are enough potential strategies in Standard that exploring and iterating on them all is a monumental task that can take months. It's becoming more common for decks to be discovered and rise to join the metagame at all points in Standard's cycle, not just right after set releases. For example, decks like Four-Color Control and 2025 Standard's Esper Pixie before it achieved a significant metagame share well after the cards for those decks were released. This is a great sign for Standard and means players who love deck building have a lot to look forward to.
+In previous banned and restricted announcements, we've discussed gameplay problems with Standard. Namely, that the format is too fast, and that too wide a swath of the format can end games too soon. These problems still exist, but they aren't insurmountable. Four-Color Control's rise shows that slower decks can still find success in Standard. While we are continuing to learn from Standard and getting better at designing to reduce these problems in the future, we don't believe that this Standard's gameplay problems are severe enough to warrant banning a card at this time.
+Overall, Standard has improved from the state it was in after Pro Tour 
+Secrets of Strixhaven
+. The metagame is more diverse and the gameplay more varied. We are taking no action at this time and will continue to watch the format as it changes throughout the rest of the year.
+Pioneer
+Written by Arya Karamchandani
+No changes
+We have monitored the state of Pioneer since banning 
+Cori-Steel Cutter
+ and have been happy with how it has developed. Format diversity looks good, with a wealth of viable decks and new cards like 
+Tablet of Discovery
+ causing churn in the format.
+3 Bleachbone Verge
+4 Blood Crypt
+2 Deadly Cover-Up
+4 Fiery Impulse
+2 Flashback
+2 Go for the Throat
+4 Great Hall of the Biblioplex
+3 Inevitable Defeat
+4 Jeskai Revelation
+2 Lightning Helix
+1 Mistrise Village
+1 Plains
+1 Raugrin Triome
+3 Riverpyre Verge
+2 Sacred Foundry
+1 Savai Triome
+2 Shattered Sanctum
+2 Starting Town
+1 Steam Vents
+4 Stock Up
+1 Swamp
+4 Tablet of Discovery
+1 The Celestus
+4 Thoughtseize
+2 Together as One
+2 Dovin's Veto
+1 Elesh Norn, Mother of Machines
+1 Inevitable Defeat
+1 Lightning Helix
+1 Mistrise Village
+1 Pest Control
+4 Rest in Peace
+2 Sphinx of the Final Word
+2 Thought Distortion
+The format still has a good spread of macro-archetypes, with 
+Badgermole Cub
+ midrange and ramp strategies rising to prominence as the format's most played decks, while combo decks like Greasefang have seen a downtick in play. The various Izzet shells have continued to put up strong results following the banning of 
+Cori-Steel Cutter
+, but their metagame share has dropped to a more appropriate number. We look forward to seeing how the format continues to evolve and develop over the next few months.
+Modern
+Written by Carmen Klomparens
+No changes
+We've got a Modern Pro Tour coming up, and 
+we just made some changes to the format
+ a month or so ago. In the time since, Modern has looked pretty good! While our last update included a number of changes to the format, they were largely changes that I'd categorize closer to "maintenance" than "addressing disaster." Rather than trying to radically alter the landscape of Modern by 
+banning
+ or 
+unbanning
+ cards, the goal of our previous set of updates was to address metagame share and power level of a few for the format's main players while preserving their existence.
+Things in the time since have looked pretty good, with various takes on Affinity being the biggest winners in the early stages of this iteration of Modern.
+2 Claws of Gix
+4 Emry, Lurker of the Loch
+4 Engineered Explosives
+4 Fiery Islet
+2 Island
+4 Kappa Cannoneer
+3 Metallic Rebuke
+4 Mishra's Bauble
+4 Mox Opal
+4 Pinnacle Emissary
+1 Pithing Needle
+2 Preordain
+1 Shadowspear
+1 Shivan Reef
+1 Sink into Stupor
+1 Skateboard
+4 Spirebluff Canal
+1 Steam Vents
+3 Tormod's Crypt
+4 Urza's Saga
+4 Weapons Manufacturing
+2 Welding Jar
+1 Blood Moon
+1 Boomerang Basics
+3 Consign to Memory
+2 Damping Sphere
+1 Flusterstorm
+3 Galvanic Blast
+1 Hurkyl's Recall
+2 Swan Song
+1 Whipflare
+Given that the deck was already a player in Modern prior to the latest bans, it makes sense that it would have a higher starting point than the rest of the format following last month's announcement. Even with it being the de facto deck to play at this point, 
+competitive events like the one that was won by the above Affinity list
+ have had a ton of diversity through the rest of the Top 8. We'll be scrutinizing any deck that regularly starts with over half a dozen zero-mana artifacts, and Modern Affinity is no exception. We've got Pro Tour 
+Magic: the Gathering
+® | 
+Marvel Super Heroes
+ coming up in just a couple of weeks, and it will be interesting to see how well the best players in the world can address this type of deck. Historically, Modern's sideboard tools have been excellent at absorbing linear, synergy-based aggro decks like Affinity, but time will tell if that remains true, or if 
+Kappa Cannoneer
+ and 
+Weapons Manufacturing
+ are too good at dodging traditional hate cards.
+4 Ajani, Nacatl Pariah
+1 Plains
+4 Arid Mesa
+1 Plains
+1 Dalkovan Encampment
+2 Elegant Parlor
+1 Mountain
+4 Marsh Flats
+4 Galvanic Discharge
+1 Lightning Bolt
+4 Guide of Souls
+3 Goblin Bombardment
+4 Flooded Strand
+3 Fable of the Mirror-Breaker
+4 Ocelot Pride
+2 Blood Moon
+4 Ragavan, Nimble Pilferer
+1 Arena of Glory
+2 Seasoned Pyromancer
+1 The Legend of Roku
+2 Thraben Charm
+3 Voice of Victory
+1 Plains
+3 Sacred Foundry
+1 Surgical Extraction
+1 Celestial Purge
+2 High Noon
+3 Obsidian Charmaw
+1 Boromir, Warden of the Tower
+1 The Legend of Roku
+1 Vexing Bauble
+2 Wear // Tear
+3 Wrath of the Skies
+Following the recent banning of 
+Phlage, Titan of Fire's Fury
+, there were a ton of questions around Boros Energy and Jeskai Blink. From what we can see, Boros Energy is a strategy people are still finding success with at Regional Championship Qualifiers and 
+Magic Online
+ Challenges. The exact configurations shift from list to list, but that exploration and tuning is what we like to see in the mainstays of nonrotating formats. Blink variants, on the other hand, haven't coalesced around a specific color combination yet, but most of them are pairing blue cards with white cards to make use of 
+Quantum Riddler
+; 
+Consign to Memory
+; and 
+Teferi, Time Raveler
+.
+The removal of 
+Lotus Field
+ from Modern has taken Amulet Titan down a peg and put it in a healthier place in the metagame. I must admit I had a good laugh when I saw some players immediately adapt to the ban by adding a single copy of 
+Zuran Orb
+ to the deck. Given that 
+Urza's Saga
+ and 
+Tolaria West
+ can grab it, it's still possible for the deck to play a similar graveyard combo to what it was doing before. That being said, 
+Urza's Saga
+ takes time and 
+Tolaria West
+ isn't cheap to transmute, so early indicators point toward this depowering the strategy without outright invalidating it.
+Finally, what we've been able to see from the recent unbanning of 
+Violent Outburst
+ is that it gave a bit of juice to 
+Living End
+ decks. At this point, their metagame share and win rates are well within what we consider to be a healthy part of Modern. 
+Crashing Footfalls
+ hasn't found a foothold in the format yet, but that deck took a bit to catch on the first time, and we expect it to want specific metagames to be successful.
+All said, with the resiliency of Affinity and the power level of the above decks, all eyes will be on Pro Tour 
+Magic: The Gathering
+ | 
+Marvel Super Heroes
+ in Amsterdam. I can't wait to see what the game's best will bring to the global stage.
+Legacy
+Written by Carmen Klomparens
+Candelabra of Tawnos
+ is banned.
+I wouldn't say it's wildly uncommon for a card to get unbanned and banned again later, but the gap between those two things is generally less than 27 years. 
+Candelabra of Tawnos
+ was on the inaugural Legacy banned list when the format was founded in 1996. Back then, it was called "Type 1.5," as it was halfway between Vintage (then known as "Type 1") and Standard (then known as "Type 2"). The first Legacy banned list was comprised of cards that were banned or restricted in Type 1 and Type 2.
+After Tolarian Academy was banned in Legacy, 
+Candelabra of Tawnos
+ was unbanned in early 1999. Paired with the banning of 
+Time Spiral
+ and 
+Memory Jar
+, the two sources of card draw that were notorious for abusing fast mana in the era, that unbanning went well … for a time.
+1 Blue Sun's Zenith
+2 Preordain
+2 Misty Rainforest
+4 Ponder
+2 Flooded Strand
+2 Polluted Delta
+3 Cunning Wish
+12 Island
+4 Brainstorm
+4 Time Spiral
+3 Turnabout
+2 Mind Over Matter
+3 Meditate
+4 Force of Will
+4 Merchant Scroll
+4 High Tide
+4 Candelabra of Tawnos
+1 Blue Sun's Zenith
+3 Pact of Negation
+1 Wipe Away
+4 Repeal
+1 Echoing Truth
+1 Brain Freeze
+1 Rebuild
+1 Turnabout
+1 Meditate
+1 Intuition
+It seems ironic, doesn't it? Writing this piece 15 years removed from the tournament results and 27 years removed from the ban-unban dance of 
+Candelabra of Tawnos
+ and 
+Time Spiral
+, that they would become one of the strongest decks in Legacy as soon as they were made legal together again. Yet here we are. After 
+Mental Misstep
+ was banned and 
+Time Spiral
+ was unbanned, the Hatfield brothers, Alix and Jesse, put a significant amount of effort into tuning 
+High Tide
+ and saw significant competitive success with the archetype.
+Over time, other players found success with various forms of the deck, even going toward the card 
+Reset
+ to try and get more redundancy for land-untapping effects. Luckily, Legacy is a powerful format that can absorb extremely powerful combo decks.
+Last time we got to chat about Legacy
+, we mentioned keeping an eye on recent versions of Colorless Tron that were rapidly climbing the Legacy metagame in terms of metagame share and win percentage. From what we can see, those trends have held true, even in settings with a high degree of competitive pressure.
+4 Ancient Tomb
+3 Candelabra of Tawnos
+1 Cityscape Leveler
+2 Disruptor Flute
+1 Emrakul, the Aeons Torn
+1 Expedition Map
+4 Grim Monolith
+4 Karn, the Great Creator
+4 Kozilek's Command
+1 Lotus Petal
+2 Manifold Key
+4 Planar Nexus
+4 The One Ring
+4 Trinisphere
+4 Ugin, Eye of the Storms
+2 Urza's Mine
+2 Urza's Power Plant
+4 Urza's Saga
+4 Urza's Tower
+4 Urza's Workshop
+1 Voltaic Key
+1 Argentum Masticore
+2 Dismember
+1 Disruptor Flute
+1 Ensnaring Bridge
+2 Faerie Macabre
+1 Liquimetal Coating
+2 Mindbreak Trap
+1 Mycosynth Lattice
+1 Paradox Engine
+1 Tormod's Crypt
+1 Torpor Orb
+1 Warping Wail
+Toward the end of last month, we saw two copies of Colorless Tron meet in the 
+finals of the Legacy Showcase Challenge
+, with another copy in the Top 8. In the time since then, we've seen the population of the deck increase without impacting its win rate, which is particularly concerning to us. We believe it is possible for colorless 
+Ancient Tomb
+ decks to be a healthy and fun part of the Legacy metagame. The trajectory that this version of Colorless Tron is on, however, concerns us to a degree that we do feel the need to act.
+Candelabra of Tawnos
+ is the card that we are going after because it is the thing that we believe is most likely to cause problems for the format in the long term and is the least likely to be a fun part of a cyclical metagame. While we will continue to print exciting lands and card-draw engines, we are extremely careful about printing cards that untap your lands. The core issue specific to Candelabra is that it rarely shows up unless it is in a problematically strong combo deck, where it is often the highest value-above-replacement card in the deck. We are concerned that trying to ban around Candelabra would result in similar situations in the future. We take banning cards extremely seriously. Whenever we have to make this sort of change in Legacy, we frequently try to minimize the total number of bans that we are going to have to make in the long term.
+Separately, if a version of Tron that doesn't play 
+Candelabra of Tawnos
+ were to still be successful in a post-ban world, we think that sounds like a cool world to live in. We've seen 
+Planar Nexus
+ power up 
+Urza's Tower
+ and company in the past, which gives us some confidence that this is possible.
+For those reasons, 
+Candelabra of Tawnos
+ is banned.
+Looking at the rest of the Legacy metagame, we're happy to see the format diversifying. Decks are becoming a bit more siloed than the combo decks we've seen over the last couple of years. Reanimator is taking on more of an all-in combo shape, 
+Sneak Attack
+ variants are showing up with big creatures, and there are a few flavors of white creature-based decks that toe the line between grinding and aggression. 
+Flow State
+ is a card that we're keeping an eye on as the spiritual successor of Expressive Iteration, but so far it looks to be a tool for the good of the format, helping games decompress and play a bit longer.
+Finally, we are aware that the community has taken notice of 
+The Fantasticar
+. It isn't lost on us that this is a card that plays very well with the fast mana and colorless artifact enablers of Eternal formats. We expect that the card has a higher risk of ruin in Vintage than in Legacy, but this announcement should be taken as a demonstration that we are willing to act quickly in the event that a card proves to be an obvious detriment to either format.
+Vintage
+Written by Eric Engelhard
+No changes
+Vintage continues to be one of my favorite 
+Magic
+ formats heading into the summer. 
+Flow State
+ and 
+Stock Up
+ continue to jockey for the position as the unrestricted draw spell of choice, though some decks continue to say, "Why not both?" like this awesome Grixis 
+Tinker
+ deck.
+1 Ancestral Recall
+1 Black Lotus
+1 Bolas's Citadel
+1 Brainstorm
+1 Chain of Vapor
+1 Demonic Tutor
+1 Flooded Strand
+4 Flow State
+2 Flusterstorm
+2 Force of Negation
+4 Force of Will
+1 Gitaxian Probe
+2 Hexing Squelcher
+1 Hullbreacher
+2 Island
+4 Lórien Revealed
+1 Mana Crypt
+1 Manifold Key
+1 Mental Misstep
+1 Misty Rainforest
+1 Mox Emerald
+1 Mox Jet
+1 Mox Pearl
+1 Mox Ruby
+1 Mox Sapphire
+1 Mystical Tutor
+1 Polluted Delta
+1 Scalding Tarn
+1 Sol Ring
+4 Stock Up
+1 Thundering Falls
+1 Time Vault
+1 Time Walk
+1 Timetwister
+1 Tinker
+1 Tolarian Academy
+2 Underground Sea
+1 Urza's Saga
+1 Vampiric Tutor
+1 Vexing Bauble
+2 Volcanic Island
+1 Yawgmoth's Will
+2 Abrade
+1 Dismember
+2 Hullbreacher
+1 Hurkyl's Recall
+3 Leyline of the Void
+1 Long Goodbye
+1 Opposition Agent
+1 Portal to Phyrexia
+2 Pyroblast
+1 Yixlid Jailer
+The pillars of the format exist and are strong, but there's still a lot of room for customization among them. And there's plenty of room for fringe archetypes as well. With almost every 
+Magic
+ card in existence available, surprising plays and interactions are the norm, not the exception.
+That said, we did unleash something that looks like it's at high risk of being problematic in Vintage with the release of 
+Magic: The Gathering
+ | 
+Marvel Super Heroes
+. 
+The Fantasticar
+ has the potential to attack for 16 damage out of nowhere on very early turns. Given that the card is immediately castable off of 
+Mishra's Workshop
+'s mana, this is the type of card that tends to receive extra scrutiny internally. That being said, we generally don't aim cards directly at Vintage, but we also allow our designers to innovate and design the cards they feel best serve their sets within certain limits. This fell within those limits at the time, but those limits are always updating, and it might not have made it today.
+Now, Vintage can absorb 
+a lot
+. We've watched it absorb some very powerful mechanics—the initiative, for example—without needing to restrict anything at all. It's the only competitive format where you can play with some of 
+Magic
+'s famous broken cards like 
+Channel
+, 
+Sol Ring
+, 
+Tinker
+, and four copies of 
+Mana Drain
+ or 
+Skullclamp
+. That adds up to us being hesitant to take preemptive action when a card looks like it could be problematic, but rest assured we are watching the format. If 
+The Fantasticar
+ becomes an issue in Vintage, we won't hesitate to take action.
+Pauper
+Written by Gavin Verhey
+Seeker of Skybreak
+ is banned.
+Today, we are banning 
+Seeker of Skybreak
+. This is because of a new combo that involves 
+Seeker of Skybreak
+ and 
+Hawkeye's Bow
+ that can kill extremely quickly. After reviewing the initial results, we thought it was better to take action on this combo now rather than let it play out throughout July and impact some upcoming large Pauper tournaments.
+For more information, 
+read our breakdown here
+.
+Alchemy
+Written by Dave Finseth
+No changes
+We have been monitoring a growing problem with the dominance of 
+Omniscience
+ decks in Best-of-One Alchemy powered by 
+Aquatic Subtlety
+ and 
+Sin, Spira's Punishment
+. 
+Aquatic Subtlety
+'s ability to cycle through the deck and find the relevant combo pieces was pushing the deck above our win rate targets for the format, so we rebalanced 
+Aquatic Subtlety
+ a few weeks ago to reduce its consistency. We are starting to see players shift away from this deck but will continue to monitor.
+Historic
+Written by Dave Finseth
+No changes
+Following the fiercely competitive Arena Championship 12, we have loved the diversity of strategies and deck building we are seeing in this format. The Top 16 of the Arena Championship featured ten distinct decks and a variety of strategies. While Golgari Yawgmoth won the event, the breakout decks were Izzet 
+Demilich
+ and a deck constructed precisely to counter it: Azorius 
+High Noon
+. These top decks hang in a balance that allows for many other archetypes to thrive, so we see no need to take any action at this time.
+1 Thoughtseize 
+2 Prismatic Vista 
+4 Ignoble Hierarch 
+4 Yawgmoth, Thran Physician 
+4 Marionette Apprentice 
+2 Forest 
+1 Swamp 
+1 A-Blood Artist 
+1 Echoing Cavern 
+4 Badgermole Cub 
+4 Birthing Ritual 
+2 Delighted Halfling 
+1 Nurturing Peatland 
+1 Birds of Paradise 
+3 Blooming Marsh 
+1 A-Haywire Mite 
+1 Wastewood Verge 
+4 Overgrown Tomb 
+1 Yavimaya, Cradle of Growth 
+1 Urborg, Tomb of Yawgmoth 
+4 Young Wolf 
+1 Hapatra, Vizier of Poisons 
+1 Boggart Trawler
+1 Sephiroth, Fabled SOLDIER
+1 Chittering Illuminator 
+2 Boseiju, Who Endures 
+4 Chord of Calling 
+1 Phyrexian Tower 
+1 Endurance 
+1 Khalni Garden 
+1 Kraul Harpooner 
+1 Endurance 
+1 Skyfisher Spider 
+1 Surgical Extraction 
+1 Reclamation Sage 
+1 Chittering Illuminator 
+2 Necromentia 
+1 Pile On 
+2 Abrupt Decay 
+1 Force of Vigor 
+1 Opposition Agent 
+2 Thoughtseize 
+Timeless
+Written by Dave Finseth
+No changes
+With no archetype making up more than four percent of the metagame, Timeless is in great shape. The return of the Mystical Archive with 
+Secrets of Strixhaven
+ bolstered the Dimir Tempo deck with the addition of 
+Daze
+, offering a powerful counterspell and draw engine when paired with 
+Hydroponics Architect
+. This is exactly the type of shenanigans we like to see from our most powerful format on 
+MTG Arena
+.
+4 Hydroponics Architect 
+4 Orcish Bowmasters 
+4 Psychic Frog 
+4 Tamiyo, Inquisitive Student 
+4 Brainstorm 
+4 Daze 
+4 Fatal Push 
+4 Force of Will 
+2 Snuff Out 
+3 Ponder 
+3 Treasure Cruise 
+1 Island 
+4 Misty Rainforest 
+4 Polluted Delta 
+2 Scalding Tarn 
+4 Strip Mine 
+1 Undercity Sewers 
+4 Watery Grave 
+1 Lurrus of the Dream-Den 
+3 Surgical Extraction 
+3 Stern Scolding 
+1 Disruptor Flute 
+3 Harbinger of the Seas 
+2 Bloodchief's Thirst 
+2 Spell Pierce 
+Brawl
+Written by Dave Finseth
+Force of Will
+ is banned.
+Subtlety
+ is banned.
+Wash Away
+ is banned.
+Ugin's Labyrinth
+ is banned.
+Time Warp
+ is banned.
+Temporal Manipulation
+ is banned.
+We want Brawl to be a place where all players can find a fun match with decks ranging from silly Squirrel typal to powerful streamlined strategies. With the release of Competitive Brawl, we can now shift Brawl into a more casual play space. That means taking a firmer line against some of the play patterns that limit the overall viability of certain commanders. Today, we wanted to act on three of these categories of cards: fast mana, free spells, and extra-turn spells.
+Efficient mana ramp creates a strategic advantage as players increase their resources turn after turn. When mana acceleration is too fast, it limits the viability of cheaper commanders and speeds up the pace of the format. The most concerning cards in this category are colorless cards, as they can be included in every deck, and cards that do not have a significant cost or condition associated with them. For those reasons, we previously banned 
+Chrome Mox
+ and 
+Ancient Tomb
+. Today, we are adding 
+Ugin's Labyrinth
+ to that list. We have also discussed banning one-time, explosive mana-generating cards like 
+Dark Ritual
+ and 
+Pyretic Ritual
+, but we believe these one-off effects add meaningful variety to matches, even when they are played on curve.
+The quantity and quality of effective countermagic have grown beyond the level we think is reasonable for Brawl. While these reactive spells play an important role in the format, the number of options available to players has increased rapidly over the last year. Having so many free spells has fundamentally shifted when it is safe to play out your hand. For these reasons, we are banning 
+Force of Will
+, 
+Subtlety
+, and 
+Wash Away
+. It's our hope that, by removing three of the most powerful counterspells, the format will better support more commanders who may not have had a chance otherwise. We are also looking at other free spells, like 
+Snuff Out
+ and 
+Force of Negation
+, but don't want to make too many changes too quickly without evaluating their outcomes.
+Finally, we are banning 
+Time Warp
+ and 
+Temporal Manipulation
+. We evaluated the cards that grant players extra turns without exiling themselves and found they often lead to repetitive games. After reviewing the match data for these cards, we found they hurt the overall experience for all players.
+This is all a granular step in the direction we would like the format to go now that competitive pressure has been taken off it. With the release of Competitive Brawl, we are anticipating a need for faster iteration as the format adapts. We will be monitoring and responding with caution as the format continues to grow.
+Competitive Brawl
+Written by Dave Finseth
+No changes
+Being as this format is brand new, we will not be making any additional changes at this time. We look forward to watching how players develop this competitive metagame over the coming months.
+        Announcements
+        Secret Lair: My Arrakis, My Superdrop
+    Secret Lair: My Arrakis, My Superdrop
+        Announcements
+        Everything New for Competitive Play in 2027
+    Everything New for Competitive Play in 2027
+        Announcements
+        Netflix Reveals Magic: The Gathering Animated Series PLANESWALKER
+    Netflix Reveals Magic: The Gathering Animated Series PLANESWALKER
+Magic: The Gathering Footer
+Find a store
+      Find a store
+Social
+Find
+        Articles
+        Club Support
+        Digital Books
+        Formats
+        Rules
+        Military Support
+Company
+        About
+        Accounts
+        Careers
+        Support
+        Wizards Play Network
+        Affiliate Program Disclosure
+Magic
+        Magic: The Gathering
+        MTG Arena
+        Magic.gg
+        Store & Events Locator
+        Card Database
+        Secret Lair
+        SpellTable
+Brands
+        Dungeons & Dragons
+        Duel Masters
+        Magic: The Gathering
+Terms
+Code of Conduct
+Privacy Policy
+Customer Support
+Fan Content Policy
+DO NOT SELL OR SHARE MY PERSONAL INFORMATION
+Your Privacy Choices
+简体中文
+繁體中文
+Français
+Deutsch
+Italiano
+日本語
+한국어
+Português (Brasil)
+Русский
+Español
+English
+  © 1993-2026 Wizards of the Coast LLC, a subsidiary of Hasbro, Inc. All Rights Reserved.

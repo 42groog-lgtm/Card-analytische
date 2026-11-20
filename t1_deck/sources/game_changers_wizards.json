@@ -1,0 +1,90 @@
+{
+ "White": {
+  "updatedAt": "2026-02-09T17:04:03.405Z",
+  "cards": [
+   "Drannith Magistrate",
+   "Enlightened Tutor",
+   "Farewell",
+   "Humility",
+   "Serra's Sanctum",
+   "Smothering Tithe",
+   "Teferi's Protection"
+  ]
+ },
+ "Blue": {
+  "updatedAt": "2025-10-22T18:00:44.378Z",
+  "cards": [
+   "Consecrated Sphinx",
+   "Cyclonic Rift",
+   "Force of Will",
+   "Fierce Guardianship",
+   "Gifts Ungiven",
+   "Intuition",
+   "Mystical Tutor",
+   "Narset, Parter of Veils",
+   "Rhystic Study",
+   "Thassa's Oracle"
+  ]
+ },
+ "Black": {
+  "updatedAt": "2025-10-22T18:00:44.397Z",
+  "cards": [
+   "Ad Nauseam",
+   "Bolas's Citadel",
+   "Braids, Cabal Minion",
+   "Demonic Tutor",
+   "Imperial Seal",
+   "Necropotence",
+   "Opposition Agent",
+   "Orcish Bowmasters",
+   "Tergrid, God of Fright",
+   "Vampiric Tutor"
+  ]
+ },
+ "Red": {
+  "updatedAt": "2025-10-22T18:00:44.416Z",
+  "cards": [
+   "Gamble",
+   "Jeska's Will",
+   "Underworld Breach"
+  ]
+ },
+ "Green": {
+  "updatedAt": "2026-02-09T17:04:03.532Z",
+  "cards": [
+   "Crop Rotation",
+   "Biorhythm",
+   "Gaea's Cradle",
+   "Natural Order",
+   "Seedborn Muse",
+   "Survival of the Fittest",
+   "Worldly Tutor"
+  ]
+ },
+ "Multicolor": {
+  "updatedAt": "2025-10-22T18:00:44.455Z",
+  "cards": [
+   "Aura Shards",
+   "Coalition Victory",
+   "Grand Arbiter Augustin IV",
+   "Notion Thief"
+  ]
+ },
+ "Colorless": {
+  "updatedAt": "2025-10-22T18:00:44.476Z",
+  "cards": [
+   "Ancient Tomb",
+   "Chrome Mox",
+   "Field of the Dead",
+   "Glacial Chasm",
+   "Grim Monolith",
+   "Lion's Eye Diamond",
+   "Mana Vault",
+   "Mishra's Workshop",
+   "Mox Diamond",
+   "Panoptic Mirror",
+   "The One Ring",
+   "The Tabernacle at Pendrell Vale"
+  ]
+ }
+}

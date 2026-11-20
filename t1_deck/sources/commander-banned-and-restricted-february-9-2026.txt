@@ -1,0 +1,299 @@
+
+Commander Banned and Restricted Announcement – February 9, 2026
+Skip to main content
+              Products
+Coming Soon
+                    Coming Soon
+Nauctis: The Sunken Realm
+ Marvel Darkhold Destiny
+Kamigawa: Titanbreach
+Zhalfir
+Available Now
+                    Available Now
+Star Trek
+Reality Fracture
+The Hobbit™
+Marvel Super Heroes
+Secrets of Strixhaven
+Lorwyn Eclipsed
+Secret Lair Drop Series
+Latest Products
+Card Set Archive
+              MTG Arena
+Download
+Getting Started
+Drop Rates
+Alchemy
+Draft
+MTG Arena News
+              Play
+Play Events
+                    Play Events
+Prerelease
+Magic Academy
+Standard Showdown
+Commander Box League
+Commander Party
+Store Championship
+Friday Night Magic
+MagicCon
+Pro Tour
+All Events
+Formats
+                    Formats
+Commander
+Standard
+Modern
+Pioneer
+Booster Draft
+Pick-Two Draft
+Sealed Deck
+All Formats
+Platforms
+                    Platforms
+Store Locator
+MTG Arena
+Magic Online
+SpellTable
+Wizards Accounts
+Support
+                    Support
+Player Support
+Store Support
+Club Support
+Military Support
+              Learn
+Resources
+                    Resources
+Where to Start
+How to Play
+Product Guide
+Keyword Glossary
+Banned & Restricted List
+Card Database
+Companion App
+              SHOP
+              News
+Read
+                    Read
+Latest News
+Announcements
+Behind The Scenes
+Making Magic
+MTG Arena News
+Card Previews
+Competitive
+Watch
+                    Watch
+Drive To Work Podcast
+WeeklyMTG
+Magic Story Podcast
+Story
+                    Story
+Latest Stories
+Story Archive
+Planes and Planeswalkers
+More
+                    More
+Wallpapers
+            Locator
+            Card Database
+            Accounts
+News
+          /
+            Announcements
+Commander Banned and Restricted Announcement – February 9, 2026
+            Announcements
+Feb 9, 2026
+                  Gavin Verhey
+Announcement Date
+: February 9, 2026
+Commander
+Biorhythm
+ is unbanned.
+Lutri, the Spellchaser
+ is unbanned but remains banned as a companion.
+Effective date
+: February 9, 2026
+View 
+the list of all banned and restricted cards by format
+.
+Hello! This is Gavin Verhey on behalf of the Commander Format Panel.
+In April of last year, the Commander Format Panel made our first changes to the Commander banned and restricted list. At that time, we said we weren't going to touch the list for the rest of the year and that we'd come back next year to discuss it.
+And here we are.
+There's another article up today
+ talking a lot about where we see the format, what to expect for this year, hybrid mana, Game Changers, and more—definitely check that one out if you want more about Commander in general. Here, we're going to focus on today's banned and restricted update, the cards we unbanned and why, and the other cards we talked about.
+To reach today's conclusions, both the Commander Format Panel and the Commander Design group at Wizards discussed cards on the banned list and voted on potential unbans. Additionally, I want to call out the Commander Summit we ran last year as particularly great for allowing some of these conversations to happen in person and planting the seeds for what we see here today.
+Let's begin with today's unbans.
+Unbanned: Biorhythm
+Biorhythm
+ has the potential to be a powerful card. It can end the game on the spot for a player with no creatures, and you can set up board states where you can take out all three opponents in a single go.
+We talked about this card a lot last year and ultimately decided to leave it on the banned list for the first go-around. Its potential strength and the disproportionate impact to the player to your right was something we noted and decided to hold off on.
+While we respect those concerns about ending the game and sitting to the 
+Biorhythm
+ player's right as a big disadvantage, we have now successfully unbanned several expensive spells that radically warp or end the game: 
+Worldfire
+ (in the days before the Commander Format Panel), 
+Sway of the Stars
+, and 
+Coalition Victory
+. All of those have ultimately turned out just fine. While Biorhythm is stronger, easier to set up, and, yes, can make the game unsatisfyingly end, it takes enough setup and has enough counterplay that it's far from an auto-include. As a situational eight-mana sorcery, there are plenty of times where it's a weak draw.
+We accept there is some risk here, but it's also a card with big moments that will generate some excitement. I personally can imagine a lot of games totally turned upside down in a memorable way as a Biorhythm resolves and suddenly the game is changed. It makes for a very memorable experience, as long as it isn't happening too often.
+Like all of the previously unbanned cards, this will immediately be put on the Game Changers list as well, where it belongs. This card quite definitionally changes the game.
+Unbanned: Lutri, the Spellchaser
+Lutri, the Spellchaser
+'s banning has always been a quirk. I was there in the room the day we first discussed how Lutri would need to be banned in Commander immediately and how we'd have to talk to the Commander Rules Committee at the time to get that sorted out.
+Lutri itself is far from too strong of a card in a game of Commander. However, the problem is that if Lutri is legal as a companion, every deck for the rest of time that has a blue-red color identity should have Lutri as a companion. There is absolutely no downside to doing so. We don't want blue-red decks to have access to an extra card in every game of Commander for all time (and it's not like it's a color combination that needs the help!) nor have players who don't have access to Lutri get told they "have to" play Lutri. It's a really undesirable outcome to add a card that shows up at that level of ubiquity.
+However, Lutri has a lot going for it. Copying spells is fun! It's a cute otter! Since the day Lutri was revealed, players have been asking to play with the card in Commander—a request which has only risen in popularity post-
+Bloomburrow
+.
+After much discussion, we decided to free the Otter. So, today we're creating a new designation: banned as a companion. It's exactly as it sounds. Lutri can't be used as a companion, but it can appear in your deck or be your commander.
+Creating an additional list is something to be very careful about. There have been plenty of discussions in the past about the dangers of a banned-as-companion list: it's one more list you have to track and adds complexity, among other reasons. However, today we're largely okay doing it for Lutri for two big reasons.
+First, if someone says they're going to have Lutri be their companion, it's the easiest thing to fix: you just say, "Hey, did you know you can't do that?" and it likely changes what their deck is doing very little. This is different from something being banned as a commander, where suddenly someone's entire deck is invalid. Second, unlike legends writ large, we aren't really planning to tap into the companion mechanic much more, and all the other ones we currently have are fine. It's not like you're going to need to monitor another list that oscillates. The list is and likely will remain forever just Lutri. And once again, if you companion it, it's very easy for a player to just point out it doesn't work. The failure case here is minimal.
+Now, don't take this to mean we're likely to implement a banned-as-commander list in the future. This is a unique case and solution for an otter people have been waiting for.
+Speaking of unique cases, we are breaking our normal protocol of moving cards from the banned list to the Game Changers list when they're unbanned for Lutri. Because the card was banned solely due to its strength as a companion and it doesn't apply here, there's no reason to gate it as a Game Changer.
+Lutri is finally free. We hope you enjoy playing with the Spellchaser!
+Additionally, there are three other cards we discussed quite heavily. These cards are not being unbanned today, but we welcome your feedback on whether you think they should be unbanned in the future.
+Sundering Titan
+Sundering Titan
+ was banned at a time where you would play it, find a way to repeatedly blink it (say, for example, 
+Deadeye Navigator
+), and absolutely ruin everyone else's mana base.
+Commander has come a long way since then. Getting into those kinds of board states happens a lot less often. And while land denial is never the most fun, it's possible that now is actually a time that punishing ramping mana bases full of Triomes and dual lands is actually a bit heroic.
+Additionally, 
+Sundering Titan
+ is in kind of a funny spot because the bracket system sets up some nice guidelines against land denial. It would be a Game Changer, limiting it from appearing in Bracket 2 and below, and if you're planning to repeatedly loop or blink Sundering Titan regularly, that kind of land-denial strategy is not something welcome in Bracket 3. For all these reasons, we considered unbanning this card.
+However, with all that said, the fact remains this card can really be quite unfun. While a lot of players are using brackets, plenty don't, and that means this card could just show up on a lot of tables and cause frustration in games. It is powerful land destruction, which is perhaps the most hated mechanic in all of Commander, and as a colorless artifact it can go into any deck and be ramped out. If it goes wrong, it can 
+really
+ go wrong, so we decided not to touch it in this go-around. But we'd love your thoughts!
+Iona, Shield of Emeria
+Iona, Shield of Emeria
+ is an exciting, expensive Angel with a splashy effect. And at the right table with the right decks, its effect can be perfectly fine as a little disruption. I think there is actually a bit of fun in navigating the politics to get someone to remove Iona so you can start casting spells again. There's good that could come from this card.
+The problem is that this effect easily shuts a player out of the game: it totally stops monocolor players from playing 
+Magic
+, and even many two-color decks often have a large portion of their hand (and their commander!) rendered uncastable by Iona.
+Don't let that mana cost fool you—it's a premier card to cheat into play. And it's worth calling out that Iona is also part of a two-card combo with 
+Painter's Servant
+ that prevents any of your opponents from ever casting spells again!
+What is the upside of unbanning this? Is it going to make Commander more fun to have a creature that can shut down your opponents' games? These were the questions many of us asked ourselves.
+This was very close to being unbanned and was right on the cusp. Ultimately, we decided it would be great to get feedback from you all first.
+Griselbrand
+If the other two are on the safer side, 
+Griselbrand
+ certainly is not. This premier reanimation target takes advantage of the 40-point life total in Commander to draw a good chunk of your deck and in many cases win the game on the spot. This card had to be banned extremely quickly for power-level reasons when it first premiered back in 
+Avacyn Restored
+.
+The card is a tremendous risk, giving people access to this game-winning draw engine. So, why even consider it?
+Griselbrand
+ is sweet. People love this card. It's worked its way into pretty much every format it's legal in and is a ton of fun to play. The games with this can be such a rush! In fact, it's so exciting that I've had to tell multiple people they have to remove it from their Commander decks because it's banned (much to their immediate disappointment).
+And, yes, it's incredibly powerful—but at Bracket 3 and above, is it really out of the question? It could even open up something new at the cEDH level.
+While the others are maybe not a huge risk, the reward is also much less for unbanning them. Freeing 
+Griselbrand
+ would unleash what would become an incredibly powerful and highly played card, but also one players really love—and in many ways, Commander is about letting people play the cards they love.
+Do you have opinions about any of these three cards? Please tell us! Social media is fine, as always, or you can direct your notes to the channels in 
+the official 
+Magic: The Gathering 
+Discord
+, where we'll have people watching and listening to take in feedback.
+Finally, I would be remiss to not mention 
+Jeweled Lotus
+ anywhere in this article, because I know some of you will be wondering if we also discussed that card. We did, and we decided not to unban it here.
+That's not to say that an unban in the future is impossible, but it is staying banned at this time, and 
+much of what I said last year
+ still applies.
+If you're interested in our opinions on any other card currently on the banned list, feel free to check out that article as well. There's a large appendix at the end with a summarized opinion on currently banned cards.
+No Bans
+I did want to take a moment to touch on the fact that there are no additional bans today.
+In one of our last articles
+, we talked about watching 
+Thassa's Oracle
+ and 
+Rhystic Study
+ and encouraged you to send in your feedback on these cards.
+We haven't seen anything close enough to a volume indicating these cards should go. 
+Thassa's Oracle
+ seems mostly enjoyed by the competitive community while not showing up much outside of the highest power levels. The case seems mostly closed on that one, though things could change.
+Rhystic Study
+ is, of course, very powerful and a nuisance for many, especially in competitive Commander, but also a card many people love. We would have to see some pretty serious signs and public opinions change before touching that card.
+The bar to ban a card in Commander is quite high, and I wouldn't expect any action to be taken if things remain on the current trajectory. With that said, we'll continue watching 
+Rhystic Study
+, and we welcome your feedback.
+Commander Banned and Restricted Updates in 2026
+There are a couple more things we want to share before winding down this article to set expectations for the rest of the year.
+First and foremost, you might notice that this announcement coincides with the one for all other formats. That is not something to expect going forward. It's just how the timing landed this time, but in general Commander gets to operate on its own schedule.
+Second, unlike last year, we are not limiting ourselves to just one banned and restricted update window in a year. If we decide we want to do something, such as unban a card, we can come back later this year and do it. That's not to say we necessarily will, and we're not withholding any changes we wanted to make today, but based on your feedback, we have that option. Please be sure to share your thoughts on the cards above (and anything else you'd like to see changed) with us!
+We'll be listening. We hope you find homes for the freshly unbanned cards, and thanks in advance for your feedback. We'll talk with you again likely this summer in May or June. And don't forget to check out 
+the other article today
+ that covers some other topics and changes.
+Signing off on behalf of the Commander Format Panel,
+Alex Heyer
+Bandit
+Ben Wheeler
+Deco
+Ittetu
+Josh Lee Kwai
+Lua Stardust
+Olivia Gobert-Hicks
+Rachel Weeks
+Rebell Lily
+Tim Willoughby
+Toby Elliott
+Tomer Abramovici
+        Announcements
+        Secret Lair: My Arrakis, My Superdrop
+    Secret Lair: My Arrakis, My Superdrop
+        Announcements
+        Everything New for Competitive Play in 2027
+    Everything New for Competitive Play in 2027
+        Announcements
+        Netflix Reveals Magic: The Gathering Animated Series PLANESWALKER
+    Netflix Reveals Magic: The Gathering Animated Series PLANESWALKER
+Magic: The Gathering Footer
+Find a store
+      Find a store
+Social
+Find
+        Articles
+        Club Support
+        Digital Books
+        Formats
+        Rules
+        Military Support
+Company
+        About
+        Accounts
+        Careers
+        Support
+        Wizards Play Network
+        Affiliate Program Disclosure
+Magic
+        Magic: The Gathering
+        MTG Arena
+        Magic.gg
+        Store & Events Locator
+        Card Database
+        Secret Lair
+        SpellTable
+Brands
+        Dungeons & Dragons
+        Duel Masters
+        Magic: The Gathering
+Terms
+Code of Conduct
+Privacy Policy
+Customer Support
+Fan Content Policy
+DO NOT SELL OR SHARE MY PERSONAL INFORMATION
+Your Privacy Choices
+简体中文
+繁體中文
+Français
+Deutsch
+Italiano
+日本語
+한국어
+Português (Brasil)
+Русский
+Español
+English
+  © 1993-2026 Wizards of the Coast LLC, a subsidiary of Hasbro, Inc. All Rights Reserved.

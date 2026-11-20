@@ -1,0 +1,950 @@
+
+Banned and Restricted Announcement – August 10, 2026
+Skip to main content
+              Products
+Coming Soon
+                    Coming Soon
+Nauctis: The Sunken Realm
+ Marvel Darkhold Destiny
+Kamigawa: Titanbreach
+Zhalfir
+Available Now
+                    Available Now
+Star Trek
+Reality Fracture
+The Hobbit™
+Marvel Super Heroes
+Secrets of Strixhaven
+Lorwyn Eclipsed
+Secret Lair Drop Series
+Latest Products
+Card Set Archive
+              MTG Arena
+Download
+Getting Started
+Drop Rates
+Alchemy
+Draft
+MTG Arena News
+              Play
+Play Events
+                    Play Events
+Prerelease
+Magic Academy
+Standard Showdown
+Commander Box League
+Commander Party
+Store Championship
+Friday Night Magic
+MagicCon
+Pro Tour
+All Events
+Formats
+                    Formats
+Commander
+Standard
+Modern
+Pioneer
+Booster Draft
+Pick-Two Draft
+Sealed Deck
+All Formats
+Platforms
+                    Platforms
+Store Locator
+MTG Arena
+Magic Online
+SpellTable
+Wizards Accounts
+Support
+                    Support
+Player Support
+Store Support
+Club Support
+Military Support
+              Learn
+Resources
+                    Resources
+Where to Start
+How to Play
+Product Guide
+Keyword Glossary
+Banned & Restricted List
+Card Database
+Companion App
+              SHOP
+              News
+Read
+                    Read
+Latest News
+Announcements
+Behind The Scenes
+Making Magic
+MTG Arena News
+Card Previews
+Competitive
+Watch
+                    Watch
+Drive To Work Podcast
+WeeklyMTG
+Magic Story Podcast
+Story
+                    Story
+Latest Stories
+Story Archive
+Planes and Planeswalkers
+More
+                    More
+Wallpapers
+            Locator
+            Card Database
+            Accounts
+News
+          /
+            Announcements
+Banned and Restricted Announcement – August 10, 2026
+            Announcements
+Aug 10, 2026
+                  Carmen Klomparens
+                  Jadine Klomparens
+                  Arya Karamchandani
+                  Gavin Verhey
+                  Dave Finseth
+Standard
+Badgermole Cub
+ is banned.
+Stormchaser's Talent
+ is banned.
+Gran-Gran
+ is banned.
+Pioneer
+No changes
+Modern
+No changes
+Legacy
+The Fantasticar
+ is banned.
+Vintage
+The Fantasticar
+ is restricted.
+Pauper
+No changes
+Alchemy
+No changes
+Historic
+No changes
+Timeless
+No changes
+Brawl
+No changes
+Competitive Brawl
+No changes
+Changes effective as of August 10, 2026. View 
+the list of all banned and restricted cards by format
+.
+Next announcement: October 12, 2026
+Howdy, gamers!
+My name is Carmen Klomparens, and I'm a senior game designer on 
+Magic
+'s Play Design team. After an exciting 
+Modern Pro Tour in Amsterdam
+ just a few weeks ago, we're setting our sights on Standard as we gear up for its season of Regional Championship Qualifiers. Standard isn't the only format getting attention, however, and we'll be talking about some of 
+Magic
+'s most popular formats.
+As usual, we'll be on WeeklyMTG on 
+twitch.tv/magic
+ tomorrow, August 11, at 10 a.m. PT to talk through these changes and answer questions. As a reminder, the next banned and restricted announcement will be on October 12, 2026. We've got a lot of ground to cover today, so let's get into it!
+Table of Contents
+Standard
+Pioneer
+Modern
+Legacy
+Vintage
+Pauper
+Alchemy
+Historic
+Timeless
+Brawl
+Competitive Brawl
+Standard
+Written by Jadine Klomparens
+Badgermole Cub
+ is banned.
+Stormchaser's Talent
+ is banned.
+Gran-Gran
+ is banned.
+For the last several months, Standard has been headlined by two strategies that are clearly ahead of the pack: 
+Badgermole Cub
+-based strategies in green and various decks utilizing blue-red noncreature spells. For most of this time, the gap between these two strategies and the rest of the format was discernable but not insurmountable, and many decks could find success each weekend.
+The Standard metagame was diverse and changed over time. The green decks evolved from 
+Ouroboroid
+ decks to 
+Nature's Rhythm
+ decks to landfall strategies. The blue-red decks splintered into Izzet Prowess, Izzet Lessons, and Izzet Spellementals. We saw new decks like Mardu Discard and Four-Color Control emerge. During this period, Standard had some problems, but it was healthy overall, and we elected to not ban cards during our updates to the banned and restricted list.
+Recently, the gap between the top decks and the rest of the field has widened. The biggest development is a new 
+Badgermole Cub
+ deck called Selesnya Offense that has emerged as the strongest green variant. Like previous variants that incorporated 
+Nature's Rhythm
+, its focus is on ending the game as quickly as possible with the help of 
+Practiced Offense
+ from 
+Secrets of Strixhaven
+. This iteration is more resilient and difficult to attack thanks to its utility lands and a creature suite focused on resilience, including a hexproof threat in 
+Leatherhead, Swamp Stalker
+.
+3 Abandoned Air Temple
+1 Ba Sing Se
+4 Badgermole Cub
+4 Brightglass Gearhulk
+1 Bushwhack
+6 Forest
+4 Hushwood Verge
+2 Jennifer Walters
+4 Leatherhead, Swamp Stalker
+4 Llanowar Elves
+1 Meltstrider's Resolve
+2 Multiversal Passage
+2 Ouroboroid
+4 Pawpatch Recruit
+2 Plains
+4 Practiced Offense
+2 Seam Rip
+3 Spider Manifestation
+3 Surrak, Elusive Hunter
+4 Temple Garden
+3 Dawn's Truce
+2 Elspeth, Storm Slayer
+2 Erode
+1 Meltstrider's Resolve
+3 Rest in Peace
+3 Sheltered by Ghosts
+1 Soul-Guide Lantern
+The world of competitive 
+Magic
+ has largely shifted its attention to Modern over the last two months with the Modern Regional Championship Qualifier (RCQ) season and Pro Tour 
+Magic: The Gathering
+® | 
+Marvel Super Heroes
+ receiving the brunt of competitive pressure. Because of this, there haven't been high-level tournaments for Selesnya Offense to succeed in, and our picture of the shape of the Standard metagame is fuzzier than it would be if Standard were under a higher degree of competitive pressure.
+Despite this lack of in-person tournaments to look at, the story told by our data from 
+MTG Arena
+ is clear. Selesnya Offense has the highest win rate by a large margin, winning over 57% of its matches, and it also has the second-highest play rate. Normally, win rates fall as play rates climb. Decks that can maintain high win rates while also having high play rates are large threats to the balance of formats. In fact, the overall profile of the Selesnya Offense deck in our data is very similar to what 
+Vivi Ornitier
+'s and 
+Agatha's Soul Cauldron
+'s data looked like at the time that we banned Vivi Ornitier.
+Most of the time, when a new deck breaks onto the scene with a high win rate and quickly picks up steam, it's not cause for alarm. It takes time for players to figure out how to play against the new strategy and adapt their sideboards and strategies to face it. In this case, Selesnya Offense is not a brand-new deck. It's an evolution of one of the format's pillars and represents a new balance of resiliency and speed with few weaknesses. The combination of a sustained high win rate and play rate in our data in addition to 
+Badgermole Cub
+'s history of dominance is concerning.
+Rather than wait for the upcoming Standard RCQ season to prove that Selesnya Offense will be problematic for in-person Standard, we're electing to act now. Banning cards in Standard is something we take very seriously. We generally err toward being conservative with changes in Standard. Standard being stable is important for its long-term health. The risk that this Standard format becomes severely imbalanced and not fun to play is high enough for us to take action today. Our goal with today's changes is to pave the way for Standard to be a fun and diverse format as competitive pressure returns to it.
+Badgermole Cub is the clear choice for a card to ban from Selesnya Offense. 
+Badgermole Cub
+ has been an extremely powerful and format-defining card in Standard ever since it was released. We've discussed it at length in several previous banned and restricted announcements. It is a cheap threat that demands an immediate answer and lets its controller develop an insurmountable mana advantage. The pressure 
+Badgermole Cub
+ exerts on decks to be able to answer a two-mana creature forces them to value mana efficiency highly and compresses the format in unhealthy ways. Without 
+Badgermole Cub
+, Standard will be more fun and have more breathing room.
+Our data shows that Standard has three distinct decks at the top in terms of metagame share. We've discussed the top deck (in terms of win rate) at length already: Selesnya Offense. The other two most played decks are Jeskai Lessons and Izzet Prowess, which represent the blue-red side of this Standard environment's historic dichotomy. To prevent one of these established decks from taking over as the best deck in the format after the banning of 
+Badgermole Cub
+, we are electing to also ban a card from Izzet Prowess and a card from Jeskai Lessons.
+4 Boomerang Basics
+4 Burst Lightning
+4 Colorstorm Stallion
+4 Eddymurk Crab
+4 Flow State
+2 Get Out
+1 Impractical Joke
+7 Island
+2 Multiversal Passage
+4 Opt
+4 Riverpyre Verge
+2 Roaring Furnace // Steaming Sauna
+4 Sleight of Hand
+2 Spell Pierce
+4 Spirebluff Canal
+4 Steam Vents
+4 Stormchaser's Talent
+1 Disdainful Stroke
+1 Flashfreeze
+1 Ghost Vacuum
+1 Impractical Joke
+1 Iroh's Demonstration
+1 Negate
+1 Pyroclasm
+2 Ral, Crackling Wit
+1 Soul-Guide Lantern
+1 Spell Pierce
+1 Spell Snare
+3 Sunderflock
+Izzet Prowess has been strongest among the various blue-red variants for a while. It is a fast and aggressive deck capable of winning the game early while also maintaining a high degree of interaction. Watching Izzet Prowess during this Standard environment has taught us that we need to be more deliberate with Prowess and cards that reward cheap spells in a three-year Standard schedule. A larger card pool leads to greater access to cheap spells. 
+Stormchaser's Talent
+ is Izzet Prowess's keystone card, and the card we are electing to ban.
+Stormchaser's Talent
+ is a one-mana card that lets Izzet Prowess pull off to fast starts and gives the deck a strong late game thanks to its interaction with 
+Boomerang Basics
+. This combination of early-game and late-game strength is something we think is inappropriate for a one-mana card. Cards that cheap shouldn't be so well-rounded and shouldn't compete with more expensive cards as the game goes long. Without 
+Stormchaser's Talent
+, blue-red decks will be a little slower and easier to overcome in the late game.
+4 Abandon Attachments
+4 Accumulate Wisdom
+4 Combustion Technique
+4 Firebending Lesson
+1 Flashback
+4 Gran-Gran
+4 Great Hall of the Biblioplex
+3 Hallowed Fountain
+2 Iroh's Demonstration
+3 Island
+2 It'll Quench Ya!
+4 Jeskai Revelation
+1 Mistrise Village
+3 Riverpyre Verge
+3 Spirebluff Canal
+4 Steam Vents
+3 Stock Up
+2 Sundown Pass
+4 Tablet of Discovery
+1 Three Steps Ahead
+1 Avengers Disassembled
+2 Day of Judgment
+1 Disdainful Stroke
+2 Emeritus of Ideation
+1 Flashfreeze
+1 Ghost Vacuum
+4 Price of Freedom
+1 Ral, Crackling Wit
+2 Spell Pierce
+Lessons decks are a blue-red variant that have been consistently strong in Standard since release. Jeskai Lessons is a new evolution of them that incorporates 
+Tablet of Discovery
+ and 
+Jeskai Revelation
+ to gain a powerful late game. It's one of the variations of blue-red that doesn't commonly play 
+Stormchaser's Talent
+, and it has the highest play rate in Standard on 
+MTG Arena
+. To prevent Lessons variants from taking the top slot in the next iteration of Standard, we're choosing to ban 
+Gran-Gran
+.
+Gran-Gran
+ is a powerful mana engine for Lessons decks. Like 
+Badgermole Cub
+, it demands a quick answer due to its snowbally nature. Like 
+Stormchaser's Talent
+, it's an inappropriately threatening one-mana card that provides too much late-game advantage for a card that costs one mana. 
+Gran-Gran
+ is in a unique spot as Jeskai Lessons is light on creatures, making counterplay against the deck more difficult. It demands an answer, but creature removal is weak against the rest of the Jeskai Lessons deck.
+With all three of today's bans, we are acting to improve the metagame diversity of Standard and slow down the format. The biggest gameplay issue of this Standard environment has been its speed. The strongest cards and strategies have forced decks to interact earlier to compete in the metagame, putting immense pressure on decks to compress their mana curves as much as possible. 
+Badgermole Cub
+ decks have historically been capable of winning games as early as turn three, and they commonly win on turn four or five. Izzet Prowess is similarly capable of ending games in the early turns. This is faster than we want Standard to be.
+Magic
+ Design has learned much from this particular Standard environment. We have greatly increased our level of scrutiny on one- and two-mana cards that demand an answer to prevent early snowbally starts. Similarly, we've put a lot of thought and energy into what we want the speed of Standard to be and how we can design cards to make that a reality. These adjustments have been in the works for a while, and we will soon start to see sets release where those learnings are incorporated.
+(Back to top)
+Pioneer
+Written by Arya Karamchandani
+No changes
+It's been a quiet period for Pioneer, and while play rates for some decks are a little high, we believe the format is in a healthy place at the moment. The two most represented archetypes right now are Izzet Spells shells and various green 
+Badgermole Cub
+-based decks. Since the banning of 
+Cori-Steel Cutter
+, Izzet Spells shells have diverged a good deal, with two of the more popular directions being slower Lessons decks and low-to-the-ground Prowess decks. These decks play differently enough that we are not concerned about homogeneity in Pioneer. However, we are keeping an eye on individual play-rate outliers that appear across different archetypes, as well as on the overall win rates and play rates of the Izzet decks, which are currently within an acceptable range.
+4 Academic Dispute
+3 Boomerang Basics
+3 Burst Lightning
+3 Emberheart Challenger
+1 Experimental Synthesizer
+4 Flow State
+1 Island
+4 Monastery Swiftspear
+1 Monstrous Rage
+2 Mountain
+3 Reckless Rage
+2 Riverglide Pathway
+4 Riverpyre Verge
+2 Screaming Nemesis
+3 Shivan Reef
+4 Sleight of Hand
+4 Soul-Scar Mage
+4 Spirebluff Canal
+4 Steam Vents
+4 Stormchaser's Talent
+1 Accumulate Wisdom
+1 Boomerang Basics
+1 Firebending Lesson
+1 Ghost Vacuum
+1 Iroh's Demonstration
+1 It'll Quench Ya!
+1 Octopus Form
+2 Quantum Riddler
+2 Redcap Melee
+2 Scorching Shot
+2 Spell Pierce
+2 Abandon Attachments
+2 Accumulate Wisdom
+3 Boomerang Basics
+3 Combustion Technique
+4 Consider
+4 Divide by Zero
+3 Firebending Lesson
+4 Gran-Gran
+2 Igneous Inspiration
+4 Island
+2 It'll Quench Ya!
+1 Otawara, Soaring City
+2 Ral, Crackling Wit
+4 Riverglide Pathway
+2 Riverpyre Verge
+2 Shivan Reef
+1 Spell Pierce
+4 Spirebluff Canal
+4 Steam Vents
+4 Stormchaser's Talent
+1 Torch the Tower
+2 Vivi Ornitier
+2 Abrade
+2 Accumulate Wisdom
+1 Boomerang Basics
+1 Combustion Technique
+1 Firebending Lesson
+1 Flashfreeze
+1 Improvisation Capstone
+1 Iroh's Demonstration
+2 Quantum Riddler
+1 Ral, Crackling Wit
+2 Soul-Guide Lantern
+The other major category seeing success is the green 
+Badgermole Cub
+ shell. There are a variety of different Cub shells, with Golgari Midrange being the most popular among them. While the Golgari deck is heavily played, it maintains a modest win rate and has clear bad matchups, so we believe it is healthy for the deck to exist at this level of popularity. The gameplay of the many other Cub decks varies a good deal, with more aggressive builds like Selesnya Counters to more combo-focused decks like Golgari Food and Scapeshift Combo. None of these decks display a problematic win rate or play rate, and we have no desire to take action against any of them at this time. We will keep an eye on 
+Badgermole Cub
+ as an outlier should the win rate or play rate of any of these decks grow beyond what we consider healthy.
+4 Abrupt Decay
+4 Badgermole Cub
+4 Blooming Marsh
+1 Boseiju, Who Endures
+2 Culling Ritual
+4 Fatal Push
+1 Forest
+1 Go for the Throat
+3 Graveyard Trespasser
+4 Llanowar Wastes
+4 Mutavault
+4 Overgrown Tomb
+3 Professor Dellian Fel
+1 Restless Cottage
+2 Sentinel of the Nameless City
+3 Sheoldred, the Apocalypse
+3 Swamp
+1 Takenuma, Abandoned Mire
+1 Tear Asunder
+4 Thoughtseize
+4 Unholy Annex // Ritual Chamber
+1 Urborg, Tomb of Yawgmoth
+1 Wastewood Verge
+1 Culling Ritual
+3 Duress
+3 Go Blank
+2 Invoke Despair
+2 Necromentia
+2 Ray of Enfeeblement
+2 Unlicensed Hearse
+1 Adventurer's Inn
+2 Aftermath Analyst
+4 Arboreal Grazer
+1 Arid Archway
+4 Badgermole Cub
+2 Boseiju, Who Endures
+4 Botanical Sanctum
+1 Castle Garenbrig
+1 Echoing Deeps
+2 Forest
+4 Hedge Maze
+1 Ipnu Rivulet
+4 Lotus Field
+4 Lumra, Bellow of the Woods
+1 Maelstrom of the Spirit Dragon
+2 Marang River Regent
+1 Otawara, Soaring City
+4 Port of Karfell
+4 Scapeshift
+4 Spelunking
+3 Starting Town
+1 Summon: Bahamut
+1 Sunken Citadel
+1 Takenuma, Abandoned Mire
+1 Thassa's Oracle
+2 The Wandering Minstrel
+3 Elder Gargaroth
+4 Ephara's Dispersal
+4 Heritage Reclamation
+1 Leatherhead, Swamp Stalker
+3 Soul-Guide Lantern
+Overall, Pioneer is in a pretty healthy spot. There are plenty of viable decks, and staple Pioneer decks like Mono-Red Aggro, Greasefang, and Azorius Control continue to put up results and hold their own against the various Izzet and 
+Badgermole Cub
+ decks. We continue to see healthy churn on a week-to-week basis, and the Pioneer metagame differs significantly from 
+Magic Online
+ to 
+MTG Arena
+. The format has seen fairly few major changes over the last few months, and we will continue to monitor it for larger shifts as it receives additional competitive pressure in the future.
+(Back to top)
+Modern
+Written by Carmen Klomparens
+No changes
+Innovation is brewing in Modern.
+Just a couple of weeks ago, the best players in the world converged in Amsterdam to play competitive Modern and Booster Draft. The results? Boros Energy and Affinity were at the top of the metagame in terms of population, but they struggled to convert that popularity to success in the form of a solid win rate. Many of the most successful decks of the weekend were in the hands of people that explored what was possible in the format and incorporated new tools into existing shells. One new flavor stood out above the rest.
+1 Gemstone Caverns
+2 Ugin, Eye of the Storms
+4 Slumbering Trudge
+4 Ugin's Labyrinth
+2 Ulamog, the Ceaseless Hunger
+1 Dryad Arbor
+5 Forest
+4 Green Sun's Zenith
+4 Eldrazi Temple
+1 Cavern of Souls
+4 Disciple of Freyalise
+4 Kozilek's Command
+1 Mosswort Bridge
+4 Malevolent Rumble
+4 Sowing Mycospawn
+4 Emrakul, the Promised End
+2 Drowner of Truth
+1 Boseiju, Who Endures
+4 Fanatic of Rhonas
+4 Fight Rigging
+2 Endurance
+2 Thought-Knot Seer
+1 Gemstone Caverns
+3 Chalice of the Void
+2 Trinisphere
+3 Force of Vigor
+1 Dismember
+1 Elder Gargaroth
+A new take on Eldrazi Ramp, Eldrazi Trudge, uses 
+Slumbering Trudge
+ and 
+Fight Rigging
+ to have a threatening early game in addition to the usual inevitability that comes from playing a pile of strong lands alongside Eldrazi creatures. Among others, a number of Team Moriyama Japan members registered the deck and played it to great success, boasting a 65% win rate in the event. Simic Neoform was the only other archetype at the event with a notable number of pilots that won more than 60% of its matches.
+If this sort of win rate were to persist for either of these archetypes, we'd be fairly worried. However, Modern is a format that has been long defined by polar matchups, and we've seen many decks have extremely successful weekends before falling out of favor soon after. Pro Tour 
+Edge of Eternities
+ last year was a prime example of this, where Mono-Blue Belcher was the only deck to put multiple pilots into the Top 8, but it hasn't been a player in the metagame since. From what we've been able to see on 
+Magic Online
+ in the time since the Pro Tour, it appears that Eldrazi Trudge is on its way to being a healthy member of an organically churning metagame.
+The previously mentioned Neoform, however, is a deck we're paying very close attention to.
+1 Flooded Strand
+4 Neoform
+4 Planar Genesis
+4 Eldritch Evolution
+1 Windswept Heath
+2 Generous Ent
+2 Forest
+1 Griselbrand
+1 Preordain
+4 Misty Rainforest
+3 Hedge Maze
+4 Allosaurus Rider
+1 Scalding Tarn
+1 Breeding Pool
+4 Consign to Memory
+1 Island
+1 Hooting Mandrills
+1 Xenagos, God of Revels
+2 Disciple of Freyalise
+2 Veil of Summer
+2 Ghalta, Stampede Tyrant
+2 Nature's Claim
+1 Ureni, the Song Unending
+1 Boseiju, Who Endures
+4 Summoner's Pact
+3 Pact of Negation
+1 Bridgeworks Battle
+1 Endurance
+1 Atraxa, Grand Unifier
+1 Elesh Norn, Grand Cenobite
+2 Nature's Claim
+1 Abhorrent Oculus
+4 Mystical Dispute
+1 Hooting Mandrills
+1 Into the Flood Maw
+2 Thundertrap Trainer
+2 Veil of Summer
+1 Pact of Negation
+Neoform has fallen in and out of favor in Modern, which is something that we like to see. It can be concerning, however, when we see the number of weekends that are favorable for it increase over time. The deck uses 
+Allosaurus Rider
+ to put a creature with a high mana value onto the battlefield before sacrificing it with 
+Neoform
+ or 
+Eldritch Evolution
+ to cheat another big creature into play. From there, it tends to win with other forms of cheating the mana system.
+This type of strategy, which manipulates the rules engine of 
+Magic
+ is something that we think is cool to exist at a baseline, and we like to see innovative deck builders try to push these decks into the competitive scene. Dredge and Lantern Control are similar decks that have become iconic for the way that they use cards in some of the most mind-bending applications imaginable. Neoform poses a problem on top of its novelty: game compression. Because it's so all or nothing and has the ability to win on turn two, we have concerns that the deck could make Modern worse if it becomes a regular player, seeing ten percent or more of the metagame share in any given Modern tournament.
+That being said, we don't think it's anywhere near that state now.
+Overall, Modern looks like a place where any given deck is exploitable and can be beaten, and we're happy to see that degree of self-correction in our nonrotating formats. We appreciate the degree to which Standard-appropriate cards have found homes in Modern over the last couple of years, and we look forward to seeing what comes with 
+Magic: The Gathering
+® | 
+The Hobbit
+™.
+(Back to top)
+Legacy
+Written by Carmen Klomparens
+The Fantasticar
+ is banned.
+Since the release of 
+Magic: The Gathering
+ | 
+Marvel Super Heroes
+, we've seen a bunch of different cards make their way into nonrotating 
+Magic
+ formats, with one card standing above the rest in Legacy and Vintage: 
+The Fantasticar
+.
+When 
+The Fantasticar
+ was first previewed, it didn't take long for it to catch the community's eye. It has a low cost and is extremely explosive, playing well with many of the tools that already define Eternal formats. Despite this early attention, Studio X is quite philosophically reticent to take preemptive action against cards in Eternal formats. The tools we use to answer specific strategies are extensive. For a lot of players, the high power level of these formats is their appeal.
+However, 
+The Fantasticar
+ has proven to be near impossible to address with any single series of cards because of how many different shells it appears in.
+4 Brainstorm
+1 Cavern of Souls
+1 Consider
+4 Dark Ritual
+3 Daze
+4 Doomsday
+1 Edge of Autumn
+1 Flooded Strand
+3 Flow State
+4 Force of Will
+1 Island
+1 Lion's Eye Diamond
+4 Lotus Petal
+1 Marsh Flats
+2 Mishra's Bauble
+1 Misty Rainforest
+4 Polluted Delta
+4 Ponder
+1 Scalding Tarn
+1 Street Wraith
+1 Swamp
+1 Thassa's Oracle
+4 The Fantasticar
+3 Thoughtseize
+1 Undercity Sewers
+4 Underground Sea
+4 Barrowgoyf
+1 Bitter Triumph
+2 Consign to Memory
+2 Dauthi Voidwalker
+2 Force of Negation
+1 Jace, Wielder of Mysteries
+1 Long Goodbye
+2 Murktide Regent
+Doomsday is the most natural home for 
+The Fantasticar
+, given the deck already wants you to play a chunk of free spells and is a natural home for 
+Dark Ritual
+. The deck's win rate and play rate have surged in the few weeks since the release of 
+The Fantasticar
+. Dedicated combo decks aren't the only place 
+The Fantasticar
+ has made itself at home, however.
+3 Flooded Strand
+1 Swamp
+2 Mishra's Bauble
+3 Underground Sea
+2 Daze
+4 Quantum Riddler
+4 Polluted Delta
+4 Ponder
+3 Thoughtseize
+1 Undercity Sewers
+3 Flow State
+1 Chrome Mox
+4 The Fantasticar
+4 Force of Will
+4 Dark Ritual
+1 Tundra
+4 Lotus Petal
+1 Island
+1 Scrubland
+1 Marsh Flats
+4 Brainstorm
+2 Barrowgoyf
+1 Stifle
+2 Orcish Bowmasters
+1 Karakas
+1 Force of Negation
+1 Pest Control
+3 Clarion Conqueror
+3 Consign to Memory
+3 Swords to Plowshares
+3 Dauthi Voidwalker
+A fairer Dimir-based shell affectionately called "UBer" has found almost immediate success over the last couple of weeks. This is exactly the type of thing we generally don't like to see out of combo decks. This is a deck that could emulate a completely fair game plan while threatening a combo that nearly ends the entire game. We spent a long time trying to tackle this exact issue with Dimir Reanimator before we 
+ultimately had to ban Entomb
+.
+Try and win early? You have to fight through 
+Thoughtseize
+ and all of the usual free countermagic that blue decks in Legacy can access. Interested in prolonging the game? Good luck grinding through the fair game that UBer's creatures offer.
+There are other decks that toe the line between "fair" and "combo" as well.
+4 The One Ring
+4 The Fantasticar
+3 Tezzeret, Cruel Captain
+4 Glaring Fleshraker
+4 Grim Monolith
+2 Plains
+2 Mox Opal
+4 Mishra's Bauble
+3 Manifold Key
+4 Lotus Petal
+4 Kozilek's Command
+2 Mystic Forge
+2 Petrified Hamlet
+1 Pithing Needle
+1 Karakas
+4 City of Traitors
+4 Chalice of the Void
+4 Ancient Tomb
+4 Urza's Saga
+3 Disruptor Flute
+1 Tormod's Crypt
+2 Mindbreak Trap
+1 Skateboard
+3 Static Prison
+2 Swords to Plowshares
+2 Surgical Extraction
+1 Engineered Explosives
+The fact that 
+The Fantasticar
+ is finding success in all-in combo decks, fairer blue shells, and even colorless artifact decks is emblematic of the fact that there isn't a one-size-fits-all way to fight 
+The Fantasticar
+. We've seen it in over a dozen different archetypes and are extremely concerned about that level of ubiquity.
+While it isn't necessarily a problem for cards in supplemental products to show up in Legacy, this level of impact is significantly out of bounds for cards from any type of release. We're constantly improving how we make 
+Magic
+ cards and have incorporated new steps in our design processes that are specific to nonrotating 
+Magic
+ formats. We're optimistic that the fresh heuristics we've begun to apply in the time since the development cycle for 
+The Fantasticar
+ will catch future designs that carry the degree of risk this incurred in Eternal formats.
+We're entering the phase of the year where we have Eternal Weekend events at the forefront when making decisions. We want those tournaments to be places where people can have fun and celebrate Eternal 
+Magic
+ together. For both ubiquity and power-level reasons, we are acting against 
+The Fantasticar
+ now rather than later. We're looking forward to getting a snapshot of Legacy post-
+Candelabra of Tawnos
+ ban that doesn't have the pressure of 
+The Fantasticar
+ compressing games across the board.
+(Back to top)
+Vintage
+Written by Eric Engelhard
+The Fantasticar
+ is restricted.
+We are restricting 
+The Fantasticar
+ in Vintage.
+When we 
+last spoke about Vintage
+, we acknowledged that the risk of 
+The Fantasticar
+ being problematic in the format was high. That risk has materialized, with the already strong 
+Glaring Fleshraker
+-fueled version of Shops being a natural home for the card.
+1 Mox Ruby
+2 Talon Gates of Madara
+1 Mox Sapphire
+1 Mox Jet
+1 Mana Vault
+1 Lotus Petal
+1 Mana Crypt
+1 Chalice of the Void
+1 Mox Pearl
+3 Manifold Key
+1 Mox Emerald
+1 Pithing Needle
+1 Gitaxian Probe
+4 Ancient Tomb
+4 The Fantasticar
+1 Karn, the Great Creator
+4 The One Ring
+1 Mox Opal
+4 Tezzeret, Cruel Captain
+4 Mishra's Workshop
+4 Grim Monolith
+4 Glaring Fleshraker
+1 Mystic Forge
+1 Time Vault
+1 Vexing Bauble
+1 Black Lotus
+3 City of Traitors
+4 Sensei's Divining Top
+1 Urza's Saga
+1 Tolarian Academy
+1 Sol Ring
+4 Mindbreak Trap
+2 Dismember
+2 Defense Grid
+2 Grafdigger's Cage
+2 Stonecoil Serpent
+3 Argentum Masticore
+While it isn't a surprise for the card to see play alongside 
+Mishra's Workshop
+, the degree to which it empowers that deck and warps the format, with 
+The Fantasticar
+ even showing up in non-Workshop shells, is highly concerning.
+We do look at new cards through the context of Vintage and Legacy, but this didn't get flagged for special attention in those formats and made it through our normal review process that was in place at the time. As I said last time, it likely would have been flagged and caught today, as we have more stringent guidelines in place to recognize this kind of potential impact.
+We're optimistic that restricting it now can address some of its ubiquity in the format. We believe it's likely 
+The Fantasticar
+ will persist as a one-of in some decks, but building an entire deck around it should prove more difficult. Our hope is that the format will return to something like the shape it was in before, which we generally thought was quite healthy. It's been a wild summer, but we're excited to see the Vintage format on display at Eternal Weekend events later this year!
+(Back to top)
+Pauper
+Written by Gavin Verhey
+No changes
+The Pauper Format Panel has spent the last month looking closely at the format as a whole and specifically the card 
+Sneaky Snacker
+, especially how it has performed at several large-scale in-person events. The format looks extremely varied, and the Snacker decks are far from taking up too much of the metagame share. As a result, there are no changes at this time.
+The trial unban of 
+Bonder's Ornament
+ has played out well, and the card is seeing play in a couple decks, but it has mostly been normalized and become another playable card. At this point, we are happy saying that 
+Bonder's Ornament
+ will be staying around for Pauper.
+For a longer, more detailed write-up, 
+check out this article
+.
+(Back to top)
+Alchemy
+Written by Dave Finseth
+No changes
+The new cards introduced in 
+Alchemy: Strixhaven
+ quickly found their place in the format, with 
+Scalar Scholar
+ slotting nicely into a green-blue deck focused on casting powerful X-cost spells like 
+Ornate Imitations
+ or 
+Expansive Reapplication
+. Additionally, a blue-red deck leveraging high-cost instants and sorceries has risen in popularity by utilizing 
+Inspiring Easel
+ and 
+Tablet of Discovery
+ to quickly ramp and 
+Summitfest Closing Ceremony
+ as a big payoff. Both decks bring new, novel play patterns to Alchemy.
+(Back to top)
+Historic
+Written by Dave Finseth
+No changes
+Historic has been stable over the last few months since being showcased at the Arena Championship. While still incredibly diverse, the format has a few highly competitive decks that hold each other in check. Much of the metagame is made up of spell-based strategies like Ruby Storm and Izzet Wizards, which has led to the popularity of High Noon Control decks. We are keeping an eye on Ruby Storm, as it recently got a powerful new card-advantage engine in the form of 
+Hex Magic
+.
+4 Atraxa, Grand Unifier
+4 Life // Death
+4 Necromancy
+4 Faithless Looting
+4 Starting Town
+2 Watery Grave
+4 Ardyn, the Usurper
+3 Saint Elenda
+2 Emperor of Bones
+4 Ulamog, the Defiler
+4 Izzet Charm
+2 Blood Crypt
+4 Otherworldly Gaze
+2 Steam Vents
+1 Multiversal Passage
+4 Mana Confluence
+2 Blackcleave Cliffs
+2 Spirebluff Canal
+2 Darkslick Shores
+2 Lightning Axe
+Additionally, Reanimator strategies have grown in popularity, offering a less-polarizing option in the current metagame. These decks leverage 
+Necromancy
+ and 
+Life // Death
+ to bring massive threats like 
+Atraxa, Grand Unifier
+ or 
+Saint Elenda
+ back from the graveyard.
+(Back to top)
+Timeless
+Written by Dave Finseth
+No changes
+The most powerful format on 
+MTG Arena
+ has seen little change since the last announcement. The most competitive decks continue to keep each other in balance while shifts in popularity come in waves. Currently, 
+Entomb
+ and 
+Reanimate
+ strategies are the most popular, but they are weak to control-focused decks. We will continue to monitor overall trends in Timeless in case any archetype consistently establishes itself above the rest, but that has yet to happen.
+(Back to top)
+Brawl
+Written by Dave Finseth
+No changes
+Back in June, we took significant action by banning six cards in Brawl. We took a stricter stance on efficient mana acceleration, low-cost countermagic, and easily looped cards that grant extra turns. Player feedback on these changes was overwhelmingly positive, and the data shows a promising, healthier future for Brawl.
+We are not making any additional changes today as we think it's healthy to give players some additional time to explore the format. We have been reviewing and discussing other individual cards internally, but nothing has emerged as an outlier in terms of win rate or play rate.
+As far as matchmaking goes, our last round of changes has made queue times slightly longer by about four seconds on average, but this has increased the percentage of matches against commanders of a similar power level. We think this is a reasonable trade-off but will continue to monitor matchmaking across several metrics to keep improving how we connect players for fun games of 
+Magic
+.
+(Back to top)
+Competitive Brawl
+Written by Dave Finseth
+No changes
+We are delighted by how balanced Competitive Brawl has become in the months since its release. Currently, no individual commander makes up more than one percent of the metagame, and win rates for the most competitive decks are within bounds of each other. Additionally, we see many players exploring new commander options from sets soon after they release. Competitive Brawl is ripe for exploration and development! We are excited to see how the metagame establishes itself and will certainly take action if it becomes necessary.
+(Back to top)
+        Announcements
+        Secret Lair: My Arrakis, My Superdrop
+    Secret Lair: My Arrakis, My Superdrop
+        Announcements
+        Everything New for Competitive Play in 2027
+    Everything New for Competitive Play in 2027
+        Announcements
+        Netflix Reveals Magic: The Gathering Animated Series PLANESWALKER
+    Netflix Reveals Magic: The Gathering Animated Series PLANESWALKER
+Magic: The Gathering Footer
+Find a store
+      Find a store
+Social
+Find
+        Articles
+        Club Support
+        Digital Books
+        Formats
+        Rules
+        Military Support
+Company
+        About
+        Accounts
+        Careers
+        Support
+        Wizards Play Network
+        Affiliate Program Disclosure
+Magic
+        Magic: The Gathering
+        MTG Arena
+        Magic.gg
+        Store & Events Locator
+        Card Database
+        Secret Lair
+        SpellTable
+Brands
+        Dungeons & Dragons
+        Duel Masters
+        Magic: The Gathering
+Terms
+Code of Conduct
+Privacy Policy
+Customer Support
+Fan Content Policy
+DO NOT SELL OR SHARE MY PERSONAL INFORMATION
+Your Privacy Choices
+简体中文
+繁體中文
+Français
+Deutsch
+Italiano
+日本語
+한국어
+Português (Brasil)
+Русский
+Español
+English
+  © 1993-2026 Wizards of the Coast LLC, a subsidiary of Hasbro, Inc. All Rights Reserved.

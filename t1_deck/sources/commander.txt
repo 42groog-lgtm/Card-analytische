@@ -1,0 +1,293 @@
+
+MTG Commander Format | Magic: The Gathering
+Skip to main content
+              Products
+Coming Soon
+                    Coming Soon
+Nauctis: The Sunken Realm
+ Marvel Darkhold Destiny
+Kamigawa: Titanbreach
+Zhalfir
+Available Now
+                    Available Now
+Star Trek
+Reality Fracture
+The Hobbit™
+Marvel Super Heroes
+Secrets of Strixhaven
+Lorwyn Eclipsed
+Secret Lair Drop Series
+Latest Products
+Card Set Archive
+              MTG Arena
+Download
+Getting Started
+Drop Rates
+Alchemy
+Draft
+MTG Arena News
+              Play
+Play Events
+                    Play Events
+Prerelease
+Magic Academy
+Standard Showdown
+Commander Box League
+Commander Party
+Store Championship
+Friday Night Magic
+MagicCon
+Pro Tour
+All Events
+Formats
+                    Formats
+Commander
+Standard
+Modern
+Pioneer
+Booster Draft
+Pick-Two Draft
+Sealed Deck
+All Formats
+Platforms
+                    Platforms
+Store Locator
+MTG Arena
+Magic Online
+SpellTable
+Wizards Accounts
+Support
+                    Support
+Player Support
+Store Support
+Club Support
+Military Support
+              Learn
+Resources
+                    Resources
+Where to Start
+How to Play
+Product Guide
+Keyword Glossary
+Banned & Restricted List
+Card Database
+Companion App
+              SHOP
+              News
+Read
+                    Read
+Latest News
+Announcements
+Behind The Scenes
+Making Magic
+MTG Arena News
+Card Previews
+Competitive
+Watch
+                    Watch
+Drive To Work Podcast
+WeeklyMTG
+Magic Story Podcast
+Story
+                    Story
+Latest Stories
+Story Archive
+Planes and Planeswalkers
+More
+                    More
+Wallpapers
+            Locator
+            Card Database
+            Accounts
+MTG Commander
+        Commander Format
+      Formats Hub
+      Brackets
+      Game Changers
+    Deck Size
+100
+    Number of Players
+3 - 5
+    Game Duration
+120 Minutes
+        Why Play This Format?
+Multiplayer games
+Great to play with friends
+Cards don't rotate
+        Play Rules/Modifiers
+This format is for four players per game and deck sizes are 99 cards + 1 commander card. The game duration for this format should be about 20 minutes per player.
+The Commander format is all about picking your hero and building a deck around them. In this casual, multiplayer format, you choose a legendary creature or artifact to serve as your commander and build the rest of your deck around their color identity and unique abilities. Players are only allowed one of each card in their deck, with the exception of basic lands, but they can use cards from throughout 
+Magic
+'s history.
+Color Identity
+A card's color identity can come from any part of that card, including its casting cost and any mana symbols in its text. Every card in your Commander deck must only use mana symbols that also appear on your commander. Colorless cards are allowed as well.
+Command Zone
+This is where your commander resides during the game when they are not in play. At the start of the game, each player puts their commander face up into the command zone. A commander can be cast from the command zone for its normal costs, plus an additional two mana for each previous time it's been cast from the command zone this game. If your commander would be put into your library, hand, graveyard or exile from anywhere, you may return it to your command zone instead.
+Commander Damage
+A player that's been dealt 21 or more combat damage by the same commander over the course of the game loses the game. The commander is tracked across zone changes for this purpose (for example, if one player takes control of another player's commander, any damage that commander already dealt is still counted).
+PLAY FREE-FOR-ALL MULTIPLAYER
+If you're playing a game of Commander with three or more people, you play against each other in a free-for-all multiplayer format.
+Each player starts with 40 life, places their commander face-up in their command zone, and draws a hand of seven cards. Players are seated randomly in a circle and turns progress one player at a time in clockwise order around the table.
+During gameplay, a player may choose to attack any other player, regardless of their position on the table, and can also choose to attack multiple different players during their attack phase. Permanents, spells, and abilities can also target any player around the table (as long as they don't explicitly say they must be used on "you").
+No matter the outcome, Commander gives players the tools to express themselves through strategy, skill, and a whole lot of deck building fun. 
+        Different Ways to Play
+      Tabletop
+Gather with friends and play in person! Tabletop is your chance to see physical card treatments like exclusive art, foils, and thematic frames up close.
+    Learn More
+      SpellTable
+Use your webcam to play 
+Magic
+ with friends in a private game, or match against players around the world! Now available with state-of-the-art card scanning technology.
+    Learn More
+      MTGO
+Celebrating twenty years strong! 
+Magic: The Gathering Online
+ allows you to collect cards, build decks, and duel other players with the widest array of cards and formats available.
+    Learn More
+        Discover More MTG
+Banned and Restricted List
+Card Database
+Formats Hub
+            BRACKETS
+      Commander Brackets Overview
+      Bracket 1: Exhibition
+      Bracket 2: Core
+      Bracket 3: Upgraded
+      Bracket 4: Optimized
+      Bracket 5: cEDH
+              BRACKETS
+              Commander Brackets Overview
+              Bracket 1: Exhibition
+              Bracket 2: Core
+              Bracket 3: Upgraded
+              Bracket 4: Optimized
+              Bracket 5: cEDH
+Commander is a format with a wide card pool, and different people find different kinds of gameplay fun. Brackets are an entirely optional way to help matchmake your Commander games with people have similar intents. In your pregame conversation, you can ask what bracket people's decks are.
+There are five Commander Brackets. Each one is meant to classify a different kind of game experience. Brackets 1, 2, and 3 are different levels of socially focused play. Brackets 4 and 5 are focused on a higher power or even a competitive experience.
+Each bracket has an intent and philosophy behind it, which is the most important part. There is also a list of what is expected at that level in a few barometers: two-card infinite combos, extra turns, mass land denial. There's also a list called the 
+Game Changers
+ list you'll find below that the brackets reference.
+Commander Brackets are currently in beta. As you try them, we welcome your feedback over on our 
+Discord
+!
+            GAME CHANGERS
+      What are Game Changers?
+      White
+      Blue
+      Black
+      Red
+      Green
+      Multicolor
+      Colorless
+              GAME CHANGERS
+              What are Game Changers?
+              White
+              Blue
+              Black
+              Red
+              Green
+              Multicolor
+              Colorless
+Game Changers are cards that can dramatically warp Commander games, allowing players to run away with resources, shift games in ways that many players dislike, block people from play, efficiently search for their strongest cards, or have commanders that tend to take away from more casual games. These cards are a clear signal indicating a different kind of play and that others might prefer not to play against them.
+Bracket 1 and 2 decks exclude Game Changers. Bracket 3 allows for up to three Game Changers. Brackets 4 and 5 allow for unlimited Game Changers.
+Latest Products
+Commander Decks
+Four ready-to-play decks built for Commander, Magic’s most popular multiplayer format – each themed after iconic crews, fleets, and armies from 
+Star Trek
+ history. 
+Buy Now
+Foundations Commander Decks
+Battle your friends with powerful creatures and spectacular spells in Commander, Magic's most popular multiplayer format. Bring one of these 100‑card decks to the table and square off against up to three other combatants!
+Buy Now
+Multiverse Reforged Commander Deck
+Reimagine a new Multiverse with Jace at the helm and a deck full of alternate-reality versions of beloved Magic creatures. Reveal your master plan by replacing tokens with these new twisted creatures and bring order, just the way Jace envisioned it!
+Buy Now
+Commander Decks
+Dive into 
+Magic
+’s most popular multiplayer format with five 100-card decks–each with a unique two-color play style. Choose your college of magical study and expand your education!
+Buy Now
+Commander Decks
+Pick up and play Magic’s most popular multiplayer format. Two preconstructed decks that embody the duality of light and shadow, with new legendary commanders tied to Lorwyn or Shadowmoor.
+Buy Now
+Commander Decklists
+      Commander Decklists
+Commander Decklists
+        Magic: The Gathering® | Star Trek™ Commander Decklists
+Bring the voyages and stories of 
+Star Trek
+ to your Commander games with four ready-to-play decks featuring the Federation, Klingons, Borg, and more!
+    Magic: The Gathering® | Star Trek™ Commander Decklists
+        Foundations Commander Decklists
+Five decks, five strategies, five ways to start playing Commander! 
+Foundations
+ Commander decks release alongside 
+Reality Fracture
+ on October 2, 2026.
+    Foundations Commander Decklists
+        Secrets of Strixhaven Commander Decklists
+Return to Strixhaven and find your new favorite Commander deck! 
+Secrets of Strixhaven
+ Commander decks release on April 24.
+    Secrets of Strixhaven Commander Decklists
+        Magic: The Gathering® | Teenage Mutant Ninja Turtles Commander Decklist
+Take a trip through the sewers of New York City with the brand-new Turtle Power! Commander deck.
+    Magic: The Gathering® | Teenage Mutant Ninja Turtles Commander Decklist
+        Lorwyn Eclipsed Commander Decklists
+Burn bright or wield blights with 
+Lorwyn Eclipsed
+ Commander decks. Harness their power when the set releases on January 23, 2026.
+    Lorwyn Eclipsed Commander Decklists
+        Edge of Eternities Commander Decklists
+Take command of your own interstellar story with two brand-new Commander decks!
+    Edge of Eternities Commander Decklists
+    Load More
+Magic: The Gathering Footer
+Find a store
+      Find a store
+Social
+Find
+        Articles
+        Club Support
+        Digital Books
+        Formats
+        Rules
+        Military Support
+Company
+        About
+        Accounts
+        Careers
+        Support
+        Wizards Play Network
+        Affiliate Program Disclosure
+Magic
+        Magic: The Gathering
+        MTG Arena
+        Magic.gg
+        Store & Events Locator
+        Card Database
+        Secret Lair
+        SpellTable
+Brands
+        Dungeons & Dragons
+        Duel Masters
+        Magic: The Gathering
+Terms
+Code of Conduct
+Privacy Policy
+Customer Support
+Fan Content Policy
+DO NOT SELL OR SHARE MY PERSONAL INFORMATION
+Your Privacy Choices
+简体中文
+繁體中文
+Français
+Deutsch
+Italiano
+日本語
+한국어
+Português (Brasil)
+Русский
+Español
+English
+  © 1993-2026 Wizards of the Coast LLC, a subsidiary of Hasbro, Inc. All Rights Reserved.

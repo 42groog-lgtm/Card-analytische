@@ -12,7 +12,8 @@ d, cmds, cz = decks.build('A')
 gcs = sorted(c for c in d + cmds if c in gc_off)
 unmodeled = sorted(c for c in d if c not in S or S[c]['kind'] == 'blank')
 
-def pct(x): return f'{100 * x:.3f} %'
+def pct(x): return f'{100 * x:.3f} %'.replace('.', ',')
+def nn(n): return f'{n:,}'.replace(',', ' ')
 def one_in(p): return f'1 sur {1 / p:,.0f}'.replace(',', ' ') if p > 0 else '—'
 def get(label, seat=1, deck='A'):
     for r in res:
@@ -30,7 +31,7 @@ for label, name in [('sans_mulligan', 'aucun'), ('mulligan_officiel_1_gratuit', 
         r = get(label, seat if seat <= 2 else 2)
         if not r: continue
         note = '' if seat <= 2 else ' (= place 2, voir hypothèses)'
-        L.append(f'| {seat}{note} | {name} | **{pct(r["p"])}** ({one_in(r["p"])}) | [{pct(r["lo"])} ; {pct(r["hi"])}] | {r["n"]:,} |'.replace(',', ' '))
+        L.append(f'| {seat}{note} | {name} | **{pct(r["p"])}** ({one_in(r["p"])}) | [{pct(r["lo"])} ; {pct(r["hi"])}] | {nn(r["n"])} |')
 L.append('\nLes places 2, 3 et 4 sont strictement équivalentes dans le modèle : la seule différence entre places est Gemstone Caverns, utilisable par tout joueur qui ne commence pas. La place 1 est la moins favorable ; c\'est sur elle que le deck a été optimisé.\n')
 
 L.append('## Règles vérifiées (sources officielles)\n')
@@ -42,10 +43,10 @@ L.append('## Comparaison des commandants (sans mulligan, place 1)\n')
 L.append('| Option | Commandant(s) | P(victoire T1) | IC 95 % | Simulations |\n|---|---|---|---|---|')
 names = {'A': 'Rograkh + Silas Renn (UBR)', 'B': 'Kenrith, the Returned King (5 couleurs)', 'C': 'Tymna + Kraum (WUBR)', 'D': 'Silas Renn seul (UB)'}
 rA = get('sans_mulligan', 1, 'A')
-if rA: L.append(f'| A | {names["A"]} | **{pct(rA["p"])}** | [{pct(rA["lo"])} ; {pct(rA["hi"])}] | {rA["n"]:,} |'.replace(',', ' '))
+if rA: L.append(f'| A | {names["A"]} | **{pct(rA["p"])}** | [{pct(rA["lo"])} ; {pct(rA["hi"])}] | {nn(rA["n"])} |')
 for code in 'BCD':
     r = get('cmp_sans_mulligan', 1, code)
-    if r: L.append(f'| {code} | {names[code]} | {pct(r["p"])} | [{pct(r["lo"])} ; {pct(r["hi"])}] | {r["n"]:,} |'.replace(',', ' '))
+    if r: L.append(f'| {code} | {names[code]} | {pct(r["p"])} | [{pct(r["lo"])} ; {pct(r["hi"])}] | {nn(r["n"])} |')
 L.append('\nChaque option utilise toutes les cartes modélisées légales dans son identité. L\'avantage de A vient surtout de Rograkh, créature à {0} qui alimente Culling the Weak, Springleaf Drum, Mox Amber, Diabolic Intent et les deux modes de Jeska\'s Will.\n')
 
 L.append('## Analyse de sensibilité\n')
@@ -54,9 +55,9 @@ for label, name in [('sensib_pas_de_pioche_T1', 'Pas de pioche au tour 1 (règle
                     ('sensib_london_jusqua_6', '1 mulligan gratuit puis London jusqu\'à 6 cartes'),
                     ('sensib_2_mulligans_gratuits', '2 mulligans gratuits (règle maison)')]:
     r = get(label, 1)
-    if r: L.append(f'| {name} | {pct(r["p"])} | [{pct(r["lo"])} ; {pct(r["hi"])}] | {r["n"]:,} |'.replace(',', ' '))
+    if r: L.append(f'| {name} | {pct(r["p"])} | [{pct(r["lo"])} ; {pct(r["hi"])}] | {nn(r["n"])} |')
 if sens:
-    L.append(f'\n### Perte d\'une pièce clé (comparaison appariée, mêmes mélanges, sans mulligan, {sens["n"]:,} parties)\n'.replace(',', ' '))
+    L.append(f'\n### Perte d\'une pièce clé (comparaison appariée, mêmes mélanges, sans mulligan, {nn(sens["n"])} parties)\n')
     L.append(f'Deck de base : {sens["base_wins"]} victoires ({pct(sens["base_wins"] / sens["n"])}).\n')
     L.append('| Carte retirée (remplacée par une carte vide) | Victoires | Écart | Parties perdues / gagnées en plus | z |\n|---|---|---|---|---|')
     for v in sens['variants']:

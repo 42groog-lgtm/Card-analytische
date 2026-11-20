@@ -1,8 +1,8 @@
 T1 10 Oracle + 10 Consult, 30 City of Brass, 10 Lotus Petal
    exact = 0.03854   sim = 0.03827  IC95 [0.03710, 0.03948]  n=100000  OK  (6s)
 T2 = T1 + 5 Dark Ritual (ne doit rien changer : BBB ne paie pas UU)
-   exact = 0.03854   sim = 0.03827  IC95 [0.03710, 0.03948]  n=100000  OK  (7s)
+   exact = 0.03854   sim = 0.03827  IC95 [0.03710, 0.03948]  n=100000  OK  (8s)
 T4 10 Oracle + 10 Consult + 10 Demonic Tutor, 30 City, 10 Petal
-   exact = 0.03894   sim = 0.03928  IC95 [0.03809, 0.04050]  n=100000  OK  (11s)
+   exact = 0.03894   sim = 0.03928  IC95 [0.03809, 0.04050]  n=100000  OK  (12s)
 T3 = T1 + 6 Worldly Tutor + 6 Elvish Spirit Guide (entretien)
    exact = 0.04020   sim = 0.04115  IC95 [0.03994, 0.04240]  n=100000  OK  (12s)

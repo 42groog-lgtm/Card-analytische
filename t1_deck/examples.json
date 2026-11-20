@@ -171,15 +171,15 @@
       "Lotus Petal"
      ],
      [
-      "opaltap"
-     ],
-     [
       "draw",
       "Sleight of Hand"
      ],
      [
       "rock",
       "Grim Monolith"
+     ],
+     [
+      "opaltap"
      ],
      [
       "tutor",
@@ -363,6 +363,10 @@
       "Mox Opal"
      ],
      [
+      "rock",
+      "Mox Amber"
+     ],
+     [
       "opaltap"
      ],
      [
@@ -376,10 +380,6 @@
       "toptutor",
       "Scheming Symmetry",
       "Mox Diamond"
-     ],
-     [
-      "rock",
-      "Mox Amber"
      ],
      [
       "rock",
@@ -1454,7 +1454,14 @@
       "Lotus Petal"
      ],
      [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
       "opaltap"
+     ],
+     [
+      "drumtap"
      ],
      [
       "ritual",
@@ -1463,17 +1470,6 @@
      [
       "jeska",
       "Jeska's Will"
-     ],
-     [
-      "rock",
-      "Springleaf Drum"
-     ],
-     [
-      "drumtap"
-     ],
-     [
-      "draw",
-      "Night's Whisper"
      ],
      [
       "tutor",
@@ -1490,7 +1486,6 @@
      false,
      false,
      false,
-     false,
      false
     ]
    ],
@@ -1498,9 +1493,7 @@
     "reveal",
     [
      "Cabal Ritual",
-     "Gemstone Mine",
      "Imperial Seal",
-     "Island",
      "Seething Song",
      "Strike It Rich",
      "Wheel of Fortune"
@@ -1532,12 +1525,11 @@
      [
       "tutor",
       "Dark Petition",
-      "Mox Diamond"
+      "Sol Ring"
      ],
      [
-      "diamond",
-      "Mox Diamond",
-      "Watery Grave"
+      "rock",
+      "Sol Ring"
      ],
      [
       "toptutor",
@@ -1546,7 +1538,7 @@
      ],
      [
       "draw",
-      "Sleight of Hand"
+      "Night's Whisper"
      ],
      [
       "consult",
@@ -2611,80 +2603,6 @@
  },
  {
   "hand7": [
-   "Ancient Tomb",
-   "Culling the Weak",
-   "Dark Petition",
-   "Flooded Strand",
-   "Lotus Petal",
-   "Rite of Flame",
-   "Tainted Pact"
-  ],
-  "draw": "Seething Song",
-  "log": [
-   [
-    "draw",
-    "pioche du tour"
-   ],
-   [
-    "plan",
-    [
-     [
-      "cmdr"
-     ],
-     [
-      "rock",
-      "Lotus Petal"
-     ],
-     [
-      "ritual",
-      "Rite of Flame"
-     ],
-     [
-      "fetch",
-      "Flooded Strand",
-      "Underground Sea",
-      "B"
-     ],
-     [
-      "ritual",
-      "Culling the Weak"
-     ],
-     [
-      "ritual",
-      "Seething Song"
-     ],
-     [
-      "tutor",
-      "Dark Petition",
-      "Beseech the Mirror"
-     ],
-     [
-      "beseech",
-      "Beseech the Mirror",
-      "Thassa's Oracle",
-      true
-     ],
-     [
-      "consult",
-      "Tainted Pact"
-     ]
-    ],
-    [
-     false,
-     false,
-     false,
-     false,
-     false,
-     false,
-     false,
-     false,
-     false
-    ]
-   ]
-  ]
- },
- {
-  "hand7": [
    "Culling the Weak",
    "Gemstone Mine",
    "Island",
@@ -3662,11 +3580,11 @@
       "Lotus Petal"
      ],
      [
-      "opaltap"
-     ],
-     [
       "rock",
       "Lion's Eye Diamond"
+     ],
+     [
+      "opaltap"
      ],
      [
       "ritual",
@@ -4347,10 +4265,6 @@
       "cmdr"
      ],
      [
-      "freecre",
-      "Shield Sphere"
-     ],
-     [
       "land",
       "Morphic Pool",
       "B"
@@ -4372,6 +4286,13 @@
       "Culling the Weak"
      ],
      [
+      "cmdr"
+     ],
+     [
+      "freecre",
+      "Shield Sphere"
+     ],
+     [
       "beseech",
       "Beseech the Mirror",
       "Thassa's Oracle",
@@ -4383,6 +4304,7 @@
      ]
     ],
     [
+     false,
      false,
      false,
      false,
@@ -5054,85 +4976,6 @@
      ]
     ],
     [
-     false,
-     false,
-     false,
-     false,
-     true
-    ]
-   ]
-  ]
- },
- {
-  "hand7": [
-   "Cabal Ritual",
-   "Demonic Tutor",
-   "Lotus Petal",
-   "Mox Opal",
-   "Pyretic Ritual",
-   "Rite of Flame",
-   "Tainted Pact"
-  ],
-  "draw": "Lion's Eye Diamond",
-  "log": [
-   [
-    "draw",
-    "pioche du tour"
-   ],
-   [
-    "plan",
-    [
-     [
-      "cmdr"
-     ],
-     [
-      "rock",
-      "Mox Opal"
-     ],
-     [
-      "rock",
-      "Lotus Petal"
-     ],
-     [
-      "ritual",
-      "Rite of Flame"
-     ],
-     [
-      "ritual",
-      "Pyretic Ritual"
-     ],
-     [
-      "rock",
-      "Lion's Eye Diamond"
-     ],
-     [
-      "opaltap"
-     ],
-     [
-      "ritual",
-      "Cabal Ritual"
-     ],
-     [
-      "tutor",
-      "Demonic Tutor",
-      "Thassa's Oracle"
-     ],
-     [
-      "consult",
-      "Tainted Pact"
-     ],
-     [
-      "oracle",
-      "Thassa's Oracle"
-     ]
-    ],
-    [
-     false,
-     false,
-     false,
-     false,
-     false,
-     false,
      false,
      false,
      false,
@@ -7141,6 +6984,200 @@
      false,
      false,
      false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ]
+   ]
+  ]
+ },
+ {
+  "hand7": [
+   "Ad Nauseam",
+   "Dark Ritual",
+   "Lion's Eye Diamond",
+   "Mox Opal",
+   "Polluted Delta",
+   "Serum Visions",
+   "Underworld Breach"
+  ],
+  "draw": "Desperate Ritual",
+  "log": [
+   [
+    "draw",
+    "pioche du tour"
+   ],
+   [
+    "plan",
+    [
+     [
+      "cmdr"
+     ],
+     [
+      "fetch",
+      "Polluted Delta",
+      "Badlands",
+      "B"
+     ],
+     [
+      "rock",
+      "Mox Opal"
+     ],
+     [
+      "rock",
+      "Lion's Eye Diamond"
+     ],
+     [
+      "ritual",
+      "Dark Ritual"
+     ],
+     [
+      "adnaus",
+      "Ad Nauseam"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Beseech the Mirror",
+     "Brain Freeze",
+     "Command Tower",
+     "Consider",
+     "Dark Petition",
+     "Demonic Tutor",
+     "Drift of Phantasms",
+     "Forbidden Orchard",
+     "Gamble",
+     "Gemstone Mine",
+     "Grapeshot",
+     "Jeska's Will",
+     "Lotus Petal",
+     "Mishra's Workshop",
+     "Misty Rainforest",
+     "Opt",
+     "Personal Tutor",
+     "Preordain",
+     "Pyretic Ritual",
+     "Strike It Rich",
+     "Tainted Pact",
+     "Volcanic Island",
+     "Wooded Foothills"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "rock",
+      "Lotus Petal"
+     ],
+     [
+      "ritual",
+      "Pyretic Ritual"
+     ],
+     [
+      "jeska",
+      "Jeska's Will"
+     ],
+     [
+      "tutor",
+      "Gamble",
+      "Cabal Ritual"
+     ]
+    ],
+    [
+     false,
+     false,
+     false,
+     false
+    ]
+   ],
+   [
+    "reveal",
+    [
+     "Cabal Ritual",
+     "Mana Confluence",
+     "Phyrexian Walker",
+     "Shred Memory"
+    ]
+   ],
+   [
+    "plan",
+    [
+     [
+      "treasure",
+      "Strike It Rich"
+     ],
+     [
+      "treastap"
+     ],
+     [
+      "freecre",
+      "Phyrexian Walker"
+     ],
+     [
+      "tutor",
+      "Demonic Tutor",
+      "Springleaf Drum"
+     ],
+     [
+      "rock",
+      "Springleaf Drum"
+     ],
+     [
+      "opaltap"
+     ],
+     [
+      "drumtap"
+     ],
+     [
+      "draw",
+      "Preordain"
+     ],
+     [
+      "ritual",
+      "Cabal Ritual"
+     ],
+     [
+      "tutor",
+      "Dark Petition",
+      "Culling the Weak"
+     ],
+     [
+      "ritual",
+      "Culling the Weak"
+     ],
+     [
+      "beseech",
+      "Beseech the Mirror",
+      "Thassa's Oracle",
+      true
+     ],
+     [
+      "consult",
+      "Tainted Pact"
+     ]
+    ],
+    [
      false,
      false,
      false,

@@ -1,3 +1,88 @@
 {"label": "sans_mulligan", "seat": 1, "n": 100000, "wins": 235, "p": 0.00235, "lo": 0.0020684054201349435, "hi": 0.0026698285558686345, "avg_mull": 0.0, "errors": 0, "kw": {"max_mull": 0}, "draw": 1, "seed": 201, "deck": "A", "seconds": 332}
 {"label": "mulligan_officiel_1_gratuit", "seat": 1, "n": 100000, "wins": 332, "p": 0.00332, "lo": 0.0029820407416871744, "hi": 0.003696118710139325, "avg_mull": 0.99679, "errors": 0, "kw": {"max_mull": 1, "free_mull": 1, "K": 4, "taus": [0.01]}, "draw": 1, "seed": 202, "deck": "A", "seconds": 1523}
 {"label": "mulligan_officiel_1_gratuit", "seat": 2, "n": 100000, "wins": 366, "p": 0.00366, "lo": 0.003304305259636167, "hi": 0.00405382807031383, "avg_mull": 0.99682, "errors": 0, "kw": {"max_mull": 1, "free_mull": 1, "K": 4, "taus": [0.01]}, "draw": 1, "seed": 203, "deck": "A", "seconds": 1610}
+{"label": "sans_mulligan", "seat": 2, "n": 100000, "wins": 251, "p": 0.00251, "lo": 0.002218396077244246, "hi": 0.002839825606111567, "avg_mull": 0.0, "errors": 0, "kw": {"max_mull": 0}, "draw": 1, "seed": 204, "deck": "A", "seconds": 355}
+{"label": "sensib_pas_de_pioche_T1", "seat": 1, "n": 50000, "wins": 57, "p": 0.00114, "lo": 0.0008800793451529599, "hi": 0.0014765715886424949, "avg_mull": 0.0, "errors": 0, "kw": {"max_mull": 0}, "draw": 0, "seed": 207, "deck": "A", "seconds": 87}
+{"label": "sensib_2_mulligans_gratuits", "seat": 1, "n": 50000, "wins": 199, "p": 0.00398, "lo": 0.0034649318330433926, "hi": 0.004571282728519414, "avg_mull": 1.99144, "errors": 0, "kw": {"max_mull": 2, "free_mull": 2, "K": 4, "taus": [0.01, 0.01]}, "draw": 1, "seed": 205, "deck": "A", "seconds": 1432}
+{"label": "sensib_london_jusqua_6", "seat": 1, "n": 50000, "wins": 143, "p": 0.00286, "lo": 0.0024285626608313033, "hi": 0.003367823991189449, "avg_mull": 1.99014, "errors": 0, "kw": {"max_mull": 2, "free_mull": 1, "K": 4, "taus": [0.01, 0.01]}, "draw": 1, "seed": 206, "deck": "A", "seconds": 1387}
+{"label": "cmp_sans_mulligan", "seat": 1, "n": 100000, "wins": 169, "p": 0.00169, "lo": 0.0014538439680500804, "hi": 0.001964440715125531, "avg_mull": 0.0, "errors": 0, "kw": {"max_mull": 0}, "draw": 1, "seed": 301, "deck": "B", "seconds": 183}
+{"label": "cmp_sans_mulligan", "seat": 1, "n": 100000, "wins": 144, "p": 0.00144, "lo": 0.0012233468231507953, "hi": 0.0016949570672869496, "avg_mull": 0.0, "errors": 0, "kw": {"max_mull": 0}, "draw": 1, "seed": 302, "deck": "C", "seconds": 178}
+{"label": "cmp_sans_mulligan", "seat": 1, "n": 100000, "wins": 64, "p": 0.00064, "lo": 0.0005012664457762804, "hi": 0.0008170989079002931, "avg_mull": 0.0, "errors": 0, "kw": {"max_mull": 0}, "draw": 1, "seed": 303, "deck": "D", "seconds": 72}
+{
+ "n": 60000,
+ "base_wins": 154,
+ "variants": [
+  {
+   "swap": "Lion's Eye Diamond -> Intuition",
+   "wins": 25,
+   "base_only": 129,
+   "variant_only": 0,
+   "z": -11.357816691600547
+  },
+  {
+   "swap": "Culling the Weak -> Intuition",
+   "wins": 78,
+   "base_only": 80,
+   "variant_only": 4,
+   "z": -8.292279828967711
+  },
+  {
+   "swap": "Thassa's Oracle -> Intuition",
+   "wins": 88,
+   "base_only": 70,
+   "variant_only": 4,
+   "z": -7.6723441570920725
+  },
+  {
+   "swap": "Demonic Consultation -> Intuition",
+   "wins": 67,
+   "base_only": 87,
+   "variant_only": 0,
+   "z": -9.327379053088814
+  },
+  {
+   "swap": "Tainted Pact -> Intuition",
+   "wins": 114,
+   "base_only": 44,
+   "variant_only": 4,
+   "z": -5.773502691896258
+  },
+  {
+   "swap": "Ad Nauseam -> Intuition",
+   "wins": 92,
+   "base_only": 63,
+   "variant_only": 1,
+   "z": -7.75
+  },
+  {
+   "swap": "Beseech the Mirror -> Intuition",
+   "wins": 125,
+   "base_only": 35,
+   "variant_only": 6,
+   "z": -4.529039094769576
+  },
+  {
+   "swap": "Demonic Tutor -> Intuition",
+   "wins": 134,
+   "base_only": 24,
+   "variant_only": 4,
+   "z": -3.779644730092272
+  }
+ ],
+ "no_rograkh": {
+  "label": "sans_Rograkh_castable",
+  "seat": 1,
+  "n": 60000,
+  "wins": 78,
+  "p": 0.0013,
+  "lo": 0.001041858165790267,
+  "hi": 0.0016219979430492706,
+  "avg_mull": 0.0,
+  "errors": 0,
+  "kw": {
+   "max_mull": 0
+  },
+  "draw": 1,
+  "seed": 3
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "n": 60000,
+ "base_wins": 154,
+ "variants": [
+  {
+   "swap": "Lion's Eye Diamond -> Intuition",
+   "wins": 25,
+   "base_only": 129,
+   "variant_only": 0,
+   "z": -11.357816691600547
+  },
+  {
+   "swap": "Culling the Weak -> Intuition",
+   "wins": 78,
+   "base_only": 80,
+   "variant_only": 4,
+   "z": -8.292279828967711
+  },
+  {
+   "swap": "Thassa's Oracle -> Intuition",
+   "wins": 88,
+   "base_only": 70,
+   "variant_only": 4,
+   "z": -7.6723441570920725
+  },
+  {
+   "swap": "Demonic Consultation -> Intuition",
+   "wins": 67,
+   "base_only": 87,
+   "variant_only": 0,
+   "z": -9.327379053088814
+  },
+  {
+   "swap": "Tainted Pact -> Intuition",
+   "wins": 114,
+   "base_only": 44,
+   "variant_only": 4,
+   "z": -5.773502691896258
+  },
+  {
+   "swap": "Ad Nauseam -> Intuition",
+   "wins": 92,
+   "base_only": 63,
+   "variant_only": 1,
+   "z": -7.75
+  },
+  {
+   "swap": "Beseech the Mirror -> Intuition",
+   "wins": 125,
+   "base_only": 35,
+   "variant_only": 6,
+   "z": -4.529039094769576
+  },
+  {
+   "swap": "Demonic Tutor -> Intuition",
+   "wins": 134,
+   "base_only": 24,
+   "variant_only": 4,
+   "z": -3.779644730092272
+  }
+ ],
+ "no_rograkh": {
+  "label": "sans_Rograkh_castable",
+  "seat": 1,
+  "n": 60000,
+  "wins": 78,
+  "p": 0.0013,
+  "lo": 0.001041858165790267,
+  "hi": 0.0016219979430492706,
+  "avg_mull": 0.0,
+  "errors": 0,
+  "kw": {
+   "max_mull": 0
+  },
+  "draw": 1,
+  "seed": 3
+ }
+}

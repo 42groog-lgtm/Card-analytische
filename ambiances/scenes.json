@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "effects": [
+    { "id": "ding", "name": "Ding (test)", "file": "sounds/test/ding.mp3", "volume": 0.8 }
+  ],
+  "scenes": [
+    {
+      "id": "test",
+      "name": "Test moteur",
+      "icon": "🧪",
+      "layers": [
+        { "id": "vent", "name": "Vent (bruit rose)", "file": "sounds/test/wind.mp3", "volume": 0.6 },
+        { "id": "nappe", "name": "Nappe (test de jonction)", "file": "sounds/test/pad.mp3", "volume": 0.5, "loopFade": 2 }
+      ]
+    }
+  ]
+}

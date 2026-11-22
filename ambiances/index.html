@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#0b0d14">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Ambiances">
+  <title>Ambiances JDR</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <h1>Ambiances</h1>
+    <label class="master">
+      <span>Volume général</span>
+      <input id="master" type="range" min="0" max="1" step="0.01" value="0.8" aria-label="Volume général">
+    </label>
+    <button id="stop" class="btn stop" type="button">■ Arrêt</button>
+    <button id="credits-btn" class="btn small" type="button">Crédits</button>
+  </header>
+
+  <main class="stage">
+    <nav id="scenes" class="scenes" aria-label="Scènes"></nav>
+    <section class="mixer">
+      <h2 id="scene-title">Touchez une scène pour démarrer</h2>
+      <div id="layers" class="layers"></div>
+      <p id="status" class="status" role="status"></p>
+    </section>
+  </main>
+
+  <footer class="fx">
+    <div id="effects" class="effects" aria-label="Effets ponctuels"></div>
+  </footer>
+
+  <dialog id="credits"><div id="credits-body"></div><button id="credits-close" class="btn" type="button">Fermer</button></dialog>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
